@@ -21,7 +21,7 @@ By the final stage of the project, the environment will be used to practice the 
 | Windows Workstation | 802.1Q Trunking | Syslog |
 | Linux Monitoring Server | Router-on-a-Stick | Wireshark |
 | VMware Workstation | SSH | Spiceworks |
-| Cisco Packet Tracer | NAT/PAT | Network Alerting |
+| Network Monitoring VM | NAT/PAT | Network Alerting |
 
 ---
 
