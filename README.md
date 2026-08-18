@@ -14,14 +14,14 @@ By the final stage of the project, the environment will be used to practice the 
 
 ## 🔧 Lab Stack
 
-| **Physical Infrastructure** | **Networking** | **Monitoring & Troubleshooting** |
+| **Physical & Virtual Infrastructure** | **Network Technologies** | **NOC Operations & Monitoring** |
 | :--- | :--- | :--- |
-| Cisco ISR 2911 | Cisco IOS | Linux |
-| Cisco Catalyst 2960-X | VLANs | LibreNMS |
-| Windows Workstation | 802.1Q Trunking | SNMP |
-| Virtualized Server | Router-on-a-Stick | Syslog |
-|  | SSH | Wireshark |
-|  | NAT/PAT | Network Alerting |
+| Cisco ISR 2911 | Cisco IOS | LibreNMS |
+| Cisco Catalyst 2960-X | VLANs | SNMP |
+| Windows Workstation | 802.1Q Trunking | Syslog |
+| Linux Monitoring Server | Router-on-a-Stick | Wireshark |
+| VMware Workstation | SSH | Spiceworks |
+| Cisco Packet Tracer | NAT/PAT | Network Alerting |
 
 ---
 
