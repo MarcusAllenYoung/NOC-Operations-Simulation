@@ -16,16 +16,14 @@ The goal is to practice supporting and troubleshooting an operational network, n
 
 ---
 
-## 🔧 Lab Stack
+## 🔧 Lab Technologies
 
-| **Physical & Virtual Infrastructure** | **Network Technologies** | **NOC Operations & Monitoring** |
-| :--- | :--- | :--- |
-| Cisco ISR 2911 | Cisco IOS | LibreNMS |
-| Cisco Catalyst 2960-X | VLANs | SNMP |
-| Windows Workstation | 802.1Q Trunking | Syslog |
-| Linux Monitoring Server | Router-on-a-Stick | Wireshark |
-| VMware Workstation | SSH | Spiceworks |
-| Network Monitoring VM | NAT/PAT | Network Alerting |
+| **Infrastructure & Virtualization** | **Monitoring & Operations** |
+| :--- | :--- |
+| Cisco ISR 2911 Router | LibreNMS |
+| Cisco Catalyst 2960 Switch | Spiceworks |
+| VMware Workstation | Wireshark |
+| Ubuntu Linux | PuTTY |
 
 ---
 
