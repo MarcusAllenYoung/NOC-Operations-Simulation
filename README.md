@@ -29,7 +29,7 @@ The first phase establishes the physical LAN and a known-good baseline. WAN conn
 
 - [Network Monitoring & Observability Deployment](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment) — Deployment of centralized network monitoring and logging using Linux, LibreNMS, SNMP, syslog, alerting, and performance monitoring.
 
-- [NOC Incident Response & Troubleshooting Operations](Phase%204%20-%20NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations.md) — Simulation of NOC incidents involving monitoring alerts, ticket documentation, fault isolation, troubleshooting, escalation, service restoration, and verification.
+- [NOC Incident Response & Troubleshooting Operations](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations) — Simulation of NOC incidents involving monitoring alerts, ticket documentation, fault isolation, troubleshooting, escalation, service restoration, and verification.
 
 ## Project Objective
 
