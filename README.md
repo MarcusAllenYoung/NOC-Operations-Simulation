@@ -23,17 +23,13 @@ The first phase establishes the physical LAN and a known-good baseline. WAN conn
 
 ## Lab Phases
 
-- **[Phase 1 — Network Infrastructure Deployment & Baseline](Phase-1-Network-Infrastructure/README.md)**  
-  Deploy the physical Cisco infrastructure, configure VLAN segmentation, 802.1Q trunking, router-on-a-stick, secure management, and establish a known-good network baseline.
+- [Network Infrastructure Deployment & Baseline](Phase%201%20-%20Network%20Infrastructure%20Deployment%20%26%20Baseline.md) — Deployment of the physical Cisco infrastructure, including VLAN segmentation, 802.1Q trunking, router-on-a-stick, secure management, and establishment of a known-good network baseline.
 
-- **[Phase 2 — WAN Integration & Internet Services](Phase-2-WAN-Integration/README.md)**  
-  Connect the branch network to the upstream network and implement WAN connectivity, routing, NAT/PAT, Internet access, and connectivity validation.
+- [WAN Integration & Internet Services](Phase%202%20-%20WAN%20Integration%20%26%20Internet%20Services.md) — Integration of the branch network with an upstream network, including routing, NAT/PAT, Internet connectivity, and WAN validation.
 
-- **[Phase 3 — Network Monitoring & Observability Deployment](Phase-3-Network-Monitoring/README.md)**  
-  Introduce centralized visibility using a Linux monitoring server, LibreNMS, SNMP, syslog, alerting, and network performance monitoring.
+- [Network Monitoring & Observability Deployment](Phase%203%20-%20Network%20Monitoring%20%26%20Observability%20Deployment.md) — Deployment of centralized network monitoring and logging using Linux, LibreNMS, SNMP, syslog, alerting, and performance monitoring.
 
-- **[Phase 4 — NOC Incident Response & Troubleshooting Operations](Phase-4-Incident-Response/README.md)**  
-  Introduce controlled network failures and practice alert investigation, ticket documentation, fault isolation, troubleshooting, escalation, service restoration, and post-incident verification.
+- [NOC Incident Response & Troubleshooting Operations](Phase%204%20-%20NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations.md) — Simulation of NOC incidents involving monitoring alerts, ticket documentation, fault isolation, troubleshooting, escalation, service restoration, and verification.
 
 ## Project Objective
 
