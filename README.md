@@ -27,7 +27,7 @@ The first phase establishes the physical LAN and a known-good baseline. WAN conn
 
 - [WAN Integration & Internet Services](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services) — Integration of the branch network with an upstream network, including routing, NAT/PAT, Internet connectivity, and WAN validation.
 
-- [Network Monitoring & Observability Deployment](Phase%203%20-%20Network%20Monitoring%20%26%20Observability%20Deployment.md) — Deployment of centralized network monitoring and logging using Linux, LibreNMS, SNMP, syslog, alerting, and performance monitoring.
+- [Network Monitoring & Observability Deployment](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment) — Deployment of centralized network monitoring and logging using Linux, LibreNMS, SNMP, syslog, alerting, and performance monitoring.
 
 - [NOC Incident Response & Troubleshooting Operations](Phase%204%20-%20NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations.md) — Simulation of NOC incidents involving monitoring alerts, ticket documentation, fault isolation, troubleshooting, escalation, service restoration, and verification.
 
