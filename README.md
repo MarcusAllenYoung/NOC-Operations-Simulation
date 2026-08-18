@@ -12,7 +12,7 @@ Once the environment is operational, controlled network failures will be introdu
 
 Each incident will require investigation, fault isolation, troubleshooting, escalation when appropriate, service restoration, validation, and ticket closure.
 
-The goal is to practice supporting and troubleshooting an operational network—not simply building one.
+The goal is to practice supporting and troubleshooting an operational network, not simply building one.
 
 ---
 
