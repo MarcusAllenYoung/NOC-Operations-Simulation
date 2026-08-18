@@ -1,14 +1,18 @@
 # 🖥️ NOC Operations Lab
 
-> A physical networking lab focused on network deployment, visibility, troubleshooting, and incident response.
+> A physical NOC lab focused on network monitoring, incident response, troubleshooting, and ticket management.
 
 ## About the Project
 
-This project is a hands-on NOC lab built around physical Cisco networking equipment. The goal is to develop practical experience supporting a network throughout its operational lifecycle—not simply configuring devices and verifying connectivity.
+This project documents the development of a physical network environment designed to simulate the operational responsibilities of an entry-level Network Operations Center (NOC) technician.
 
-The environment represents a small branch location, **LBR-001**, built using a Cisco 2911 router and Cisco Catalyst 2960-X switch. The network will progressively expand to include WAN connectivity, a virtualized monitoring server, centralized logging, and controlled network failures.
+The lab is built using physical Cisco routing and switching infrastructure and will expand to include WAN connectivity, centralized network monitoring, logging, and ticket management. While the project begins with deploying and validating the network, its primary focus is using that infrastructure to practice realistic NOC incident response.
 
-By the final stage of the project, the environment will be used to practice the workflow of a NOC technician: identifying problems, reviewing monitoring data, troubleshooting network faults, documenting incidents, escalating when necessary, restoring service, and validating recovery.
+Once the environment is operational, controlled network failures will be introduced to generate realistic incidents. These incidents will be detected through monitoring alerts or simulated user reports and documented in Spiceworks as trouble tickets.
+
+Each incident will require investigation, fault isolation, troubleshooting, escalation when appropriate, service restoration, validation, and ticket closure.
+
+The goal is to practice supporting and troubleshooting an operational network—not simply building one.
 
 ---
 
