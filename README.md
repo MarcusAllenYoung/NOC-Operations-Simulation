@@ -23,7 +23,7 @@ The first phase establishes the physical LAN and a known-good baseline. WAN conn
 
 ## Lab Phases
 
-- [NOC Incident Response & Troubleshooting Operations](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Infrastructure%20Deployment%20%26%20Baseline) — Deployment of the physical Cisco infrastructure, including VLAN segmentation, 802.1Q trunking, router-on-a-stick, secure management, and establishment of a known-good network baseline.
+- [Network Infrastructure Deployment & Baseline](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Infrastructure%20Deployment%20%26%20Baseline) — Deployment of the physical Cisco infrastructure, including VLAN segmentation, 802.1Q trunking, router-on-a-stick, secure management, and establishment of a known-good network baseline.
 
 - [WAN Integration & Internet Services](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services) — Integration of the branch network with an upstream network, including routing, NAT/PAT, Internet connectivity, and WAN validation.
 
