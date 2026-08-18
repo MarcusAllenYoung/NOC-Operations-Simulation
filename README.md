@@ -14,25 +14,14 @@ By the final stage of the project, the environment will be used to practice the 
 
 ## 🔧 Lab Stack
 
-### Physical Infrastructure
-- Cisco ISR 2911
-- Cisco Catalyst 2960-X
-- Windows workstation
-
-### Networking
-- Cisco IOS
-- VLANs
-- 802.1Q Trunking
-- Router-on-a-Stick
-- SSH
-- NAT/PAT
-
-### Monitoring & Troubleshooting
-- Linux
-- LibreNMS
-- SNMP
-- Syslog
-- Wireshark
+| **Physical Infrastructure** | **Networking** | **Monitoring & Troubleshooting** |
+| :--- | :--- | :--- |
+| Cisco ISR 2911 | Cisco IOS | Linux |
+| Cisco Catalyst 2960-X | VLANs | LibreNMS |
+| Windows Workstation | 802.1Q Trunking | SNMP |
+| Virtualized Server | Router-on-a-Stick | Syslog |
+|  | SSH | Wireshark |
+|  | NAT/PAT | Network Alerting |
 
 ---
 
