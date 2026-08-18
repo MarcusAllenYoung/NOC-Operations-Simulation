@@ -1,36 +1,106 @@
-# NOC Operations Lab 🖥️
+# 🖥️ NOC Operations Lab
 
-This project documents the development of a physical network lab designed around the responsibilities of an entry-level Network Operations Center (NOC) technician. The environment begins with physical Cisco routing and switching infrastructure and gradually expands to include WAN connectivity, network monitoring, centralized logging, and simulated incident response.
+> A physical networking lab focused on network deployment, visibility, troubleshooting, and incident response.
 
-The goal is to build practical experience supporting a network after deployment—not just configuring it. The completed environment will be used to establish network baselines, monitor infrastructure health, investigate alerts, troubleshoot connectivity problems, document incidents, and verify service restoration.
+## About the Project
 
-## Lab Environment
+This project is a hands-on NOC lab built around physical Cisco networking equipment. The goal is to develop practical experience supporting a network throughout its operational lifecycle—not simply configuring devices and verifying connectivity.
 
-| **Cisco 2911 Router** | **Cisco Catalyst 2960-X** |
-| --------------------- | ------------------------- |
-| Cisco IOS             | Windows PC                |
-| Linux Server          | Virtualization            |
-| LibreNMS              | Wireshark                  |
-| SNMP                  | Syslog                     |
+The environment represents a small branch location, **LBR-001**, built using a Cisco 2911 router and Cisco Catalyst 2960-X switch. The network will progressively expand to include WAN connectivity, a virtualized monitoring server, centralized logging, and controlled network failures.
 
-The lab represents a small branch network identified as **LBR-001**. The network is being developed in four phases, with each phase building on the working environment created during the previous stage.
+By the final stage of the project, the environment will be used to practice the workflow of a NOC technician: identifying problems, reviewing monitoring data, troubleshooting network faults, documenting incidents, escalating when necessary, restoring service, and validating recovery.
 
-The first phase establishes the physical LAN and a known-good baseline. WAN connectivity is then introduced, followed by centralized monitoring and logging. The final environment will be intentionally subjected to network failures so that incidents can be detected, investigated, resolved or escalated, and documented using a structured NOC workflow.
+---
 
-### Project Workflow
+## 🔧 Lab Stack
 
-**Build → Connect → Monitor → Troubleshoot → Restore → Document**
+### Physical Infrastructure
+- Cisco ISR 2911
+- Cisco Catalyst 2960-X
+- Windows workstation
 
-## Lab Phases
+### Networking
+- Cisco IOS
+- VLANs
+- 802.1Q Trunking
+- Router-on-a-Stick
+- SSH
+- NAT/PAT
 
-- [Network Infrastructure Deployment & Baseline](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Infrastructure%20Deployment%20%26%20Baseline) — Deployment of the physical Cisco infrastructure, including VLAN segmentation, 802.1Q trunking, router-on-a-stick, secure management, and establishment of a known-good network baseline.
+### Monitoring & Troubleshooting
+- Linux
+- LibreNMS
+- SNMP
+- Syslog
+- Wireshark
 
-- [WAN Integration & Internet Services](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services) — Integration of the branch network with an upstream network, including routing, NAT/PAT, Internet connectivity, and WAN validation.
+---
 
-- [Network Monitoring & Observability Deployment](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment) — Deployment of centralized network monitoring and logging using Linux, LibreNMS, SNMP, syslog, alerting, and performance monitoring.
+## 🗺️ Project Roadmap
 
-- [NOC Incident Response & Troubleshooting Operations](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations) — Simulation of NOC incidents involving monitoring alerts, ticket documentation, fault isolation, troubleshooting, escalation, service restoration, and verification.
+### 01 | Network Infrastructure & Baseline 🏗️
 
-## Project Objective
+Build and validate the physical LAN before introducing outside connectivity.
 
-The objective of this lab is to demonstrate hands-on experience with the operational side of networking. By the end of the project, the same environment that was initially built and validated will be used to practice monitoring, troubleshooting, incident response, and technical documentation similar to the workflows encountered in a NOC environment.
+**Focus:** VLAN segmentation, 802.1Q trunking, inter-VLAN routing, management access, device hardening, endpoint connectivity, and establishing a known-good network baseline.
+
+[View Phase 1 Documentation →](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Infrastructure%20Deployment%20%26%20Baseline)
+
+---
+
+### 02 | WAN Integration & Internet Services 🌐
+
+Extend LBR-001 beyond the internal network and establish external connectivity.
+
+**Focus:** WAN integration, default routing, NAT/PAT, Internet connectivity, DNS testing, and WAN validation.
+
+[View Phase 2 Documentation →](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services)
+
+---
+
+### 03 | Network Monitoring & Observability 📊
+
+Introduce centralized visibility into the health and performance of the network.
+
+**Focus:** LibreNMS, SNMP, syslog, device availability, interface monitoring, performance baselines, and alerting.
+
+[View Phase 3 Documentation →](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment)
+
+---
+
+### 04 | NOC Incident Response & Troubleshooting 🚨
+
+Use the completed environment to simulate network incidents and operational troubleshooting.
+
+**Focus:** Alert investigation, ticket creation, fault isolation, troubleshooting, ISP escalation, service restoration, and incident closure.
+
+[View Phase 4 Documentation →](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
+
+---
+
+## 🔄 NOC Workflow
+
+The completed environment will be used to practice a repeatable operational process:
+
+**Monitor → Detect → Investigate → Ticket → Troubleshoot → Resolve/Escalate → Verify → Close**
+
+Each incident will document:
+
+- What was reported or detected
+- What services or devices were affected
+- Initial troubleshooting observations
+- Tests performed
+- Root cause
+- Corrective action
+- Verification of service restoration
+- Final ticket resolution
+
+---
+
+## 🎯 Project Goal
+
+The purpose of this project is to bridge the gap between networking knowledge and actually operating a network.
+
+A working network is only the starting point. The completed lab will provide an environment where I can practice recognizing abnormal behavior, using monitoring data to investigate problems, troubleshooting across multiple layers of the network, communicating technical findings, and documenting incidents from detection through resolution.
+
+The project will continue to evolve as new monitoring capabilities, troubleshooting scenarios, and infrastructure are introduced.
