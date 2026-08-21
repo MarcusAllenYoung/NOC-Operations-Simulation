@@ -1,4 +1,4 @@
-# 🖥️ NOC Operations Lab
+# 🖥️ NOC Operations Simulation
 
 > A physical NOC lab focused on network monitoring, incident response, troubleshooting, and ticket management.
 
