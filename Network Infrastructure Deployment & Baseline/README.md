@@ -42,24 +42,10 @@ The objectives of this phase are to:
 
 ## 3. Physical Topology
 
-```text
-                         RTR-01
-                      Cisco 2911
-                           |
-                           | Gi0/1
-                           |
-                    802.1Q Trunk
-                 VLANs 10,20,30,99
-                           |
-                           | Gi1/0/1
-                        SW-01
-                   Cisco Catalyst
-                           |
-                           | Gi1/0/10
-                           | Access VLAN 10
-                           |
-                       STORE-PC
-                  Windows Test Endpoint
+### Physical Lab
+
+![Phase 1 Network Topology](PhysicalTopology.jpeg)
+
 ```
 
 The router currently provides the Layer 3 gateways for the internal VLANs. Internet/WAN connectivity is intentionally excluded from this phase.
