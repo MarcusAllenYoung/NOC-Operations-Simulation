@@ -1,3 +1,4 @@
+# Phase 1
 # Network Infrastructure Deployment & Baseline
 
 ## NOC Operations Simulation
