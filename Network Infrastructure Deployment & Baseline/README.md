@@ -1,6 +1,6 @@
 # Network Infrastructure Deployment
 
-## LBR-001 — NOC Operations Simulation
+## NOC Operations Simulation
 
 **Status:** In Progress  
 **Environment:** Physical Home Lab  
