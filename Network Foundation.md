@@ -97,14 +97,14 @@ VLAN 99 is intentionally not used for production endpoints. It serves as the nat
 
 The required VLANs were created on `SW-01`.
 
-`Gi1/0/10` was configured as an access interface in VLAN 10 for `STORE-PC1`.
+Gi1/0/10 was configured as an access interface in VLAN 10 for STORE-PC1.
 
-`Gi1/0/1` was configured as a static 802.1Q trunk toward `RTR-01`.
+Gi1/0/1 was configured as a static 802.1Q trunk toward RTR-01.
 
 The trunk carries:
 
 ```text
-10,20,30,99
+10,20,99
 ```
 
 with VLAN 99 configured as the native VLAN.
