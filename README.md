@@ -29,7 +29,7 @@ The goal is to practice supporting and troubleshooting an operational network, n
 
 ## 🗺️ Project Roadmap
 
-### [01 | Network Infrastructure & Baseline 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Infrastructure%20Deployment%20%26%20Baseline)
+### [01 | Network Foundation 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Infrastructure%20Deployment%20%26%20Baseline)
 
 Build and validate the physical LAN before introducing outside connectivity.
 
@@ -37,7 +37,7 @@ Build and validate the physical LAN before introducing outside connectivity.
 
 ---
 
-### [02 | WAN Integration & Internet Services 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services)
+### [02 | WAN & Internet Connectivity 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services)
 
 Extend LBR-001 beyond the internal network and establish external connectivity.
 
@@ -45,7 +45,7 @@ Extend LBR-001 beyond the internal network and establish external connectivity.
 
 ---
 
-### [03 | Network Monitoring & Observability 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment)
+### [03 | Network Monitoring 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment)
 
 Introduce centralized visibility into the health and performance of the network.
 
@@ -53,7 +53,7 @@ Introduce centralized visibility into the health and performance of the network.
 
 ---
 
-### [04 | NOC Incident Response & Troubleshooting 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
+### [04 | Incident Response 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
 
 Use the completed environment to simulate network incidents and operational troubleshooting.
 
