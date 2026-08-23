@@ -32,7 +32,7 @@ The network was designed to provide:
 | Workstation | Windows PC | User endpoint, SSH, testing, and packet capture |
 | Cabling | Cat5e/Cat6 | Physical network connectivity |
 
-### 🔌 Physical Topology
+### ⛓️ Physical Topology
 
 <img width="4280" height="3406" alt="Physical Network Topology" src="https://github.com/user-attachments/assets/d56cc878-b6e6-4a8e-9a93-3c87da51f04e" />
 
