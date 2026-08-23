@@ -87,7 +87,7 @@ The following was configured during the Network Foundation phase:
 - Local administrative account and VTY access
 - Interface descriptions
 
-📄 [View RTR-01 Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/Phase%201%20RTR-01)
+📄 [View RTR-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/Phase%201%20RTR-01)
 
 ### 🔌 SW-01 — Switch Configuration
 
