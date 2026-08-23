@@ -87,7 +87,7 @@ The following was configured during the Network Foundation phase:
 - Local administrative account and VTY access
 - Interface descriptions
 
-📄 [View RTR-01 Configuration](configs/Phase 1 RTR-01)
+📄 [View RTR-01 Configuration](Configs/Phase 1 RTR-01)
 
 ### 🔌 SW-01 — Switch Configuration
 
