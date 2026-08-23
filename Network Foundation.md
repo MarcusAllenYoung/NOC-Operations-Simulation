@@ -61,7 +61,7 @@ The Network Foundation was built using physical Cisco networking equipment and a
 
 ### Physical Lab
 
-https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/issues/1#issue-5227721885
+<img width="4284" height="5712" alt="Image" src="https://github.com/user-attachments/assets/abe2adb3-e682-4b3c-8761-bdfcb4d2fb14" />
 ```
 
 WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is reserved for WAN integration during Phase 2.
