@@ -59,9 +59,12 @@ The Network Foundation was built using physical Cisco networking equipment and a
 | Wireshark | Packet capture and protocol analysis |
 | Command Prompt | Connectivity and network configuration testing |
 
-### Physical Lab
+### Physical Topology
 
 <img width="4280" height="3406" alt="Image" src="https://github.com/user-attachments/assets/d56cc878-b6e6-4a8e-9a93-3c87da51f04e" />
+
+### Logical Topology
+
 ```
 
 WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is reserved for WAN integration during Phase 2.
