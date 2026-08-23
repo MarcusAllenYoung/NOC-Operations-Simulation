@@ -76,6 +76,12 @@ WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is re
 | `SW-01` | `Vlan20` | Switch management | 10.10.20.2/24 |
 | `SW-01` | Remaining ports | Unused | VLAN 99 / Shutdown |
 
+## RTR-01 (2911 router)
+
+| Interface | Connected To | Connetion / Role   |
+| --------- | ------------ | ------ |
+| Gi0/1     | SW-01        | Trunk to SW-01  |
+
 ---
 
 ## 6. VLAN & IP Addressing Design
