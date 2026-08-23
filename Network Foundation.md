@@ -125,10 +125,10 @@ Port        Vlans allowed on trunk
 Gi1/0/1     10,20,30,99
 
 Port        Vlans allowed and active in management domain
-Gi1/0/1     10,20,30,99
+Gi1/0/1     10,20,99
 
 Port        Vlans in spanning tree forwarding state and not pruned
-Gi1/0/1     10,20,30,99
+Gi1/0/1     10,20,99
 ```
 
 This confirmed that `Gi1/0/1` was actively trunking and forwarding all four required VLANs.
