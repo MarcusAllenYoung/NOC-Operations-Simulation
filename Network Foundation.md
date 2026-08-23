@@ -44,10 +44,9 @@ The Network Foundation was built using physical Cisco networking equipment and a
 
 | Equipment | Model / Platform | Role |
 | --- | --- | --- |
-| Router | Cisco ISR 2911 | Inter-VLAN routing, default gateways, DHCP, and remote management |
+| Router | Cisco ISR 2911 | Inter-VLAN routing, DHCP, and NAT |
 | Switch | Cisco Catalyst 2960 | VLAN segmentation, 802.1Q trunking, and Layer 2 connectivity |
 | Workstation | Windows PC | User endpoint, network testing, SSH access, and packet capture |
-| Console Cable | USB Console Cable | Local console access to Cisco devices |
 | Ethernet Cabling | Cat5e/Cat6 | Physical connectivity between network devices |
 
 ### Physical Topology
