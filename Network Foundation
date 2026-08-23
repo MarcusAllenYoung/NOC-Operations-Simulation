@@ -49,7 +49,7 @@ The Network Foundation is built using physical networking equipment rather than 
 
 ### Physical Lab
 
-<!-- Replace URL with the direct Imgur link for the physical lab photo -->
+<!-- Replace YOUR-IMGUR-LINK with the direct Imgur URL for your physical lab photo -->
 
 <img src="YOUR-IMGUR-LINK" alt="LBR-001 Physical Network Foundation Lab"/>
 
@@ -57,9 +57,9 @@ The Network Foundation is built using physical networking equipment rather than 
 
 ## 4. Physical Topology
 
-The initial internal topology consists of a Cisco ISR 2911 connected to a Cisco Catalyst access switch through an 802.1Q trunk.
+The internal topology consists of a Cisco ISR 2911 connected to a Cisco Catalyst access switch through an 802.1Q trunk.
 
-`STORE-PC1` connects to an access interface assigned to the user VLAN.
+`STORE-PC1` connects to an access interface assigned to VLAN 10.
 
 ```text
                          RTR-01
@@ -81,7 +81,7 @@ The initial internal topology consists of a Cisco ISR 2911 connected to a Cisco 
                      Test Endpoint
 ```
 
-WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` remains reserved for the WAN integration performed during Phase 2.
+WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is reserved for WAN integration during Phase 2.
 
 ---
 
@@ -98,7 +98,7 @@ WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` remai
 | `SW-01` | `Gi1/0/1` | Trunk to RTR-01 | VLANs 10,20,30,99 |
 | `SW-01` | `Gi1/0/10` | STORE-PC1 | Access VLAN 10 |
 | `SW-01` | `Vlan20` | Switch management | 10.10.20.2/24 |
-| `SW-01` | Remaining ports | Unused | VLAN 99 / shutdown |
+| `SW-01` | Remaining ports | Unused | VLAN 99 / Shutdown |
 
 ---
 
@@ -113,7 +113,7 @@ Four VLANs are used to separate network functions.
 | 30 | `SERVERS` | 10.10.30.0/24 | 10.10.30.1 | Server infrastructure |
 | 99 | `PARKING-NATIVE` | N/A | N/A | Native VLAN and unused-port isolation |
 
-VLAN 20 provides separation between endpoint traffic and infrastructure management.
+VLAN 20 provides separation between user traffic and infrastructure management.
 
 VLAN 99 is intentionally not used for production endpoints. It serves as the native VLAN on the router-to-switch trunk and as the parking VLAN for unused switch interfaces.
 
@@ -144,8 +144,8 @@ The completed trunk was validated with:
 ```text
 SW-01# show interfaces trunk
 
-Port        Mode       Encapsulation  Status     Native vlan
-Gi1/0/1     on         802.1q         trunking   99
+Port        Mode             Encapsulation  Status        Native vlan
+Gi1/0/1     on               802.1q         trunking      99
 
 Port        Vlans allowed on trunk
 Gi1/0/1     10,20,30,99
@@ -237,6 +237,7 @@ From `SW-01`:
 
 ```text
 SW-01# ping 10.10.20.1
+
 !!!!!
 Success rate is 100 percent (5/5)
 ```
@@ -245,6 +246,7 @@ From `RTR-01`:
 
 ```text
 RTR-01# ping 10.10.20.2
+
 !!!!!
 Success rate is 100 percent (5/5)
 ```
@@ -285,8 +287,11 @@ The router DHCP binding table confirmed the active lease:
 ```text
 RTR-01# show ip dhcp binding
 
-IP address       Client-ID                 Type
-10.10.10.21      016c.6e07.2109.1e        Automatic
+IP address          Client-ID/              Lease expiration        Type
+                    Hardware address/
+                    User name
+
+10.10.10.21         016c.6e07.2109.1e       Aug 23 2026 04:30 PM    Automatic
 ```
 
 This verified that DHCP was operating successfully across the VLAN 10 access path.
@@ -309,53 +314,63 @@ DHCP Request
 DHCP ACK
 ```
 
-The capture provided packet-level evidence that the endpoint was discovering `RTR-01`, requesting an address, and receiving a valid lease from the configured DHCP pool.
+This demonstrated the complete process used by `STORE-PC1` to dynamically obtain its IPv4 configuration from `RTR-01`.
 
 ### DHCP DORA Capture
 
-<!-- Replace with your direct Imgur URL -->
+<!-- Replace YOUR-IMGUR-LINK with your direct Imgur URL -->
 
 <img src="YOUR-IMGUR-LINK" alt="Wireshark DHCP DORA Capture"/>
 
-This provides a packet-level validation of the same DHCP process observed through the endpoint configuration and Cisco DHCP binding table.
+The packet capture provides wire-level evidence of the same DHCP process confirmed through the endpoint configuration and Cisco DHCP binding table.
 
 ---
 
 ## 12. ARP & ICMP Packet Analysis
 
-Additional Wireshark captures were performed to examine local address resolution and routed ICMP traffic.
+Wireshark was also used to examine ARP and ICMP behavior.
 
-### ARP
+### ARP Analysis
 
-ARP analysis was used to observe how `STORE-PC1` resolves the Layer 2 address of its default gateway before sending traffic outside its local subnet.
+ARP was observed while `STORE-PC1` resolved the MAC address associated with its default gateway.
 
-This demonstrates the relationship between:
+The process demonstrates how a host prepares traffic for a destination outside its local subnet:
 
 ```text
-IPv4 destination
+Destination IP
       ↓
-Routing decision
+Routing Decision
       ↓
-Default gateway
+Default Gateway
       ↓
-ARP resolution
+ARP Resolution
       ↓
-Ethernet frame
+Ethernet Frame
 ```
 
-### ICMP
+### ARP Capture
 
-ICMP captures were used while testing connectivity between the endpoint, router interfaces, and management network.
+<!-- Replace YOUR-IMGUR-LINK with your direct Imgur URL -->
 
-These captures provide packet-level evidence of successful routed communication through `RTR-01`.
+<img src="YOUR-IMGUR-LINK" alt="Wireshark ARP Capture"/>
 
-<!-- Add ARP and ICMP screenshots here -->
+### ICMP Analysis
+
+ICMP traffic was captured while testing connectivity between VLAN 10 and the management network.
+
+This provided packet-level verification that traffic was successfully being routed through `RTR-01`.
+
+### ICMP Capture
+
+<!-- Replace YOUR-IMGUR-LINK with your direct Imgur URL -->
+
+<img src="YOUR-IMGUR-LINK" alt="Wireshark Inter-VLAN ICMP Capture"/>
 
 ---
 
 ## 13. SSH Remote Management
 
-SSH version 2 was enabled for remote administration.
+SSH version 2 was enabled to provide secure remote administration of the Cisco devices.
 
 The management domain was standardized as:
 
@@ -363,7 +378,7 @@ The management domain was standardized as:
 noc.lab
 ```
 
-A local privileged administrative account was created and VTY access restricted to SSH.
+A local privileged administrative account was created, and VTY access was restricted to SSH.
 
 Relevant configuration includes:
 
@@ -384,44 +399,57 @@ Remote SSH access was successfully validated to both `RTR-01` and `SW-01`.
 
 ### Legacy SSH Compatibility
 
-The physical Cisco equipment runs an older IOS release that offers legacy SSH cryptographic algorithms.
+During testing, the modern Windows OpenSSH client successfully reached TCP port 22 on the Cisco router but rejected the older cryptographic algorithms offered by Cisco IOS.
 
-Modern Windows OpenSSH rejected the initial connection because no mutually supported key-exchange algorithm was available.
+The initial connection failed during key-exchange negotiation rather than because of a routing, VLAN, or authentication problem.
 
-After explicitly permitting compatible legacy algorithms on the lab workstation, SSH connectivity succeeded.
+Compatible legacy SSH algorithms were explicitly permitted on the lab workstation, after which SSH access succeeded.
 
-This was documented as a **lab compatibility requirement**, not a configuration failure.
+This demonstrated that SSH troubleshooting can involve multiple independent stages:
 
-The experience also demonstrated the difference between:
+```text
+IP Reachability
+      ↓
+TCP Port 22
+      ↓
+Key Exchange
+      ↓
+Host Key Negotiation
+      ↓
+MAC Negotiation
+      ↓
+Authentication
+      ↓
+CLI Access
+```
 
-- IP reachability
-- TCP port availability
-- SSH service availability
-- Cryptographic negotiation
-- User authentication
-
-A device can therefore be reachable on the network while an SSH session still fails during protocol negotiation.
+The issue was documented as a compatibility consideration between a modern SSH client and legacy Cisco IOS.
 
 ---
 
 ## 14. Endpoint Connectivity Validation
 
-`STORE-PC1` received `10.10.10.21/24` from `RTR-01` and successfully reached its default gateway:
+`STORE-PC1` successfully received `10.10.10.21/24` from `RTR-01`.
+
+Connectivity to the VLAN 10 default gateway was verified:
 
 ```text
-C:\> ping 10.10.10.1
+C:\Users\Marcus>ping 10.10.10.1
 
-Reply from 10.10.10.1
-Reply from 10.10.10.1
-Reply from 10.10.10.1
-Reply from 10.10.10.1
+Pinging 10.10.10.1 with 32 bytes of data:
 
-Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
+Reply from 10.10.10.1: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.1: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.1: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.1: bytes=32 time<1ms TTL=255
+
+Ping statistics for 10.10.10.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
 ```
 
-Inter-VLAN communication was also validated between VLAN 10 and VLAN 20.
+Inter-VLAN communication was also successfully validated.
 
-This confirmed the complete traffic path:
+The traffic path from the user endpoint to the management network is:
 
 ```text
 STORE-PC1
@@ -431,7 +459,7 @@ STORE-PC1
      ▼
 SW-01 Gi1/0/10
      │
-     │ 802.1Q
+     │ 802.1Q Trunk
      ▼
 RTR-01 Gi0/1.10
 10.10.10.1
@@ -447,75 +475,73 @@ SW-01
 10.10.20.2
 ```
 
+This confirmed successful communication across the internal Layer 2 and Layer 3 infrastructure.
+
 ---
 
 ## 15. Troubleshooting Encountered
 
-Building the baseline also produced several real troubleshooting scenarios.
+Establishing the baseline produced real troubleshooting scenarios that were documented rather than removed from the project history.
 
-### 15.1 Dual Default Gateways
+### 15.1 Dual Network Paths
 
 During testing, `STORE-PC1` had both Wi-Fi and wired Ethernet active.
 
-Windows installed two default routes:
+The Windows routing table contained two default routes:
 
 ```text
 0.0.0.0/0 → AT&T Wi-Fi gateway
 0.0.0.0/0 → RTR-01
 ```
 
-The Wi-Fi route had a competing path, which caused traffic intended for the lab to behave unexpectedly.
+This created competing network paths and caused traffic intended for the physical lab to behave unexpectedly.
 
-After Wi-Fi was disabled, inter-VLAN connectivity through `RTR-01` worked correctly.
-
-#### Lesson Learned
-
-A successful local ping does not guarantee that subsequent traffic will use the expected interface.
-
-The endpoint routing table should be inspected whenever a host has multiple active network interfaces.
-
-Commands such as:
+The routing table was inspected using:
 
 ```text
 route print
+```
+
+and interface addressing was verified using:
+
+```text
 ipconfig /all
 ```
 
-were used to identify the competing paths.
+After Wi-Fi was disabled, the wired lab path operated correctly and inter-VLAN connectivity succeeded.
+
+### Lesson Learned
+
+A successful local ping does not guarantee that subsequent traffic will leave through the expected network interface.
+
+When troubleshooting a multi-homed endpoint, the host routing table must be considered alongside the Cisco network configuration.
 
 ---
 
 ### 15.2 SSH Algorithm Negotiation
 
-Initial SSH attempts reached the router but failed before authentication.
-
-The first error reported that no compatible key-exchange algorithm could be negotiated.
-
-After enabling a compatible key exchange and RSA host key, the connection progressed further but then failed because the modern client rejected the router's available SHA-1 MAC algorithms.
-
-Allowing the required legacy MAC completed the connection.
-
-#### Lesson Learned
-
-SSH troubleshooting should distinguish between:
+The first SSH connection attempt reached `RTR-01` but failed with:
 
 ```text
-Network reachability
-        ↓
-TCP/22 connectivity
-        ↓
-Key exchange
-        ↓
-Host key negotiation
-        ↓
-MAC negotiation
-        ↓
-Authentication
-        ↓
-CLI access
+Unable to negotiate with 10.10.10.1 port 22:
+no matching key exchange method found
 ```
 
-The problem was not routing, VLAN configuration, or credentials. It was cryptographic compatibility between a modern SSH client and legacy Cisco IOS.
+After allowing a compatible key-exchange method and RSA host key, the connection progressed further but encountered another negotiation failure:
+
+```text
+no matching MAC found
+```
+
+The router offered legacy SHA-1-based MAC algorithms that the modern OpenSSH client did not enable by default.
+
+After permitting the required compatibility algorithms, SSH authentication and CLI access succeeded.
+
+### Lesson Learned
+
+An SSH failure does not automatically indicate a routing, firewall, credential, or Cisco configuration problem.
+
+The troubleshooting process must identify **which stage of the SSH connection is failing**.
 
 ---
 
@@ -529,21 +555,21 @@ The following checks were completed before declaring the internal network baseli
 | Gi1/0/1 trunk | Trunking | PASS |
 | Native VLAN | VLAN 99 | PASS |
 | Allowed VLANs | 10,20,30,99 | PASS |
-| VLAN 10 | Active | PASS |
-| VLAN 20 | Active | PASS |
-| VLAN 30 | Active | PASS |
-| VLAN 99 | Active | PASS |
-| STORE-PC1 access port | VLAN 10 / connected | PASS |
+| VLAN 10 USERS | Active | PASS |
+| VLAN 20 MANAGEMENT | Active | PASS |
+| VLAN 30 SERVERS | Active | PASS |
+| VLAN 99 PARKING-NATIVE | Active | PASS |
+| STORE-PC1 access port | VLAN 10 / Connected | PASS |
 | SW-01 management SVI | 10.10.20.2 reachable | PASS |
 | Inter-VLAN routing | Operational | PASS |
 | DHCP | Lease successfully assigned | PASS |
 | STORE-PC1 gateway | 10.10.10.1 reachable | PASS |
 | DHCP DORA | Captured | PASS |
-| ARP | Captured / analyzed | PASS |
-| ICMP | Captured / analyzed | PASS |
+| ARP | Captured and analyzed | PASS |
+| ICMP | Captured and analyzed | PASS |
 | RTR-01 SSH | Successful | PASS |
 | SW-01 SSH | Successful | PASS |
-| Unused switch interfaces | VLAN 99 / shutdown | PASS |
+| Unused switch interfaces | VLAN 99 / Shutdown | PASS |
 
 ---
 
@@ -552,42 +578,42 @@ The following checks were completed before declaring the internal network baseli
 At the completion of this phase, the internal LBR-001 network has a documented known-good state.
 
 ```text
-Physical connectivity       ✓
-VLAN segmentation           ✓
-802.1Q trunking             ✓
-Inter-VLAN routing          ✓
-Management connectivity     ✓
-DHCP                        ✓
-Endpoint connectivity       ✓
-SSH administration          ✓
-Packet-level validation     ✓
-Unused-port isolation       ✓
+Physical Connectivity       PASS
+VLAN Segmentation           PASS
+802.1Q Trunking             PASS
+Inter-VLAN Routing          PASS
+Management Connectivity     PASS
+DHCP                        PASS
+Endpoint Connectivity       PASS
+SSH Administration          PASS
+Packet-Level Validation     PASS
+Unused-Port Isolation       PASS
 ```
 
-This baseline is important because later incident-response exercises require a known working state for comparison.
+This baseline is important because future incident-response exercises require a known working state for comparison.
 
-When a controlled failure is introduced, troubleshooting can compare the incident condition against the configuration and behavior documented in this phase.
+When controlled failures are introduced later in the project, troubleshooting can compare the incident condition against the configuration and behavior documented during this phase.
 
 ---
 
 ## 18. Handoff to Phase 2
 
-The internal network is now ready for external connectivity.
+The internal LBR-001 network is now ready to be extended beyond the local environment.
 
-Phase 2 — **WAN & Internet Connectivity** will extend `LBR-001` to the existing AT&T network using the currently reserved `RTR-01 Gi0/0` interface.
+Phase 2 — **WAN & Internet Connectivity** will use the currently reserved `RTR-01 Gi0/0` interface to connect the lab to the upstream AT&T network.
 
 The next phase will introduce:
 
-- Upstream connectivity
-- WAN addressing
+- WAN connectivity
+- Upstream IPv4 addressing
 - Default routing
 - NAT/PAT
 - Internet access
 - DNS validation
 - Double-NAT documentation
-- WAN baseline testing
+- End-to-end WAN testing
 
-WAN functionality will not be considered complete until internal VLAN traffic can successfully reach external destinations and the resulting packet path has been validated.
+WAN functionality will not be considered complete until internal VLAN traffic can successfully reach external destinations and the resulting traffic path has been validated.
 
 ---
 
@@ -596,3 +622,4 @@ WAN functionality will not be considered complete until internal VLAN traffic ca
 **Network Foundation: COMPLETE ✅**
 
 **Next:** [02 | WAN & Internet Connectivity 🌐](02-WAN-Internet-Connectivity.md)
+
