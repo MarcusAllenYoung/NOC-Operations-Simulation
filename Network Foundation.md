@@ -83,9 +83,9 @@ Three VLANs are used to separate network functions.
 
 | VLAN | Name | Network | Gateway | Purpose |
 | ---: | --- | --- | --- | --- |
-| 10 | `USERS` | 10.10.10.0/24 | 10.10.10.1 | User endpoints |
-| 20 | `MANAGEMENT` | 10.10.20.0/24 | 10.10.20.1 | Infrastructure management |
-| 99 | `PARKING-NATIVE` | N/A | N/A | Native VLAN and unused-port isolation |
+| 10 | USERS | 10.10.10.0/24 | 10.10.10.1 | User endpoints |
+| 20 | MANAGEMENT | 10.10.20.0/24 | 10.10.20.1 | Infrastructure management |
+| 99 | PARKING-NATIVE | N/A | N/A | Native VLAN and unused-port isolation |
 
 VLAN 20 provides separation between user traffic and infrastructure management.
 
