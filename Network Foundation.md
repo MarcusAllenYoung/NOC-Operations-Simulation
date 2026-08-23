@@ -67,47 +67,27 @@ WAN connectivity is excluded from this phase and will be introduced during Phase
 
 ## 3. Network Implementation ⚙️
 
-The router and switch were configured to establish the internal network baseline. Full device configurations are available in the `config/` folder.
+Both devices received baseline hardening: hostname, local admin account, SSH v2 for remote management, VTY access, and interface descriptions.
 
-### 🔀 RTR-01 — Router Configuration
+### 🔀 RTR-01 — Router
 
-`RTR-01` serves as the Layer 3 device for the internal network.
+Layer 3 routing for the internal network.
 
-The following was configured during the Network Foundation phase:
-
-- Device hostname and basic management settings
-- 802.1Q subinterfaces for router-on-a-stick
-- VLAN 10 gateway — `10.10.10.1/24`
-- VLAN 20 gateway — `10.10.20.1/24`
-- VLAN 99 as the native VLAN
+- 802.1Q subinterfaces for router-on-a-stick (VLANs 10, 20, native 99)
 - Inter-VLAN routing between USERS and MANAGEMENT
-- DHCP services for VLAN 10
-- DHCP address exclusions for infrastructure addresses
-- SSH version 2 for remote management
-- Local administrative account and VTY access
-- Interface descriptions
+- DHCP for VLAN 10, with infrastructure addresses excluded
 
 📄 [View RTR-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/Phase%201%20RTR-01)
 
-### 🔌 SW-01 — Switch Configuration
+### 🔌 SW-01 — Switch
 
-`SW-01` provides Layer 2 connectivity and segmentation for the internal network.
+Layer 2 segmentation and access.
 
-The following was configured during the Network Foundation phase:
-
-- Device hostname and basic management settings
-- VLAN 10 — USERS
-- VLAN 20 — MANAGEMENT
-- VLAN 99 — PARKING-NATIVE
-- VLAN 99 as the native VLAN
-- `Gi1/0/1` as an 802.1Q trunk to `RTR-01`
-- `Gi1/0/10` as an access port for `STORE-PC1` in VLAN 10
-- VLAN 20 management SVI — `10.10.20.2/24`
-- Default gateway — `10.10.20.1`
-- SSH version 2 for remote management
-- Local administrative account and VTY access
-- Unused interfaces assigned to VLAN 99 and administratively disabled
-- Interface descriptions
+- VLANs 10 (USERS), 20 (MANAGEMENT), and 99 (native/parking)
+- `Gi1/0/1` trunk to RTR-01
+- `Gi1/0/10` access port for STORE-PC1
+- Management SVI `10.10.20.2/24`
+- Unused ports assigned to VLAN 99 and administratively disabled
 
 📄 [View SW-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/Phase%201%20SW-01)
 
