@@ -79,7 +79,7 @@ WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is re
 
 ## 6. VLAN & IP Addressing Design
 
-Four VLANs are used to separate network functions.
+Three VLANs are used to separate network functions.
 
 | VLAN | Name | Network | Gateway | Purpose |
 | ---: | --- | --- | --- | --- |
