@@ -50,15 +50,6 @@ The Network Foundation was built using physical Cisco networking equipment and a
 | Console Cable | USB Console Cable | Local console access to Cisco devices |
 | Ethernet Cabling | Cat5e/Cat6 | Physical connectivity between network devices |
 
-### Software Used
-
-| Software | Purpose |
-| --- | --- |
-| PuTTY | Cisco console access |
-| Windows OpenSSH | Remote SSH management |
-| Wireshark | Packet capture and protocol analysis |
-| Command Prompt | Connectivity and network configuration testing |
-
 ### Physical Topology
 
 <img width="4280" height="3406" alt="Image" src="https://github.com/user-attachments/assets/d56cc878-b6e6-4a8e-9a93-3c87da51f04e" />
