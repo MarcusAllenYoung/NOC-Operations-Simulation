@@ -6,7 +6,7 @@ Establishing a known-good internal network to support future monitoring and inci
 
 ## 1. Purpose & Objectives 🎯
 
-The purpose of this phase is to deploy and validate the internal network for the NOC Operations Simulation.
+The purpose of this phase is to deploy and validate the internal network for the NOC Operations Simulation. This foundation exists to support the monitoring and incident-response work in later phases
 
 The network was designed to provide:
 
