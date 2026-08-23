@@ -29,7 +29,7 @@ The goal is to practice supporting and troubleshooting an operational network, n
 
 ## 🗺️ Project Roadmap
 
-### [01 | Network Foundation 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Infrastructure%20Deployment%20%26%20Baseline)
+### [01 | Network Foundation 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Foundation)
 
 Build and validate the physical LAN before introducing outside connectivity.
 
