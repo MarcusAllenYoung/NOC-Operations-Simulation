@@ -65,7 +65,7 @@ WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is re
 ## 5. Interface Mapping
 
 | Device | Interface | Connection / Role |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | RTR-01 | Gi0/1 | Trunk to SW-01 |
 | RTR-01 | Gi0/1.10 | VLAN 10 gateway |
 | RTR-01 | Gi0/1.20 | VLAN 20 gateway |
