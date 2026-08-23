@@ -69,7 +69,6 @@ WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is re
 | RTR-01 | Gi0/1 | Trunk to SW-01 |
 | RTR-01 | Gi0/1.10 | VLAN 10 gateway |
 | RTR-01 | Gi0/1.20 | VLAN 20 gateway |
-| RTR-01 | Gi0/1.30 | VLAN 30 gateway |
 | RTR-01 | Gi0/1.99 | Native VLAN |
 | SW-01 | Gi1/0/1 | Trunk to RTR-01 |
 | SW-01 | Gi1/0/10 | STORE-PC1 |
@@ -86,7 +85,6 @@ Four VLANs are used to separate network functions.
 | ---: | --- | --- | --- | --- |
 | 10 | `USERS` | 10.10.10.0/24 | 10.10.10.1 | User endpoints |
 | 20 | `MANAGEMENT` | 10.10.20.0/24 | 10.10.20.1 | Infrastructure management |
-| 30 | `SERVERS` | 10.10.30.0/24 | 10.10.30.1 | Server infrastructure |
 | 99 | `PARKING-NATIVE` | N/A | N/A | Native VLAN and unused-port isolation |
 
 VLAN 20 provides separation between user traffic and infrastructure management.
