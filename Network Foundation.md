@@ -67,17 +67,49 @@ WAN connectivity is excluded from this phase and will be introduced during Phase
 
 ## 3. Network Implementation ⚙️
 
-The network was configured to provide segmentation, routing, addressing, and secure management.
+The router and switch were configured to establish the internal network baseline. Full device configurations are available in the `config/` folder.
 
-- VLANs 10, 20, and 99 were configured on `SW-01`.
-- `Gi1/0/1` was configured as an 802.1Q trunk to `RTR-01`.
-- Router-on-a-stick was implemented on `RTR-01` for inter-VLAN routing.
-- `RTR-01` provides DHCP services for VLAN 10.
-- `SW-01` uses `10.10.20.2/24` for management.
-- SSH was configured for remote access to both Cisco devices.
-- Unused switch ports were assigned to VLAN 99 and disabled.
+### 🔀 RTR-01 — Router Configuration
 
-This configuration established the internal network required for the remaining phases of the NOC Operations Simulation.
+`RTR-01` serves as the Layer 3 device for the internal network.
+
+The following was configured during the Network Foundation phase:
+
+- Device hostname and basic management settings
+- 802.1Q subinterfaces for router-on-a-stick
+- VLAN 10 gateway — `10.10.10.1/24`
+- VLAN 20 gateway — `10.10.20.1/24`
+- VLAN 99 as the native VLAN
+- Inter-VLAN routing between USERS and MANAGEMENT
+- DHCP services for VLAN 10
+- DHCP address exclusions for infrastructure addresses
+- SSH version 2 for remote management
+- Local administrative account and VTY access
+- Interface descriptions
+
+📄 [View RTR-01 Configuration](configs/Phase 1 RTR-01)
+
+### 🔌 SW-01 — Switch Configuration
+
+`SW-01` provides Layer 2 connectivity and segmentation for the internal network.
+
+The following was configured during the Network Foundation phase:
+
+- Device hostname and basic management settings
+- VLAN 10 — USERS
+- VLAN 20 — MANAGEMENT
+- VLAN 99 — PARKING-NATIVE
+- VLAN 99 as the native VLAN
+- `Gi1/0/1` as an 802.1Q trunk to `RTR-01`
+- `Gi1/0/10` as an access port for `STORE-PC1` in VLAN 10
+- VLAN 20 management SVI — `10.10.20.2/24`
+- Default gateway — `10.10.20.1`
+- SSH version 2 for remote management
+- Local administrative account and VTY access
+- Unused interfaces assigned to VLAN 99 and administratively disabled
+- Interface descriptions
+
+📄 [View SW-01 Configuration](configs/Phase 1 SW-01)
 
 ---
 
