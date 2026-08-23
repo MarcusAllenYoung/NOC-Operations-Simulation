@@ -66,7 +66,6 @@ WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is re
 
 | Device | Interface | Connection / Role | Configuration |
 | --- | --- | --- | --- |
-| `RTR-01` | `Gi0/0` | Future WAN uplink | Reserved for Phase 2 |
 | `RTR-01` | `Gi0/1` | Trunk to SW-01 | 802.1Q |
 | `RTR-01` | `Gi0/1.10` | VLAN 10 gateway | 10.10.10.1/24 |
 | `RTR-01` | `Gi0/1.20` | VLAN 20 gateway | 10.10.20.1/24 |
