@@ -64,17 +64,17 @@ WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is re
 
 ## 5. Interface Mapping
 
-| Device | Interface | Connection / Role | Configuration |
+| Device | Interface | Connection / Role |
 | --- | --- | --- | --- |
-| RTR-01 | Gi0/1 | Trunk to SW-01 | 802.1Q |
-| RTR-01 | Gi0/1.10 | VLAN 10 gateway | 10.10.10.1/24 |
-| RTR-01 | Gi0/1.20 | VLAN 20 gateway | 10.10.20.1/24 |
-| RTR-01 | Gi0/1.30 | VLAN 30 gateway | 10.10.30.1/24 |
-| RTR-01 | Gi0/1.99 | Native VLAN | No IP address |
-| SW-01 | Gi1/0/1 | Trunk to RTR-01 | VLANs 10,20,30,99 |
-| SW-01 | Gi1/0/10 | STORE-PC1 | Access VLAN 10 |
-| SW-01 | Vlan20 | Switch management | 10.10.20.2/24 |
-| SW-01 | Remaining ports | Unused | VLAN 99 / Shutdown |
+| RTR-01 | Gi0/1 | Trunk to SW-01 |
+| RTR-01 | Gi0/1.10 | VLAN 10 gateway |
+| RTR-01 | Gi0/1.20 | VLAN 20 gateway |
+| RTR-01 | Gi0/1.30 | VLAN 30 gateway |
+| RTR-01 | Gi0/1.99 | Native VLAN |
+| SW-01 | Gi1/0/1 | Trunk to RTR-01 |
+| SW-01 | Gi1/0/10 | STORE-PC1 |
+| SW-01 | Vlan20 | Switch management |
+| SW-01 | Remaining ports | Unused |
 
 ---
 
