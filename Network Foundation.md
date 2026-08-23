@@ -141,18 +141,8 @@ This confirmed that `Gi1/0/1` was actively trunking and forwarding all four requ
 
 The physical `Gi0/1` interface carries the trunk while individual subinterfaces provide the Layer 3 gateway for each routed VLAN.
 
-```text
-Gi0/1
- │
- ├── Gi0/1.10 → 10.10.10.1/24
- ├── Gi0/1.20 → 10.10.20.1/24
- ├── Gi0/1.30 → 10.10.30.1/24
- └── Gi0/1.99 → Native VLAN
-```
-
 The router configuration includes:
 
-```text
 interface GigabitEthernet0/1
  description ## 802.1Q TRUNK TO SW-01 Gi1/0/1 ##
  no ip address
@@ -167,23 +157,15 @@ interface GigabitEthernet0/1.20
  encapsulation dot1Q 20
  ip address 10.10.20.1 255.255.255.0
 
-interface GigabitEthernet0/1.30
- description ## VLAN 30 SERVERS GATEWAY ##
- encapsulation dot1Q 30
- ip address 10.10.30.1 255.255.255.0
-
 interface GigabitEthernet0/1.99
  description ## VLAN 99 NATIVE ##
  encapsulation dot1Q 99 native
-```
 
 The routing table confirmed that all three routed VLAN networks were directly connected:
 
-```text
 C  10.10.10.0/24 is directly connected, GigabitEthernet0/1.10
 C  10.10.20.0/24 is directly connected, GigabitEthernet0/1.20
 C  10.10.30.0/24 is directly connected, GigabitEthernet0/1.30
-```
 
 ---
 
