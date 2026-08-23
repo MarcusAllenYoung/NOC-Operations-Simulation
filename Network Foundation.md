@@ -109,7 +109,7 @@ The following was configured during the Network Foundation phase:
 - Unused interfaces assigned to VLAN 99 and administratively disabled
 - Interface descriptions
 
-📄 [View SW-01 Configuration](configs/Phase 1 SW-01)
+📄 [View SW-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/Phase%201%20SW-01)
 
 ---
 
