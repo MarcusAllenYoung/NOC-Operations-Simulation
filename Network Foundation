@@ -1,1 +1,598 @@
+# 01 | Network Foundation 🏗️
 
+> Establishing and validating the known-good internal network that will serve as the foundation for monitoring and incident-response operations.
+
+---
+
+## 1. Purpose
+
+The purpose of the Network Foundation phase is to deploy and validate the internal network for the NOC Operations Simulation.
+
+Before monitoring, alerting, and incident-response workflows can be introduced, the underlying network must have a documented and verified known-good state.
+
+This phase establishes that baseline using physical Cisco routing and switching equipment. The network is segmented using VLANs, routed through router-on-a-stick (ROAS), centrally addressed through DHCP, and remotely manageable through SSH.
+
+Packet captures and command-line verification are used to confirm that the network is operating as designed.
+
+The completed baseline will later provide a reference point when controlled failures are introduced during the Incident Response phase.
+
+---
+
+## 2. Phase Objectives
+
+The objectives of this phase are to:
+
+- Deploy the physical router, switch, and test endpoint.
+- Establish the physical network topology.
+- Create logical network segmentation using VLANs.
+- Configure an IEEE 802.1Q trunk between the router and switch.
+- Implement router-on-a-stick inter-VLAN routing.
+- Configure a dedicated management VLAN.
+- Provide dynamic IPv4 addressing to user endpoints with DHCP.
+- Establish secure remote administration using SSH.
+- Disable and isolate unused switch interfaces.
+- Validate Layer 1, Layer 2, and Layer 3 connectivity.
+- Capture and analyze DHCP, ARP, and ICMP traffic with Wireshark.
+- Document a known-good network baseline before WAN connectivity and monitoring are introduced.
+
+---
+
+## 3. Physical Environment
+
+The Network Foundation is built using physical networking equipment rather than a fully simulated topology.
+
+| Device | Platform | Role |
+| --- | --- | --- |
+| `RTR-01` | Cisco ISR 2911 | Inter-VLAN routing, default gateways, DHCP, remote management |
+| `SW-01` | Cisco Catalyst 2960 | Layer 2 switching, VLAN segmentation, trunking, management |
+| `STORE-PC1` | Test Workstation | VLAN 10 endpoint, DHCP client, SSH client, packet capture |
+
+### Physical Lab
+
+<!-- Replace URL with the direct Imgur link for the physical lab photo -->
+
+<img src="YOUR-IMGUR-LINK" alt="LBR-001 Physical Network Foundation Lab"/>
+
+---
+
+## 4. Physical Topology
+
+The initial internal topology consists of a Cisco ISR 2911 connected to a Cisco Catalyst access switch through an 802.1Q trunk.
+
+`STORE-PC1` connects to an access interface assigned to the user VLAN.
+
+```text
+                         RTR-01
+                     Cisco ISR 2911
+                           |
+                           | Gi0/1
+                           |
+                    802.1Q Trunk
+                 VLANs 10,20,30,99
+                           |
+                           | Gi1/0/1
+                         SW-01
+                    Cisco Catalyst
+                           |
+                           | Gi1/0/10
+                           | Access VLAN 10
+                           |
+                       STORE-PC1
+                     Test Endpoint
+```
+
+WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` remains reserved for the WAN integration performed during Phase 2.
+
+---
+
+## 5. Interface Mapping
+
+| Device | Interface | Connection / Role | Configuration |
+| --- | --- | --- | --- |
+| `RTR-01` | `Gi0/0` | Future WAN uplink | Reserved for Phase 2 |
+| `RTR-01` | `Gi0/1` | Trunk to SW-01 | 802.1Q |
+| `RTR-01` | `Gi0/1.10` | VLAN 10 gateway | 10.10.10.1/24 |
+| `RTR-01` | `Gi0/1.20` | VLAN 20 gateway | 10.10.20.1/24 |
+| `RTR-01` | `Gi0/1.30` | VLAN 30 gateway | 10.10.30.1/24 |
+| `RTR-01` | `Gi0/1.99` | Native VLAN | No IP address |
+| `SW-01` | `Gi1/0/1` | Trunk to RTR-01 | VLANs 10,20,30,99 |
+| `SW-01` | `Gi1/0/10` | STORE-PC1 | Access VLAN 10 |
+| `SW-01` | `Vlan20` | Switch management | 10.10.20.2/24 |
+| `SW-01` | Remaining ports | Unused | VLAN 99 / shutdown |
+
+---
+
+## 6. VLAN & IP Addressing Design
+
+Four VLANs are used to separate network functions.
+
+| VLAN | Name | Network | Gateway | Purpose |
+| ---: | --- | --- | --- | --- |
+| 10 | `USERS` | 10.10.10.0/24 | 10.10.10.1 | User endpoints |
+| 20 | `MANAGEMENT` | 10.10.20.0/24 | 10.10.20.1 | Infrastructure management |
+| 30 | `SERVERS` | 10.10.30.0/24 | 10.10.30.1 | Server infrastructure |
+| 99 | `PARKING-NATIVE` | N/A | N/A | Native VLAN and unused-port isolation |
+
+VLAN 20 provides separation between endpoint traffic and infrastructure management.
+
+VLAN 99 is intentionally not used for production endpoints. It serves as the native VLAN on the router-to-switch trunk and as the parking VLAN for unused switch interfaces.
+
+---
+
+## 7. Layer 2 Switching
+
+The required VLANs were created on `SW-01`.
+
+`Gi1/0/10` was configured as an access interface in VLAN 10 for `STORE-PC1`.
+
+`Gi1/0/1` was configured as a static 802.1Q trunk toward `RTR-01`.
+
+The trunk carries:
+
+```text
+10,20,30,99
+```
+
+with VLAN 99 configured as the native VLAN.
+
+Unused switch interfaces were assigned to VLAN 99 and administratively shut down to prevent unintended network access.
+
+### Trunk Verification
+
+The completed trunk was validated with:
+
+```text
+SW-01# show interfaces trunk
+
+Port        Mode       Encapsulation  Status     Native vlan
+Gi1/0/1     on         802.1q         trunking   99
+
+Port        Vlans allowed on trunk
+Gi1/0/1     10,20,30,99
+
+Port        Vlans allowed and active in management domain
+Gi1/0/1     10,20,30,99
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gi1/0/1     10,20,30,99
+```
+
+This confirmed that `Gi1/0/1` was actively trunking and forwarding all four required VLANs.
+
+---
+
+## 8. Inter-VLAN Routing
+
+`RTR-01` provides Layer 3 routing using router-on-a-stick.
+
+The physical `Gi0/1` interface carries the trunk while individual subinterfaces provide the Layer 3 gateway for each routed VLAN.
+
+```text
+Gi0/1
+ │
+ ├── Gi0/1.10 → 10.10.10.1/24
+ ├── Gi0/1.20 → 10.10.20.1/24
+ ├── Gi0/1.30 → 10.10.30.1/24
+ └── Gi0/1.99 → Native VLAN
+```
+
+The router configuration includes:
+
+```text
+interface GigabitEthernet0/1
+ description ## 802.1Q TRUNK TO SW-01 Gi1/0/1 ##
+ no ip address
+
+interface GigabitEthernet0/1.10
+ description ## VLAN 10 USERS GATEWAY ##
+ encapsulation dot1Q 10
+ ip address 10.10.10.1 255.255.255.0
+
+interface GigabitEthernet0/1.20
+ description ## VLAN 20 MANAGEMENT GATEWAY ##
+ encapsulation dot1Q 20
+ ip address 10.10.20.1 255.255.255.0
+
+interface GigabitEthernet0/1.30
+ description ## VLAN 30 SERVERS GATEWAY ##
+ encapsulation dot1Q 30
+ ip address 10.10.30.1 255.255.255.0
+
+interface GigabitEthernet0/1.99
+ description ## VLAN 99 NATIVE ##
+ encapsulation dot1Q 99 native
+```
+
+The routing table confirmed that all three routed VLAN networks were directly connected:
+
+```text
+C  10.10.10.0/24 is directly connected, GigabitEthernet0/1.10
+C  10.10.20.0/24 is directly connected, GigabitEthernet0/1.20
+C  10.10.30.0/24 is directly connected, GigabitEthernet0/1.30
+```
+
+---
+
+## 9. Switch Management
+
+`SW-01` uses VLAN 20 as its management network.
+
+The switch management SVI is:
+
+```text
+Vlan20
+10.10.20.2/24
+```
+
+The corresponding router gateway is:
+
+```text
+RTR-01 Gi0/1.20
+10.10.20.1/24
+```
+
+Bidirectional connectivity was successfully verified.
+
+From `SW-01`:
+
+```text
+SW-01# ping 10.10.20.1
+!!!!!
+Success rate is 100 percent (5/5)
+```
+
+From `RTR-01`:
+
+```text
+RTR-01# ping 10.10.20.2
+!!!!!
+Success rate is 100 percent (5/5)
+```
+
+This established a working Layer 3 management path between the router and switch.
+
+---
+
+## 10. DHCP Services
+
+`RTR-01` provides DHCP services for VLAN 10.
+
+Addresses `10.10.10.1` through `10.10.10.20` are excluded from dynamic allocation.
+
+```text
+ip dhcp excluded-address 10.10.10.1 10.10.10.20
+
+ip dhcp pool VLAN10-USERS
+ network 10.10.10.0 255.255.255.0
+ default-router 10.10.10.1
+ dns-server 8.8.8.8
+ domain-name noc.lab
+```
+
+`STORE-PC1` successfully received:
+
+| Parameter | Assigned Value |
+| --- | --- |
+| IPv4 Address | 10.10.10.21 |
+| Subnet Mask | 255.255.255.0 |
+| Default Gateway | 10.10.10.1 |
+| DHCP Server | 10.10.10.1 |
+| DNS Server | 8.8.8.8 |
+| DNS Suffix | noc.lab |
+
+The router DHCP binding table confirmed the active lease:
+
+```text
+RTR-01# show ip dhcp binding
+
+IP address       Client-ID                 Type
+10.10.10.21      016c.6e07.2109.1e        Automatic
+```
+
+This verified that DHCP was operating successfully across the VLAN 10 access path.
+
+---
+
+## 11. DHCP Packet Analysis
+
+Wireshark was used on `STORE-PC1` to observe the DHCP address-allocation process.
+
+The capture verified the four-message DHCP DORA exchange:
+
+```text
+DHCP Discover
+      ↓
+DHCP Offer
+      ↓
+DHCP Request
+      ↓
+DHCP ACK
+```
+
+The capture provided packet-level evidence that the endpoint was discovering `RTR-01`, requesting an address, and receiving a valid lease from the configured DHCP pool.
+
+### DHCP DORA Capture
+
+<!-- Replace with your direct Imgur URL -->
+
+<img src="YOUR-IMGUR-LINK" alt="Wireshark DHCP DORA Capture"/>
+
+This provides a packet-level validation of the same DHCP process observed through the endpoint configuration and Cisco DHCP binding table.
+
+---
+
+## 12. ARP & ICMP Packet Analysis
+
+Additional Wireshark captures were performed to examine local address resolution and routed ICMP traffic.
+
+### ARP
+
+ARP analysis was used to observe how `STORE-PC1` resolves the Layer 2 address of its default gateway before sending traffic outside its local subnet.
+
+This demonstrates the relationship between:
+
+```text
+IPv4 destination
+      ↓
+Routing decision
+      ↓
+Default gateway
+      ↓
+ARP resolution
+      ↓
+Ethernet frame
+```
+
+### ICMP
+
+ICMP captures were used while testing connectivity between the endpoint, router interfaces, and management network.
+
+These captures provide packet-level evidence of successful routed communication through `RTR-01`.
+
+<!-- Add ARP and ICMP screenshots here -->
+
+---
+
+## 13. SSH Remote Management
+
+SSH version 2 was enabled for remote administration.
+
+The management domain was standardized as:
+
+```text
+noc.lab
+```
+
+A local privileged administrative account was created and VTY access restricted to SSH.
+
+Relevant configuration includes:
+
+```text
+ip domain name noc.lab
+ip ssh version 2
+
+line vty 0 4
+ login local
+ transport input ssh
+
+line vty 5 15
+ login local
+ transport input ssh
+```
+
+Remote SSH access was successfully validated to both `RTR-01` and `SW-01`.
+
+### Legacy SSH Compatibility
+
+The physical Cisco equipment runs an older IOS release that offers legacy SSH cryptographic algorithms.
+
+Modern Windows OpenSSH rejected the initial connection because no mutually supported key-exchange algorithm was available.
+
+After explicitly permitting compatible legacy algorithms on the lab workstation, SSH connectivity succeeded.
+
+This was documented as a **lab compatibility requirement**, not a configuration failure.
+
+The experience also demonstrated the difference between:
+
+- IP reachability
+- TCP port availability
+- SSH service availability
+- Cryptographic negotiation
+- User authentication
+
+A device can therefore be reachable on the network while an SSH session still fails during protocol negotiation.
+
+---
+
+## 14. Endpoint Connectivity Validation
+
+`STORE-PC1` received `10.10.10.21/24` from `RTR-01` and successfully reached its default gateway:
+
+```text
+C:\> ping 10.10.10.1
+
+Reply from 10.10.10.1
+Reply from 10.10.10.1
+Reply from 10.10.10.1
+Reply from 10.10.10.1
+
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
+```
+
+Inter-VLAN communication was also validated between VLAN 10 and VLAN 20.
+
+This confirmed the complete traffic path:
+
+```text
+STORE-PC1
+10.10.10.21
+     │
+     │ VLAN 10
+     ▼
+SW-01 Gi1/0/10
+     │
+     │ 802.1Q
+     ▼
+RTR-01 Gi0/1.10
+10.10.10.1
+     │
+     │ Layer 3 Routing
+     ▼
+RTR-01 Gi0/1.20
+10.10.20.1
+     │
+     │ VLAN 20
+     ▼
+SW-01
+10.10.20.2
+```
+
+---
+
+## 15. Troubleshooting Encountered
+
+Building the baseline also produced several real troubleshooting scenarios.
+
+### 15.1 Dual Default Gateways
+
+During testing, `STORE-PC1` had both Wi-Fi and wired Ethernet active.
+
+Windows installed two default routes:
+
+```text
+0.0.0.0/0 → AT&T Wi-Fi gateway
+0.0.0.0/0 → RTR-01
+```
+
+The Wi-Fi route had a competing path, which caused traffic intended for the lab to behave unexpectedly.
+
+After Wi-Fi was disabled, inter-VLAN connectivity through `RTR-01` worked correctly.
+
+#### Lesson Learned
+
+A successful local ping does not guarantee that subsequent traffic will use the expected interface.
+
+The endpoint routing table should be inspected whenever a host has multiple active network interfaces.
+
+Commands such as:
+
+```text
+route print
+ipconfig /all
+```
+
+were used to identify the competing paths.
+
+---
+
+### 15.2 SSH Algorithm Negotiation
+
+Initial SSH attempts reached the router but failed before authentication.
+
+The first error reported that no compatible key-exchange algorithm could be negotiated.
+
+After enabling a compatible key exchange and RSA host key, the connection progressed further but then failed because the modern client rejected the router's available SHA-1 MAC algorithms.
+
+Allowing the required legacy MAC completed the connection.
+
+#### Lesson Learned
+
+SSH troubleshooting should distinguish between:
+
+```text
+Network reachability
+        ↓
+TCP/22 connectivity
+        ↓
+Key exchange
+        ↓
+Host key negotiation
+        ↓
+MAC negotiation
+        ↓
+Authentication
+        ↓
+CLI access
+```
+
+The problem was not routing, VLAN configuration, or credentials. It was cryptographic compatibility between a modern SSH client and legacy Cisco IOS.
+
+---
+
+## 16. Baseline Verification
+
+The following checks were completed before declaring the internal network baseline operational.
+
+| Validation | Expected Result | Result |
+| --- | --- | --- |
+| RTR-01 ↔ SW-01 physical link | Connected | PASS |
+| Gi1/0/1 trunk | Trunking | PASS |
+| Native VLAN | VLAN 99 | PASS |
+| Allowed VLANs | 10,20,30,99 | PASS |
+| VLAN 10 | Active | PASS |
+| VLAN 20 | Active | PASS |
+| VLAN 30 | Active | PASS |
+| VLAN 99 | Active | PASS |
+| STORE-PC1 access port | VLAN 10 / connected | PASS |
+| SW-01 management SVI | 10.10.20.2 reachable | PASS |
+| Inter-VLAN routing | Operational | PASS |
+| DHCP | Lease successfully assigned | PASS |
+| STORE-PC1 gateway | 10.10.10.1 reachable | PASS |
+| DHCP DORA | Captured | PASS |
+| ARP | Captured / analyzed | PASS |
+| ICMP | Captured / analyzed | PASS |
+| RTR-01 SSH | Successful | PASS |
+| SW-01 SSH | Successful | PASS |
+| Unused switch interfaces | VLAN 99 / shutdown | PASS |
+
+---
+
+## 17. Known-Good Baseline
+
+At the completion of this phase, the internal LBR-001 network has a documented known-good state.
+
+```text
+Physical connectivity       ✓
+VLAN segmentation           ✓
+802.1Q trunking             ✓
+Inter-VLAN routing          ✓
+Management connectivity     ✓
+DHCP                        ✓
+Endpoint connectivity       ✓
+SSH administration          ✓
+Packet-level validation     ✓
+Unused-port isolation       ✓
+```
+
+This baseline is important because later incident-response exercises require a known working state for comparison.
+
+When a controlled failure is introduced, troubleshooting can compare the incident condition against the configuration and behavior documented in this phase.
+
+---
+
+## 18. Handoff to Phase 2
+
+The internal network is now ready for external connectivity.
+
+Phase 2 — **WAN & Internet Connectivity** will extend `LBR-001` to the existing AT&T network using the currently reserved `RTR-01 Gi0/0` interface.
+
+The next phase will introduce:
+
+- Upstream connectivity
+- WAN addressing
+- Default routing
+- NAT/PAT
+- Internet access
+- DNS validation
+- Double-NAT documentation
+- WAN baseline testing
+
+WAN functionality will not be considered complete until internal VLAN traffic can successfully reach external destinations and the resulting packet path has been validated.
+
+---
+
+## Phase Status
+
+**Network Foundation: COMPLETE ✅**
+
+**Next:** [02 | WAN & Internet Connectivity 🌐](02-WAN-Internet-Connectivity.md)
