@@ -1,3 +1,4 @@
+
 # 01 | Network Foundation 🏗️
 
 > Establishing and validating the known-good internal network that will serve as the foundation for monitoring and incident-response operations.
