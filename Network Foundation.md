@@ -65,7 +65,7 @@ The Network Foundation was built using physical Cisco networking equipment and a
 
 ### Logical Topology
 
-<img width="1919" height="555" alt="Image" src="https://github.com/user-attachments/assets/4d02be2e-013f-46cd-a0d5-8d286d67b220" />
+<img width="1403" height="325" alt="Image" src="https://github.com/user-attachments/assets/3ba0c3c3-20d2-497d-b6f9-b1882f9b2050" />
 ```
 
 WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is reserved for WAN integration during Phase 2.
