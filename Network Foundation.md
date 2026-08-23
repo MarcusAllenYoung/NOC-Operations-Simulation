@@ -122,7 +122,7 @@ Port        Mode             Encapsulation  Status        Native vlan
 Gi1/0/1     on               802.1q         trunking      99
 
 Port        Vlans allowed on trunk
-Gi1/0/1     10,20,30,99
+Gi1/0/1     10,20,99
 
 Port        Vlans allowed and active in management domain
 Gi1/0/1     10,20,99
