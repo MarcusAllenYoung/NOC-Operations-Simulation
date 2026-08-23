@@ -67,15 +67,17 @@ WAN connectivity is excluded from this phase and will be introduced during Phase
 
 ## 3. Network Implementation ⚙️
 
-`SW-01` was configured with VLANs 10, 20, and 99. `Gi1/0/10` provides access connectivity for `STORE-PC1`, while `Gi1/0/1` operates as an 802.1Q trunk to `RTR-01`.
+The network was configured to provide segmentation, routing, addressing, and secure management.
 
-`RTR-01` provides inter-VLAN routing using router-on-a-stick. VLAN 10 uses `10.10.10.1` as its gateway, while VLAN 20 uses `10.10.20.1`.
+- VLANs 10, 20, and 99 were configured on `SW-01`.
+- `Gi1/0/1` was configured as an 802.1Q trunk to `RTR-01`.
+- Router-on-a-stick was implemented on `RTR-01` for inter-VLAN routing.
+- `RTR-01` provides DHCP services for VLAN 10.
+- `SW-01` uses `10.10.20.2/24` for management.
+- SSH was configured for remote access to both Cisco devices.
+- Unused switch ports were assigned to VLAN 99 and disabled.
 
-DHCP was configured on `RTR-01`, allowing `STORE-PC1` to automatically receive `10.10.10.21/24`, gateway `10.10.10.1`, and DNS server `8.8.8.8`.
-
-`SW-01` uses `10.10.20.2/24` for management. SSH was configured and successfully tested on both Cisco devices.
-
-Unused switch interfaces were placed in VLAN 99 and administratively disabled.
+This configuration established the internal network required for the remaining phases of the NOC Operations Simulation.
 
 ---
 
