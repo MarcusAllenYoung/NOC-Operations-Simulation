@@ -37,48 +37,30 @@ The objectives of this phase are to:
 
 ---
 
-## 3. Physical Environment
+## 3. Equipment Used
 
-The Network Foundation is built using physical networking equipment rather than a fully simulated topology.
+The Network Foundation was built using physical Cisco networking equipment and a Windows workstation used for configuration, testing, and packet analysis.
 
-| Device | Platform | Role |
+| Equipment | Model / Platform | Role |
 | --- | --- | --- |
-| `RTR-01` | Cisco ISR 2911 | Inter-VLAN routing, default gateways, DHCP, remote management |
-| `SW-01` | Cisco Catalyst 2960 | Layer 2 switching, VLAN segmentation, trunking, management |
-| `STORE-PC1` | Test Workstation | VLAN 10 endpoint, DHCP client, SSH client, packet capture |
+| Router | Cisco ISR 2911 | Inter-VLAN routing, default gateways, DHCP, and remote management |
+| Switch | Cisco Catalyst 2960 | VLAN segmentation, 802.1Q trunking, and Layer 2 connectivity |
+| Workstation | Windows PC | User endpoint, network testing, SSH access, and packet capture |
+| Console Cable | USB Console Cable | Local console access to Cisco devices |
+| Ethernet Cabling | Cat5e/Cat6 | Physical connectivity between network devices |
+
+### Software Used
+
+| Software | Purpose |
+| --- | --- |
+| PuTTY | Cisco console access |
+| Windows OpenSSH | Remote SSH management |
+| Wireshark | Packet capture and protocol analysis |
+| Command Prompt | Connectivity and network configuration testing |
 
 ### Physical Lab
 
-<!-- Replace YOUR-IMGUR-LINK with the direct Imgur URL for your physical lab photo -->
-
-<img src="YOUR-IMGUR-LINK" alt="LBR-001 Physical Network Foundation Lab"/>
-
----
-
-## 4. Physical Topology
-
-The internal topology consists of a Cisco ISR 2911 connected to a Cisco Catalyst access switch through an 802.1Q trunk.
-
-`STORE-PC1` connects to an access interface assigned to VLAN 10.
-
-```text
-                         RTR-01
-                     Cisco ISR 2911
-                           |
-                           | Gi0/1
-                           |
-                    802.1Q Trunk
-                 VLANs 10,20,30,99
-                           |
-                           | Gi1/0/1
-                         SW-01
-                    Cisco Catalyst
-                           |
-                           | Gi1/0/10
-                           | Access VLAN 10
-                           |
-                       STORE-PC1
-                     Test Endpoint
+<img src="https://imgur.com/a/aJHpRsn" alt="NOC Operations Simulation Physical Lab"/>
 ```
 
 WAN connectivity is intentionally excluded from this phase. `RTR-01 Gi0/0` is reserved for WAN integration during Phase 2.
