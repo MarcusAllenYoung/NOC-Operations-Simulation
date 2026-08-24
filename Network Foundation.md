@@ -92,27 +92,49 @@ Layer 2 segmentation and access.
 
 ## 4. Validation & Troubleshooting 🔎
 
-The completed network was tested before establishing the baseline.
+### 🌐 DHCP & Endpoint Verification
 
-| Validation | Result |
-| --- | --- |
-| Physical connectivity | PASS ✅ |
-| 802.1Q trunk | PASS ✅ |
-| VLAN segmentation | PASS ✅ |
-| Inter-VLAN routing | PASS ✅ |
-| DHCP | PASS ✅ |
-| RTR-01 SSH | PASS ✅ |
-| SW-01 SSH | PASS ✅ |
-| Unused-port isolation | PASS ✅ |
+STORE-PC1 successfully received its network configuration from RTR-01 through DHCP.
 
-Wireshark was used to verify DHCP, ARP, and ICMP traffic. The complete DHCP DORA process — **Discover → Offer → Request → Acknowledge** — was successfully captured.
+The workstation received:
 
-During testing, two issues were identified and resolved:
+- IP address: 10.10.10.21/24
+- Default gateway: 10.10.10.1
+- DNS suffix: noc.lab
 
-- Wi-Fi and wired Ethernet created competing routes on `STORE-PC1`. Disabling Wi-Fi allowed lab traffic to follow the intended wired path.
-- Windows OpenSSH initially rejected the legacy SSH algorithms supported by the Cisco IOS devices. After adjusting client compatibility settings, SSH access succeeded.
+[INSERT IPCONFIG SCREENSHOT]
 
-These tests confirmed that the internal network was functioning as designed.
+Wireshark captured the complete DHCP process used by STORE-PC1 to obtain its address: Discover, Offer, Request, and ACK.
+
+[INSERT DHCP DORA SCREENSHOT]
+
+### 📡 Connectivity Verification
+
+Connectivity was verified from STORE-PC1 to the VLAN 10 gateway and the SW-01 management interface.
+
+[INSERT PING 10.10.10.1 SCREENSHOT]
+
+[INSERT PING 10.10.20.2 SCREENSHOT]
+
+### 🔐 SSH Verification & Troubleshooting
+
+Remote management was tested from STORE-PC1 to both RTR-01 and SW-01.
+
+During initial testing, SSH connections failed because the older Cisco devices use legacy SSH algorithms that the newer Windows SSH client does not enable by default.
+
+The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility issue. SSH access to both devices was then successfully verified.
+
+[INSERT RTR-01 SSH SCREENSHOT]
+
+[INSERT SW-01 SSH SCREENSHOT]
+
+### 🦈 ARP Verification
+
+Wireshark was used to verify ARP communication between STORE-PC1 and its default gateway.
+
+The capture shows STORE-PC1 requesting the MAC address for 10.10.10.1 and receiving a reply from the gateway.
+
+[INSERT ARP SCREENSHOT]
 
 ---
 
