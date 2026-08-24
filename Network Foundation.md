@@ -112,7 +112,7 @@ Wireshark captured the complete DHCP process used by STORE-PC1 to obtain its add
 
 ### 📡 Connectivity Verification
 
-Connectivity was verified from STORE-PC1 to the VLAN 10 gateway and the SW-01 management interface.
+Connectivity was verified from STORE-PC1 to the VLAN 10 gateway `10.10.10.1` , and the SW-01 management interface `10.10.20.2`.
 
 [INSERT PING 10.10.10.1 SCREENSHOT]
 
