@@ -102,6 +102,8 @@ The workstation received:
 - Default gateway: 10.10.10.1
 - DNS suffix: noc.lab
 
+---
+
 <img width="1906" height="227" alt="Image" src="https://github.com/user-attachments/assets/a7c243a1-8449-4377-89f0-4867aed5be59" />
 
 Wireshark captured the complete DHCP process used by STORE-PC1 to obtain its address: Discover, Offer, Request, and ACK.
