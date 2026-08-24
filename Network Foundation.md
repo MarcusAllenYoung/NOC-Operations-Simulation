@@ -74,7 +74,7 @@ Layer 3 routing for the internal network.
 - Inter-VLAN routing between USERS and MANAGEMENT
 - DHCP for VLAN 10, with infrastructure addresses excluded
 
-📄 [View RTR-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/Phase%201%20RTR-01)
+📄 [View RTR-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Phase%201%20Running-Config)
 
 ### 🔌 SW-01 — Switch
 
