@@ -128,7 +128,7 @@ The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility
 
 <img width="1912" height="213" alt="Image" src="https://github.com/user-attachments/assets/0a729927-7198-4e70-8d2f-30df929490b7" />
 
-[INSERT SW-01 SSH SCREENSHOT]
+<img width="1918" height="239" alt="Image" src="https://github.com/user-attachments/assets/6db5d04c-0f47-4215-9c58-b1e88aefa482" />
 
 ### 🦈 ARP Verification
 
