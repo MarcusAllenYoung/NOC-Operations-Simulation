@@ -130,14 +130,6 @@ The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility
 
 <img width="1918" height="239" alt="Image" src="https://github.com/user-attachments/assets/6db5d04c-0f47-4215-9c58-b1e88aefa482" />
 
-### 🦈 ARP Verification
-
-Wireshark was used to verify ARP communication between STORE-PC1 and its default gateway.
-
-The capture shows STORE-PC1 requesting the MAC address for 10.10.10.1 and receiving a reply from the gateway.
-
-[INSERT ARP SCREENSHOT]
-
 ---
 
 ## 5. Results & Handoff 🏁
