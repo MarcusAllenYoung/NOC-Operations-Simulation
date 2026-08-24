@@ -86,7 +86,7 @@ Layer 2 segmentation and access.
 - Management SVI `10.10.20.2/24`
 - Unused ports assigned to VLAN 99 and administratively disabled
 
-📄 [View SW-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/Phase%201%20SW-01)
+📄 [View SW-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Running-Config)
 
 ---
 
