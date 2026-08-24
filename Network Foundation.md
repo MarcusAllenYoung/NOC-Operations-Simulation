@@ -114,9 +114,9 @@ Wireshark captured the complete DHCP process used by STORE-PC1 to obtain its add
 
 Connectivity was verified from STORE-PC1 to the VLAN 10 gateway `10.10.10.1` , and the SW-01 management interface `10.10.20.2`.
 
-[INSERT PING 10.10.10.1 SCREENSHOT]
+<img width="1915" height="399" alt="Image" src="https://github.com/user-attachments/assets/26d811b7-7e61-437a-9b3d-308381903bda" />
 
-[INSERT PING 10.10.20.2 SCREENSHOT]
+<img width="1918" height="355" alt="Image" src="https://github.com/user-attachments/assets/11346c69-3f7a-499d-aa89-6d62855b6783" />
 
 ### 🔐 SSH Verification & Troubleshooting
 
@@ -126,7 +126,7 @@ During initial testing, SSH connections failed because the older Cisco devices u
 
 The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility issue. SSH access to both devices was then successfully verified.
 
-<img width="1915" height="399" alt="Image" src="https://github.com/user-attachments/assets/26d811b7-7e61-437a-9b3d-308381903bda" />
+[INSERT RTR-01 SSH SCREENSHOT]
 
 [INSERT SW-01 SSH SCREENSHOT]
 
