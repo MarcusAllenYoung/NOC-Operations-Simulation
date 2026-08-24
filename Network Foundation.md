@@ -126,7 +126,7 @@ During initial testing, SSH connections failed because the older Cisco devices u
 
 The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility issue. SSH access to both devices was then successfully verified.
 
-[INSERT RTR-01 SSH SCREENSHOT]
+<img width="1912" height="213" alt="Image" src="https://github.com/user-attachments/assets/0a729927-7198-4e70-8d2f-30df929490b7" />
 
 [INSERT SW-01 SSH SCREENSHOT]
 
