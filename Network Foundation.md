@@ -106,7 +106,7 @@ The workstation received:
 
 Wireshark captured the complete DHCP process used by STORE-PC1 to obtain its address: Discover, Offer, Request, and ACK.
 
-[INSERT DHCP DORA SCREENSHOT]
+<img width="1918" height="1031" alt="Image" src="https://github.com/user-attachments/assets/bdcfbd58-fe82-497e-aaa6-b91d7b4ec3f7" />
 
 ### 📡 Connectivity Verification
 
