@@ -124,7 +124,7 @@ RTR-01 successfully installed a default route pointing toward the AT&T gateway.
 
 This provides a path for traffic destined for networks outside of the internal lab.
 
-<!-- Add Default Route Verification screenshot here -->
+<img width="958" height="65" alt="Image" src="https://github.com/user-attachments/assets/f600b4e0-f0c3-464d-9181-bb7713d1d21f" />
 
 ### 🔄 NAT/PAT Verification
 
