@@ -33,13 +33,12 @@ The purpose of this phase is to establish upstream WAN and Internet connectivity
 
 ### ⛓️ Physical Topology
 
-<img width="586" height="89" alt="Image" src="https://github.com/user-attachments/assets/7a2f438e-5f1e-4b82-94ad-995984e24a73" />
 
 ### 🔀 Logical Topology
 
 The internal VLAN design from Phase 1 remains unchanged. Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 
-`VLAN 10 / VLAN 20 → RTR-01 → AT&T Gateway → Internet`
+<img width="586" height="89" alt="Image" src="https://github.com/user-attachments/assets/7a2f438e-5f1e-4b82-94ad-995984e24a73" />
 
 ### 🔌 Interface Mapping
 
