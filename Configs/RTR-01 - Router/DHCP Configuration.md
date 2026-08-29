@@ -48,6 +48,4 @@ Assigned configuration:
 - DNS Server: `8.8.8.8`
 - DNS Suffix: `noc.lab`
 
-Because addresses `10.10.10.1` through `10.10.10.20` were excluded, `10.10.10.21` was the first available address assigned to the workstation.
-
 
