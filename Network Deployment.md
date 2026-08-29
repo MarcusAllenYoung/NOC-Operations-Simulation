@@ -146,5 +146,5 @@ The Network Foundation phase established a working and documented internal netwo
 
 This known-good baseline will be used as a reference when monitoring and incident-response scenarios are introduced later in the project.
 
-🌐 Next Phase: [WAN & NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/WAN%20&%20NAT%20Configuration.md)
+🌐 Next Phase: [Upstream Connectivity & NAT](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20&%20NAT.md)
 
