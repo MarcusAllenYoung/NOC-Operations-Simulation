@@ -1,167 +1,173 @@
 # 02 | WAN & Internet Connectivity 🌐
 
-Extending the internal NOC lab to the Internet while maintaining the segmented network established during Phase 1.
-
-Phase 2 introduced upstream connectivity between RTR-01 and the AT&T home gateway. RTR-01 was configured to obtain its WAN address through DHCP and provide Internet access to the internal VLANs using NAT/PAT.
+Extending the known-good internal network to the Internet while maintaining the segmentation established during Phase 1.
 
 ---
 
 ## 1. Purpose & Objectives 🎯
 
-The goal of Phase 2 was to extend the known-good internal network from Phase 1 to an upstream network and establish working Internet connectivity.
+The purpose of this phase is to establish upstream WAN and Internet connectivity for the NOC Operations Simulation. This connectivity extends the internal network from Phase 1 and provides the foundation required for external connectivity and future monitoring operations.
 
-### Objectives
-
-- Connect RTR-01 to the upstream AT&T gateway
-- Obtain a WAN IPv4 address through DHCP
-- Establish a default route toward the upstream gateway
-- Configure NAT/PAT for the internal networks
-- Provide Internet access to STORE-PC1
-- Verify DNS resolution
-- Preserve the VLAN segmentation established during Phase 1
+| Design Goal | Purpose |
+| --- | --- |
+| WAN connectivity | Connect RTR-01 to the upstream AT&T gateway |
+| DHCP WAN addressing | Dynamically obtain an address for the WAN interface |
+| Default routing | Forward external traffic toward the upstream gateway |
+| NAT/PAT | Translate private internal addresses for Internet access |
+| Internet & DNS validation | Verify end-to-end external connectivity |
+| Known-good baseline | Reference point for future monitoring and incident-response work |
 
 ---
 
 ## 2. Network Design 🗺️
 
-### Physical Path
+### 🛠️ Equipment Used
+
+| Equipment | Model / Platform | Role |
+| --- | --- | --- |
+| Router | Cisco ISR 2911 | Routing, DHCP, NAT/PAT, and WAN connectivity |
+| Switch | Cisco Catalyst 2960 | VLANs, trunking, and Layer 2 connectivity |
+| Workstation | Windows PC | User endpoint, testing, and verification |
+| Upstream Gateway | AT&T Gateway | Internet access |
+| Cabling | Cat5e/Cat6 | Physical network connectivity |
+
+### ⛓️ Physical Topology
 
 `STORE-PC1 → SW-01 → RTR-01 → AT&T Gateway → Internet`
 
-### Addressing
+### 🔀 Logical Topology
 
-| Device / Network | Interface | Address | Purpose |
-| --- | --- | --- | --- |
-| RTR-01 | `Gi0/0` | `192.168.1.86/24` | WAN |
-| AT&T Gateway | LAN | `192.168.1.254` | Upstream Gateway |
-| VLAN 10 | `Gi0/1.10` | `10.10.10.1/24` | USERS Gateway |
-| VLAN 20 | `Gi0/1.20` | `10.10.20.1/24` | MANAGEMENT Gateway |
-| STORE-PC1 | Ethernet | `10.10.10.21/24` | User Workstation |
+The internal VLAN design from Phase 1 remains unchanged. Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 
-> RTR-01 receives its WAN address dynamically from the upstream gateway, so the `192.168.1.86` address may change.
+`VLAN 10 / VLAN 20 → RTR-01 → AT&T Gateway → Internet`
 
----
+### 🔌 Interface Mapping
 
-## 3. WAN Implementation ⚙️
-
-RTR-01 `GigabitEthernet0/0` was connected to a LAN port on the AT&T gateway and configured as the WAN-facing interface.
-
-The interface received:
-
-- WAN Address: `192.168.1.86/24`
-- Upstream Gateway: `192.168.1.254`
-- Address Assignment: DHCP
-- Interface State: Up/Up
-
-The DHCP-learned WAN configuration also installed a default route toward the AT&T gateway.
-
-### WAN Interface Verification
-
-The final interface state confirmed that the WAN interface and internal ROAS subinterfaces were operational.
-
-![RTR-01 WAN Interface Verification](YOUR-SCREENSHOT-URL)
-
----
-
-## 4. NAT/PAT Implementation 🔄
-
-The internal lab uses private IPv4 addressing that is not directly routable to the Internet.
-
-NAT/PAT was configured on RTR-01 so internal devices could share the IPv4 address assigned to `GigabitEthernet0/0`.
-
-### NAT Roles
-
-| Interface | Network | NAT Role |
+| Device | Interface | Role |
 | --- | --- | --- |
-| `Gi0/1.10` | `10.10.10.0/24` | Inside |
-| `Gi0/1.20` | `10.10.20.0/24` | Inside |
-| `Gi0/0` | `192.168.1.0/24` | Outside |
+| RTR-01 | Gi0/0 | WAN connection to AT&T gateway |
+| RTR-01 | Gi0/1 | Trunk to SW-01 |
+| RTR-01 | Gi0/1.10 | VLAN 10 gateway / NAT inside |
+| RTR-01 | Gi0/1.20 | VLAN 20 gateway / NAT inside |
+| RTR-01 | Gi0/1.99 | Native VLAN |
+| SW-01 | Gi1/0/1 | Trunk to RTR-01 |
+| SW-01 | Gi1/0/10 | STORE-PC1 |
 
-Standard ACL 1 identifies VLAN 10 and VLAN 20 as networks eligible for translation.
+### 🌐 WAN & IP Addressing
 
-PAT overload then translates internal sessions to the address assigned to RTR-01's WAN interface.
+| Network / Device | Address | Purpose |
+| --- | --- | --- |
+| VLAN 10 | 10.10.10.0/24 | USERS network |
+| VLAN 20 | 10.10.20.0/24 | MANAGEMENT network |
+| STORE-PC1 | 10.10.10.21/24 | User workstation |
+| RTR-01 Gi0/0 | 192.168.1.86/24 | WAN interface |
+| AT&T Gateway | 192.168.1.254 | Upstream gateway |
 
-### Translation Example
+RTR-01 receives its WAN address dynamically through DHCP from the AT&T gateway, so the WAN address may change.
+
+---
+
+## 3. Network Implementation ⚙️
+
+Phase 2 extended RTR-01 to the upstream network while preserving the internal VLAN, routing, DHCP, and management configuration established during Phase 1.
+
+### 🌐 RTR-01 — WAN Connectivity
+
+`GigabitEthernet0/0` was connected to the AT&T gateway and configured as the WAN-facing interface.
+
+- WAN addressing provided through DHCP
+- WAN address received: `192.168.1.86/24`
+- Upstream gateway: `192.168.1.254`
+- Default route learned through the WAN DHCP configuration
+- `Gi0/0` configured as the NAT outside interface
+
+### 🔄 RTR-01 — NAT/PAT
+
+NAT/PAT was configured to provide Internet access to the private internal networks.
+
+- VLAN 10 (`10.10.10.0/24`) configured for NAT
+- VLAN 20 (`10.10.20.0/24`) configured for NAT
+- `Gi0/1.10` and `Gi0/1.20` configured as NAT inside interfaces
+- `Gi0/0` configured as the NAT outside interface
+- Standard ACL used to identify traffic eligible for translation
+- PAT overload used to share the RTR-01 WAN address
+
+Example translation path:
 
 `10.10.10.21 → 192.168.1.86 → Internet`
 
-📄 [View RTR-01 NAT Configuration](../Configs/RTR-01%20-%20Router/NAT%20Configuration)
+📄 [View RTR-01 NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration)
+
+📄 [View RTR-01 Phase 2 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
 
 ---
 
-## 5. Validation & Troubleshooting 🔎
+## 4. Validation & Troubleshooting 🔎
 
-Phase 2 was validated from both RTR-01 and STORE-PC1 to confirm that connectivity worked across the complete path.
+### 🌐 WAN Interface Verification
 
-### Default Route Verification
+RTR-01 successfully received its WAN address through DHCP from the upstream AT&T gateway.
 
-RTR-01 successfully learned a default route through the upstream AT&T gateway:
+The router received:
+
+- WAN address: 192.168.1.86/24
+- Upstream gateway: 192.168.1.254
+- Interface status: up/up
+
+<!-- Add WAN Interface Verification screenshot here -->
+
+---
+
+### 🛣️ Default Route Verification
+
+RTR-01 successfully installed a default route pointing toward the AT&T gateway.
 
 `0.0.0.0/0 → 192.168.1.254`
 
-![RTR-01 Default Route Verification](YOUR-SCREENSHOT-URL)
+This provides a path for traffic destined for networks outside of the internal lab.
 
-### NAT/PAT Translation Verification
+<!-- Add Default Route Verification screenshot here -->
 
-Active translations confirmed that STORE-PC1 traffic was being translated from its inside-local address `10.10.10.21` to RTR-01's inside-global address `192.168.1.86`.
+### 🔄 NAT/PAT Verification
 
-![RTR-01 NAT PAT Translation Verification](YOUR-SCREENSHOT-URL)
+NAT translations were verified while STORE-PC1 generated Internet traffic.
 
-### Internet Connectivity Verification
+The translation table confirmed that STORE-PC1's private address `10.10.10.21` was translated to the WAN address `192.168.1.86`.
 
-STORE-PC1 successfully reached `8.8.8.8`, confirming end-to-end IPv4 connectivity through SW-01, RTR-01, the upstream gateway, and the Internet.
+**STORE-PC1 NAT Translation**
 
-![STORE-PC1 Internet Connectivity Verification](YOUR-SCREENSHOT-URL)
+`10.10.10.21 → 192.168.1.86`
 
-### DNS Resolution Verification
+<!-- Add NAT/PAT Translation Verification screenshot here -->
 
-A DNS lookup for `google.com` using `8.8.8.8` successfully returned records, confirming that DNS traffic was functioning through the NAT/PAT configuration.
+### 📡 Internet Connectivity Verification
 
-![STORE-PC1 DNS Resolution Verification](YOUR-SCREENSHOT-URL)
+End-to-end Internet connectivity was tested from STORE-PC1.
 
-### Verification Commands
+STORE-PC1 successfully reached Google's public DNS server at `8.8.8.8`, confirming connectivity through SW-01, RTR-01, the AT&T gateway, and the Internet.
 
-```text
-show ip interface brief
-show ip route 0.0.0.0
-show ip nat translations
-show ip nat statistics
-show access-list 1
-```
+**STORE-PC1 → Internet**
 
-Endpoint validation:
+<!-- Add STORE-PC1 Ping 8.8.8.8 screenshot here -->
 
-```text
-ping 8.8.8.8
-nslookup google.com
-ping google.com
-```
+### 🔎 DNS Resolution Verification
+
+DNS resolution was tested from STORE-PC1 using `nslookup`.
+
+The workstation successfully resolved `google.com` using the configured DNS server `8.8.8.8`, confirming that both Internet connectivity and DNS resolution were operational.
+
+**STORE-PC1 DNS Verification**
+
+<!-- Add STORE-PC1 nslookup google.com screenshot here -->
 
 ---
 
-## 6. Results & Handoff 🏁
+## 5. Results & Handoff 🏁
 
-Phase 2 successfully extended the internal lab network to the Internet.
+The WAN & Internet Connectivity phase successfully extended the internal network from Phase 1 to the Internet while maintaining the existing VLAN segmentation and internal routing design.
 
-The completed environment now provides:
+RTR-01 now provides upstream connectivity, default routing, and NAT/PAT services for the internal lab networks. STORE-PC1 successfully demonstrated end-to-end Internet connectivity and DNS resolution.
 
-- Operational upstream WAN connectivity
-- DHCP-based WAN addressing
-- Default routing through the AT&T gateway
-- NAT/PAT for VLAN 10 and VLAN 20
-- Internet connectivity from STORE-PC1
-- Functional DNS resolution
-- Preserved internal VLAN segmentation
-- A validated network baseline for monitoring
+This known-good baseline will be used as a reference when network monitoring and centralized visibility are introduced during the next phase.
 
-The Phase 2 configuration was saved as the new known-good baseline before moving into network monitoring.
-
-📄 [View RTR-01 Phase 2 Running-Config](../Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
-
----
-
-## Next Phase
-
-### 03 | Network Monitoring 📊
-
-Phase 3 will introduce centralized network monitoring to provide visibility into device availability, network health, and events across the physical lab environment.
+📊 Next Phase: Network Monitoring
