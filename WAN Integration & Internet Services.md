@@ -157,7 +157,7 @@ The workstation successfully resolved `google.com` using the configured DNS serv
 
 **STORE-PC1 DNS Verification**
 
-<!-- Add STORE-PC1 nslookup google.com screenshot here -->
+<img width="959" height="236" alt="Image" src="https://github.com/user-attachments/assets/6b3554bc-5ef0-49c9-9dba-f5b13335109b" />
 
 ---
 
