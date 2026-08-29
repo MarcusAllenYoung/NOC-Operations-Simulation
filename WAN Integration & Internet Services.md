@@ -39,8 +39,6 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 
 ### 🔀 Logical Topology
 
-The internal VLAN design from Phase 1 remains unchanged. Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
-
 <img width="936" height="145" alt="Image" src="https://github.com/user-attachments/assets/52bd71f0-b537-441e-8065-b093a00021db" />
 
 ### 🔌 Interface Mapping
