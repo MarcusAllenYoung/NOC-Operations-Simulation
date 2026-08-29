@@ -142,6 +142,7 @@ The translation table confirmed that STORE-PC1's private address `10.10.10.21` w
 
 <img width="959" height="140" alt="Image" src="https://github.com/user-attachments/assets/90c5d765-a55f-4a8a-b05a-47d491acaaa8" />
 
+> **Double NAT:** RTR-01 operates behind the AT&T gateway, so `192.168.1.86` is not a public Internet address. RTR-01 first translates internal VLAN traffic to its `192.168.1.86` WAN address, and the AT&T gateway performs a second NAT translation before the traffic reaches the Internet.
 
 ### 📡 Internet Connectivity Verification
 
