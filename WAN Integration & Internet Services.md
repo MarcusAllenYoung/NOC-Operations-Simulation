@@ -147,7 +147,7 @@ STORE-PC1 successfully reached Google's public DNS server at `8.8.8.8`, confirmi
 
 **STORE-PC1 → Internet**
 
-<!-- Add STORE-PC1 Ping 8.8.8.8 screenshot here -->
+<img width="959" height="182" alt="Image" src="https://github.com/user-attachments/assets/ee7040c3-277d-4de8-b0b1-ae3976cd9115" />
 
 ### 🔎 DNS Resolution Verification
 
