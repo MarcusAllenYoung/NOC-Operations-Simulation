@@ -4,12 +4,12 @@ NAT/PAT was configured on RTR-01 during Phase 2 to provide Internet access for t
 
 ### NAT Inside Interfaces
 
-#### VLAN 10 — USERS
+#### VLAN 10 - USERS
 - Interface: `GigabitEthernet0/1.10`
 - Network: `10.10.10.0/24`
 - NAT Role: Inside
 
-#### VLAN 20 — MANAGEMENT
+#### VLAN 20 - MANAGEMENT
 - Interface: `GigabitEthernet0/1.20`
 - Network: `10.10.20.0/24`
 - NAT Role: Inside
@@ -26,8 +26,8 @@ NAT/PAT was configured on RTR-01 during Phase 2 to provide Internet access for t
 
 Standard ACL 1 identifies the internal networks eligible for translation.
 
-- `10.10.10.0/24` — USERS
-- `10.10.20.0/24` — MANAGEMENT
+- `10.10.10.0/24` - USERS
+- `10.10.20.0/24` - MANAGEMENT
 
 ### PAT
 
