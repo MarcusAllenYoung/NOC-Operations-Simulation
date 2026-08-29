@@ -136,6 +136,16 @@ The translation table confirmed that STORE-PC1's private address `10.10.10.21` w
 
 `10.10.10.21 → 192.168.1.86`
 
+### 🔄 NAT/PAT Verification
+
+NAT translations were verified while STORE-PC1 generated Internet traffic.
+
+The translation table confirmed that STORE-PC1's private address `10.10.10.21` was translated to RTR-01's inside global address `192.168.1.86`.
+
+**STORE-PC1 NAT Translation**
+
+`10.10.10.21 → 192.168.1.86`
+
 <img width="1258" height="185" alt="RTR-01 NAT PAT Translation Verification" src="YOUR-GITHUB-IMAGE-LINK" />
 
 ### 📡 Internet Connectivity Verification
