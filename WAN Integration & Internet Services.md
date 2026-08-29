@@ -38,3 +38,27 @@ The existing Phase 1 LAN design remains unchanged. `GigabitEthernet0/0` on RTR-0
 RTR-01 receives its WAN address through DHCP from the AT&T gateway.
 
 A default route learned through the WAN connection provides a path from RTR-01 toward external networks.
+
+## 3. WAN Implementation ⚙️
+
+RTR-01 was connected to the AT&T gateway to provide upstream Internet connectivity for the lab.
+
+### 🌐 RTR-01 — WAN Interface
+
+`GigabitEthernet0/0` was configured as the WAN-facing interface.
+
+- Interface: `Gi0/0`
+- Addressing: DHCP
+- Assigned address: `192.168.1.86/24`
+- Upstream gateway: `192.168.1.254`
+- NAT role: Outside
+
+The AT&T gateway automatically provided RTR-01 with its WAN address and a default route.
+
+### Default Route
+
+RTR-01 installed the following default route toward the AT&T gateway:
+
+`0.0.0.0/0 → 192.168.1.254`
+
+This route allows traffic destined for networks outside of the lab to be forwarded toward the Internet.
