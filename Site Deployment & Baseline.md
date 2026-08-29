@@ -1,4 +1,4 @@
-# 01 | Network Foundation 🏗️
+# 01 | Site Deployment & Baseline 🏗️
 
 Establishing a known-good internal network to support future monitoring and incident-response operations.
 
