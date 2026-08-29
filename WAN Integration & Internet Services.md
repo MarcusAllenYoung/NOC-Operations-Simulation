@@ -74,6 +74,7 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 ### 🌐 RTR-01 (WAN Connectivity)
 
 `GigabitEthernet0/0` was connected to the AT&T gateway and configured as the WAN-facing interface.
+
 📄 [View RTR-01 Phase 2 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
 
 - WAN addressing provided through DHCP
