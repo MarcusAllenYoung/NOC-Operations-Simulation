@@ -71,7 +71,7 @@ RTR-01 receives its WAN address dynamically through DHCP from the AT&T gateway, 
 
 Phase 2 extended RTR-01 to the upstream network while preserving the internal VLAN, routing, DHCP, and management configuration established during Phase 1.
 
-### 🌐 RTR-01 — WAN Connectivity
+### 🌐 RTR-01 (WAN Connectivity)
 
 `GigabitEthernet0/0` was connected to the AT&T gateway and configured as the WAN-facing interface.
 
@@ -84,7 +84,7 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 
 📄 [View RTR-01 Phase 2 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
 
-### 🔄 RTR-01 — NAT/PAT
+### 🔄 RTR-01 (NAT/PAT)
 
 NAT/PAT was configured to provide Internet access to the private internal networks.
 
@@ -100,8 +100,6 @@ Example translation path:
 `10.10.10.21 → 192.168.1.86 → Internet`
 
 📄 [View RTR-01 NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration)
-
-📄 [View RTR-01 Phase 2 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
 
 ---
 
