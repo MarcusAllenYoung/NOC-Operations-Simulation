@@ -135,6 +135,7 @@ The translation table confirmed that STORE-PC1's private address `10.10.10.21` w
 **STORE-PC1 NAT Translation**
 
 `10.10.10.21 → 192.168.1.86`
+<img width="959" height="140" alt="Image" src="https://github.com/user-attachments/assets/90c5d765-a55f-4a8a-b05a-47d491acaaa8" />
 
 
 ### 📡 Internet Connectivity Verification
