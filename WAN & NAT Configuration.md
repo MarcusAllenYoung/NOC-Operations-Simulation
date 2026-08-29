@@ -1,4 +1,4 @@
-# 02 | Upstream Connectivity & NAT 🌐
+# 02 | WAN & NAT Configuration 🌐
 
 Extending the known-good internal network to the Internet while maintaining the segmentation established during Phase 1.
 
