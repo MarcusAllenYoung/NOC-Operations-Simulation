@@ -29,7 +29,7 @@ The goal is to practice supporting and troubleshooting an operational network, n
 
 ## 🗺️ Project Roadmap
 
-### [01 | Site Deployment & Baseline 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Foundation.md) Completed ✅
+### [01 | Network Deployment 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Foundation.md) Completed ✅
 
 Build and validate the physical LAN before introducing outside connectivity.
 
@@ -37,7 +37,7 @@ Build and validate the physical LAN before introducing outside connectivity.
 
 ---
 
-### [02 | Upstream Connectivity & NAT 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services)
+### [02 | WAN & NAT Configuration 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/WAN%20Integration%20%26%20Internet%20Services)
 
 Extend LBR-001 beyond the internal network and establish external connectivity.
 
@@ -45,7 +45,7 @@ Extend LBR-001 beyond the internal network and establish external connectivity.
 
 ---
 
-### [03 | Remote Monitoring & Visibility 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment)
+### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment)
 
 Introduce centralized visibility into the health and performance of the network.
 
@@ -53,7 +53,7 @@ Introduce centralized visibility into the health and performance of the network.
 
 ---
 
-### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
+### [04 | Incident Response 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
 
 Use the completed environment to simulate network incidents and operational troubleshooting.
 
