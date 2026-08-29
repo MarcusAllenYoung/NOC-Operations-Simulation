@@ -1,43 +1,64 @@
 ## NAT/PAT Configuration (RTR-01)
 
-NAT/PAT was configured on RTR-01 during Phase 2 to provide Internet access for the internal lab networks.
+NAT/PAT was configured on RTR-01 during Phase 2 to provide Internet access for the internal lab networks while preserving their private IPv4 addressing.
 
-### NAT Inside Interfaces
+### NAT Interface Roles
 
-#### VLAN 10 - USERS
-- Interface: `GigabitEthernet0/1.10`
-- Network: `10.10.10.0/24`
-- NAT Role: Inside
+| Interface | Network | NAT Role |
+| --- | --- | --- |
+| `Gi0/1.10` | `10.10.10.0/24` | Inside |
+| `Gi0/1.20` | `10.10.20.0/24` | Inside |
+| `Gi0/0` | `192.168.1.0/24` | Outside |
 
-#### VLAN 20 - MANAGEMENT
-- Interface: `GigabitEthernet0/1.20`
-- Network: `10.10.20.0/24`
-- NAT Role: Inside
+RTR-01 receives its WAN address through DHCP from the upstream AT&T gateway.
 
-### NAT Outside Interface
+---
 
-- Interface: `GigabitEthernet0/0`
-- Network: `192.168.1.0/24`
-- Addressing: DHCP
-- NAT Role: Outside
-- Upstream Gateway: `192.168.1.254`
+### Configuration Commands
 
-### NAT ACL
+#### NAT Inside — VLAN 10 USERS
 
-Standard ACL 1 identifies the internal networks eligible for translation.
+```text
+interface GigabitEthernet0/1.10
+ ip nat inside
+```
 
-- `10.10.10.0/24` - USERS
-- `10.10.20.0/24` - MANAGEMENT
+#### NAT Inside — VLAN 20 MANAGEMENT
 
-### PAT
+```text
+interface GigabitEthernet0/1.20
+ ip nat inside
+```
 
-PAT overload uses the IP address assigned to `GigabitEthernet0/0`.
+#### NAT Outside — WAN
 
-This allows multiple internal devices to access external networks while sharing RTR-01's WAN address.
+```text
+interface GigabitEthernet0/0
+ ip nat outside
+```
+
+#### NAT ACL
+
+Standard ACL 1 identifies the internal networks that are eligible for address translation.
+
+```text
+access-list 1 permit 10.10.10.0 0.0.0.255
+access-list 1 permit 10.10.20.0 0.0.0.255
+```
+
+#### PAT Overload
+
+PAT allows multiple internal devices to share the IPv4 address assigned to RTR-01 `GigabitEthernet0/0`.
+
+```text
+ip nat inside source list 1 interface GigabitEthernet0/0 overload
+```
+
+---
 
 ### Translation Example
 
-During validation, STORE-PC1 generated Internet traffic using:
+During validation, STORE-PC1 generated Internet traffic using its private VLAN 10 address.
 
 - Inside Local: `10.10.10.21`
 - Inside Global: `192.168.1.86`
@@ -46,18 +67,29 @@ Translation path:
 
 `10.10.10.21 → 192.168.1.86 → Internet`
 
-### Verification
+PAT uses TCP and UDP port numbers to allow multiple sessions to share the same translated address.
+
+---
+
+### Verification Commands
 
 NAT/PAT operation was verified using:
 
-- `show ip nat translations`
-- `show ip nat statistics`
-- `show access-list 1`
+```text
+show ip nat translations
+show ip nat statistics
+show access-list 1
+```
+
+### Verification Results
 
 Testing confirmed:
 
-- Active dynamic translations
-- VLAN 10 traffic matched ACL 1
-- STORE-PC1 successfully accessed the Internet
-- DNS traffic successfully passed through NAT
-- NAT statistics recorded successful translations with no misses
+- `GigabitEthernet0/0` operating as the NAT outside interface
+- `GigabitEthernet0/1.10` and `GigabitEthernet0/1.20` operating as NAT inside interfaces
+- VLAN 10 traffic successfully matching ACL 1
+- Active dynamic PAT translations
+- STORE-PC1 translated from `10.10.10.21` to `192.168.1.86`
+- Internet connectivity from STORE-PC1
+- DNS traffic successfully passing through NAT
+- NAT statistics recording successful translations with no misses
