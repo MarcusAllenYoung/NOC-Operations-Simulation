@@ -33,7 +33,7 @@ The purpose of this phase is to establish upstream WAN and Internet connectivity
 
 ### ⛓️ Physical Topology
 
-`STORE-PC1 → SW-01 → RTR-01 → AT&T Gateway → Internet`
+<img width="586" height="89" alt="Image" src="https://github.com/user-attachments/assets/7a2f438e-5f1e-4b82-94ad-995984e24a73" />
 
 ### 🔀 Logical Topology
 
