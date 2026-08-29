@@ -89,6 +89,8 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 
 NAT/PAT was configured to provide Internet access to the private internal networks.
 
+📄 [View RTR-01 NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration.md)
+
 - VLAN 10 (`10.10.10.0/24`) configured for NAT
 - VLAN 20 (`10.10.20.0/24`) configured for NAT
 - `Gi0/1.10` and `Gi0/1.20` configured as NAT inside interfaces
@@ -100,7 +102,6 @@ Example translation path:
 
 `10.10.10.21 → 192.168.1.86 → Internet`
 
-📄 [View RTR-01 NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration)
 
 ---
 
