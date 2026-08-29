@@ -37,7 +37,7 @@ Build and validate the physical LAN before introducing outside connectivity.
 
 ---
 
-### [02 | WAN & NAT Configuration 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/WAN%20%26%20NAT%20Configuration.md) Completed ✅
+### [02 | Upstream Connectivity & NAT 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md) Completed ✅
 
 Extend LBR-001 beyond the internal network and establish external connectivity.
 
