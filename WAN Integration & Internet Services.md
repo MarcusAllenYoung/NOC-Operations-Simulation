@@ -81,7 +81,6 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 - WAN address received: `192.168.1.86/24`
 - Upstream gateway: `192.168.1.254`
 - Default route learned through the WAN DHCP configuration
-- `Gi0/0` configured as the NAT outside interface
 <img width="957" height="126" alt="Image" src="https://github.com/user-attachments/assets/844b58aa-dba1-4c81-9cb5-51d659c888d8" />
 
 
@@ -98,9 +97,6 @@ NAT/PAT was configured to provide Internet access to the private internal networ
 - Standard ACL used to identify traffic eligible for translation
 - PAT overload used to share the RTR-01 WAN address
 
-Example translation path:
-
-`10.10.10.21 → 192.168.1.86 → Internet`
 
 
 ---
