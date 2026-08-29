@@ -1,4 +1,4 @@
-# 01 | Site Deployment & Baseline 🏗️
+# 01 | Network Deployment 🏗️
 
 Establishing a known-good internal network to support future monitoring and incident-response operations.
 
