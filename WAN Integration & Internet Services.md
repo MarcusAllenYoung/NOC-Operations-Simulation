@@ -82,6 +82,8 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 - `Gi0/0` configured as the NAT outside interface
 <img width="959" height="56" alt="Image" src="https://github.com/user-attachments/assets/861be16e-e5c7-4bdc-a8d9-394a3b527a9c" />
 
+📄 [View RTR-01 Phase 2 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
+
 ### 🔄 RTR-01 — NAT/PAT
 
 NAT/PAT was configured to provide Internet access to the private internal networks.
