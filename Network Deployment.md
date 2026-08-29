@@ -146,5 +146,5 @@ The Network Foundation phase established a working and documented internal netwo
 
 This known-good baseline will be used as a reference when monitoring and incident-response scenarios are introduced later in the project.
 
-🌐 Next Phase: WAN & Internet Connectivity
+🌐 Next Phase: WAN & NAT Configuration
 
