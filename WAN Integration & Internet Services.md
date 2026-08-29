@@ -96,7 +96,7 @@ During validation, STORE-PC1 generated Internet traffic using its private addres
 
 RTR-01 translated the workstation's private address to its WAN address while maintaining individual sessions using TCP and UDP port numbers.
 
-📄 [View RTR-01 NAT Configuration](../Configs/RTR-01%20-%20Router/NAT%20Configuration)
+📄 [View RTR-01 NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration.md)
 
 📄 [View RTR-01 Phase 2 Running-Config](../Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
 
