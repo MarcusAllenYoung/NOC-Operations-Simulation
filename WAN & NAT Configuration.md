@@ -174,4 +174,4 @@ RTR-01 now provides upstream connectivity, default routing, and NAT/PAT services
 
 This known-good baseline will be used as a reference when network monitoring and centralized visibility are introduced during the next phase.
 
-📊 Next Phase: Network Monitoring
+📊 Next Phase: Monitoring & Alerting
