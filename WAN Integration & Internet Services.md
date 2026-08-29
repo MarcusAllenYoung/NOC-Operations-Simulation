@@ -81,7 +81,6 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 - WAN address received: `192.168.1.86/24`
 - Upstream gateway: `192.168.1.254`
 - Default route learned through the WAN DHCP configuration
-<img width="957" height="126" alt="Image" src="https://github.com/user-attachments/assets/844b58aa-dba1-4c81-9cb5-51d659c888d8" />
 
 
 ### 🔄 RTR-01 (NAT/PAT)
