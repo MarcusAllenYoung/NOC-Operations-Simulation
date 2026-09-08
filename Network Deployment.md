@@ -76,9 +76,8 @@ Layer 3 routing for the internal network.
 
 #### View RTR-01 Phase 1 Configurations below
 
-[Router On A Stick](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/ROAS%20Configuration.md)
-
-[DHCP](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/DHCP%20Configuration.md)
+- [ROAS Configuartion](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/ROAS%20Configuration.md)
+- [DHCP Configuation](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/DHCP%20Configuration.md)
 
 ### 🔌 SW-01 — Switch
 
