@@ -79,7 +79,7 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 
 `GigabitEthernet0/0` was connected to the AT&T gateway and configured as the WAN-facing interface.
 
-- WAN addressing provided through DHCP
+- WAN addressing provided through DHCP via the AT&T router
 - WAN address received: `192.168.1.86/24`
 - Upstream gateway: `192.168.1.254`
 - Default route learned through the WAN DHCP configuration
