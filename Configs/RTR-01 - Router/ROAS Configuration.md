@@ -2,7 +2,6 @@
 
 Router-on-a-Stick was configured on RTR-01 during Phase 1 to provide Layer 3 gateway services for the VLANs configured on SW-01.
 
-A single physical router interface carries multiple VLANs using 802.1Q tagging.
 
 ### VLAN Gateway Design
 
