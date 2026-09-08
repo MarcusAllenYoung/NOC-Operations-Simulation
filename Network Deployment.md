@@ -92,7 +92,6 @@ Layer 2 segmentation and access.
 - [VLAN Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/VLAN%20Configuration.md)
 - [Trunk & Access Port Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Trunk%20%26%20Access%20Port%20Configuration.md)
 - [Management SVI Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Management%20SVI%20Configuration.md)
-- [Unused Port Hardening]
 ---
 
 ## 4. Validation & Troubleshooting 🔎
