@@ -6,15 +6,18 @@ Establishing a known-good internal network to support future monitoring and inci
 
 ## 1. Purpose & Objectives 🎯
 
-The purpose of this phase is to deploy and validate the internal network for the NOC Operations Simulation. This foundation exists to support the monitoring and incident-response work in later phases
+The internal network was designed with separate user and management networks, centralized DHCP addressing, inter-VLAN routing, secure remote device administration, and basic switch-port hardening.
 
 | Design Goal | Purpose |
 | --- | --- |
-| VLAN segmentation & trunking | Logical separation of users and management traffic |
-| Inter-VLAN routing | Connectivity between segmented networks |
-| DHCP addressing | Automated IP assignment for endpoints |
-| SSH & device hardening | Secure remote administration |
-| Known-good baseline | Reference point for later monitoring and incident-response work |
+| VLAN segmentation | Separate user and network-management traffic |
+| 802.1Q trunking | Carry multiple VLANs between SW-01 and RTR-01 |
+| Inter-VLAN routing | Provide Layer 3 connectivity between segmented networks |
+| DHCP | Automatically configure user endpoints |
+| Management network | Provide dedicated addressing for network-device management |
+| SSH | Provide secure remote administration |
+| Port hardening | Disable and isolate unused switch interfaces |
+| Known-good baseline | Establish normal network behavior before monitoring and incident simulation |
 
 ---
 
