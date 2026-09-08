@@ -90,7 +90,9 @@ Layer 2 segmentation and access.
 
 ##### View SW-01 Phase 1 Configurations below
 - [VLAN Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/VLAN%20Configuration.md)
-
+- [Trunk & Access Port Configuration]
+- [Management SVI Configuration]
+- [Unused Port Hardening]
 ---
 
 ## 4. Validation & Troubleshooting 🔎
