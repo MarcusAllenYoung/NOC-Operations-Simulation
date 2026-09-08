@@ -20,7 +20,7 @@ STORE-PC1 connects to `Gi1/0/10` as an access device in the VLAN 10 USERS networ
 #### Gi1/0/1 — Trunk to RTR-01
 
 ```text
-interface GigabitEthernet1/0/1
+int Gi1/0/1
  description TRUNK_TO_RTR-01
  switchport mode trunk
  switchport trunk native vlan 99
@@ -30,8 +30,8 @@ interface GigabitEthernet1/0/1
 #### Gi1/0/10 — STORE-PC1
 
 ```text
-interface GigabitEthernet1/0/10
+int Gi1/0/10
  description STORE_PC
- switchport access vlan 10
  switchport mode access
+ switchport access vlan 10
 ```
