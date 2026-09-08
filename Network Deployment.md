@@ -75,7 +75,6 @@ Layer 3 routing for the internal network.
 - DHCP for VLAN 10, with infrastructure addresses excluded
 
 ##### View RTR-01 Phase 1 Configurations below
-
 - [ROAS Configuartion](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/ROAS%20Configuration.md)
 - [DHCP Configuation](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/DHCP%20Configuration.md)
 
@@ -89,7 +88,8 @@ Layer 2 segmentation and access.
 - Management SVI `10.10.20.2/24`
 - Unused ports assigned to VLAN 99 and administratively disabled
 
-📄 [View SW-01 Phase 1 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Running-Config)
+##### View SW-01 Phase 1 Configurations below
+- [VLAN Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/VLAN%20Configuration.md)
 
 ---
 
