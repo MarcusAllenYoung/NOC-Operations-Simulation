@@ -62,7 +62,7 @@ WAN connectivity is excluded from this phase and will be introduced during Phase
 
 ---
 
-## 3. Network Implementation ⚙️
+## 3. Network Configurations ⚙️
 
 Both devices received baseline hardening: hostname, local admin account, SSH v2 for remote management, VTY access, and interface descriptions.
 
