@@ -75,6 +75,7 @@ Layer 3 routing for the internal network.
 - DHCP for VLAN 10, with infrastructure addresses excluded
 
 📄 [View RTR-01 Phase 1 Configurations below]
+
 [Router On A Stick](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/ROAS%20Configuration.md)
 ### 🔌 SW-01 — Switch
 
