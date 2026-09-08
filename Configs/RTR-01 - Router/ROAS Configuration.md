@@ -7,9 +7,9 @@ Router-on-a-Stick was configured on RTR-01 during Phase 1 to provide Layer 3 gat
 
 | VLAN | Name | Subinterface | Gateway |
 | --- | --- | --- | --- |
-| 10 | USERS | `Gi0/1.10` | `10.10.10.1/24` |
-| 20 | MANAGEMENT | `Gi0/1.20` | `10.10.20.1/24` |
-| 99 | PARKING-NATIVE | `Gi0/1.99` | No IP |
+| 10 | USERS | Gi0/1.10 | `10.10.10.1/24` |
+| 20 | MANAGEMENT | Gi0/1.20 | `10.10.20.1/24` |
+| 99 | PARKING-NATIVE | Gi0/1.99 | No IP |
 
 The physical interface `GigabitEthernet0/1` connects RTR-01 to SW-01 and operates as the router side of the 802.1Q trunk.
 
