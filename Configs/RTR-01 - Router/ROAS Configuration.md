@@ -26,7 +26,7 @@ interface GigabitEthernet0/1
  no shutdown
 ```
 
-#### VLAN 10 — USERS
+#### VLAN 10 - USERS
 
 ```text
 interface GigabitEthernet0/1.10
@@ -35,7 +35,7 @@ interface GigabitEthernet0/1.10
  ip address 10.10.10.1 255.255.255.0
 ```
 
-#### VLAN 20 — MANAGEMENT
+#### VLAN 20 - MANAGEMENT
 
 ```text
 interface GigabitEthernet0/1.20
@@ -44,7 +44,7 @@ interface GigabitEthernet0/1.20
  ip address 10.10.20.1 255.255.255.0
 ```
 
-#### VLAN 99 — Native VLAN
+#### VLAN 99 - Native VLAN
 
 ```text
 interface GigabitEthernet0/1.99
