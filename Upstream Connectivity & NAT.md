@@ -96,7 +96,7 @@ NAT/PAT was configured to provide Internet access to the private internal networ
 - PAT overload used to share the RTR-01 WAN address
   
 ##### View RTR-01 Phase 2 Configurations below
-- [Gi0/0 WAN-Facing interface Configuration]
+- [Gi0/0 WAN-Facing interface Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/WAN%20Interface%20Configuration%20(RTR-01).md)
 - [NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration.md)
 
 
