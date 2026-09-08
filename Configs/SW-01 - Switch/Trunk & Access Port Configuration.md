@@ -17,7 +17,7 @@ STORE-PC1 connects to `Gi1/0/10` as an access device in the VLAN 10 USERS networ
 
 ### Configuration Commands
 
-#### Gi1/0/1 — Trunk to RTR-01
+#### Gi1/0/1 - Trunk to RTR-01
 
 ```text
 int Gi1/0/1
@@ -27,7 +27,7 @@ int Gi1/0/1
  switchport trunk allowed vlan 10,20,99
 ```
 
-#### Gi1/0/10 — STORE-PC1
+#### Gi1/0/10 - STORE-PC1
 
 ```text
 int Gi1/0/10
