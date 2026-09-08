@@ -71,15 +71,13 @@ RTR-01 receives its WAN address dynamically through DHCP from the AT&T gateway, 
 
 ---
 
-## 3. Network Implementation ⚙️
+## 3. Network Configurations ⚙️
 
 Phase 2 extended RTR-01 to the upstream network while preserving the internal VLAN, routing, DHCP, and management configuration established during Phase 1.
 
 ### 🌐 RTR-01 (WAN Connectivity)
 
 `GigabitEthernet0/0` was connected to the AT&T gateway and configured as the WAN-facing interface.
-
-📄 [View RTR-01 Phase 2 Configurations](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Phase%202%20Running-Config)
 
 - WAN addressing provided through DHCP
 - WAN address received: `192.168.1.86/24`
