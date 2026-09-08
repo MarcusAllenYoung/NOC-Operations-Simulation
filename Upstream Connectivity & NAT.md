@@ -84,15 +84,9 @@ Phase 2 extended RTR-01 to the upstream network while preserving the internal VL
 - Upstream gateway: `192.168.1.254`
 - Default route learned through the WAN DHCP configuration
 
-##### View RTR-01 Phase 2 Configurations
-- [Gi0/0 WAN-Facing interface Configuration]
-
-
 ### 🔄 RTR-01 (NAT/PAT)
 
 NAT/PAT was configured to provide Internet access to the private internal networks.
-
-📄 [View RTR-01 NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration.md)
 
 - VLAN 10 (`10.10.10.0/24`) configured for NAT
 - VLAN 20 (`10.10.20.0/24`) configured for NAT
@@ -100,6 +94,10 @@ NAT/PAT was configured to provide Internet access to the private internal networ
 - `Gi0/0` configured as the NAT outside interface
 - Standard ACL used to identify traffic eligible for translation
 - PAT overload used to share the RTR-01 WAN address
+  
+##### View RTR-01 Phase 2 Configurations
+- [Gi0/0 WAN-Facing interface Configuration]
+- [NAT Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Configuration.md)
 
 
 
