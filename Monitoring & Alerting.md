@@ -84,7 +84,7 @@ The server provides:
 
 - [Network Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Network%20Configuration.md)
 - [Static Management Route](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Static%20Management%20Route.md)
-- [Syslog Receiver Configuration](...)
+- [Syslog Receiver Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Syslog%20Receiver%20Configuration.md)
 
 ### 🔄 RTR-01 — Management Routing & NAT Policy
 
