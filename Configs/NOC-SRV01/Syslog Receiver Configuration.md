@@ -53,3 +53,5 @@ if ($fromhost-ip == '10.10.20.2' or $fromhost-ip == '192.168.1.86') then {
 ```
 
 The rsyslog service was then used to receive and store network-device events centrally on NOC-SRV01.
+
+⬅️[Back to Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
