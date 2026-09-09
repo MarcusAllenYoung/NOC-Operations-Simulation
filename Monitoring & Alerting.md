@@ -45,6 +45,8 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as NOC-SRV01 to m
 | Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
 | Cabling | Cat5e/Cat6 | Physical network connectivity |
 
+### ⛓️ Physical Topology
+
 ### 🔀 Logical Topology
 
 <img width="944" height="362" alt="Image" src="https://github.com/user-attachments/assets/9a447537-0233-4b77-bb2f-890f6446b7cb" />
