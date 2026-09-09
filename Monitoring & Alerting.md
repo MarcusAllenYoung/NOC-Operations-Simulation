@@ -121,16 +121,6 @@ RTR-01 synchronizes with an external NTP source.
 
 SW-01 uses RTR-01 as its NTP source.
 
-```text
-External NTP
-     |
-     v
-   RTR-01
-     |
-     v
-   SW-01
-```
-
 During implementation, RTR-01 initially could not resolve the hostname of the configured NTP server because DNS lookup had previously been disabled.
 
 DNS lookup was enabled on RTR-01, allowing hostname-based NTP synchronization to succeed.
