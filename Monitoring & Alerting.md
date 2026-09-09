@@ -113,7 +113,7 @@ The server provides:
 
 The existing Phase 2 NAT policy was modified to support the remote monitoring path.
 
-Traffic between the VLAN 20 MANAGEMENT network and NOC-SRV01 is exempted from NAT, while normal Internet-bound traffic continues to use PAT.
+The Phase 2 NAT configuration was updated to allow direct communication between the VLAN 20 management network and NOC-SRV01 while preserving PAT for normal Internet-bound traffic.
 
 📄 View RTR-01 Phase 3 configurations below:
 
