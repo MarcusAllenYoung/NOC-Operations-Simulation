@@ -56,6 +56,8 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 | RTR-01 | Gi0/1.99 | Native VLAN |
 | SW-01 | Gi1/0/1 | Trunk to RTR-01 |
 | SW-01 | Gi1/0/10 | STORE-PC1 |
+| SW-01 | Vlan20 | Switch management |
+| SW-01 | Remaining ports | Unused / shutdown |
 
 ### 🌐 WAN & IP Addressing
 
