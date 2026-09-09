@@ -8,12 +8,12 @@ Centralized logging allows events from RTR-01 and SW-01 to be collected on the m
 
 | Setting | Value |
 | --- | --- |
-| Syslog Server | `NOC-SRV01` |
+| Syslog Server | NOC-SRV01 |
 | Server Address | `192.168.1.50` |
-| Service | `rsyslog` |
+| Service | rsyslog |
 | Protocol | UDP |
-| Port | `514` |
-| Cisco Log File | `/var/log/cisco.log` |
+| Port | 514 |
+| Cisco Log File | /var/log/cisco.log |
 
 ---
 
