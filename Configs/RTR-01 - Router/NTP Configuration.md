@@ -28,11 +28,7 @@ DNS lookup was enabled because RTR-01 initially could not resolve the hostname o
 #### External NTP Source
 
 ```text
-ntp server <EXTERNAL-NTP-SERVER>
+ntp server time.google.com
 ```
-
-Replace `<EXTERNAL-NTP-SERVER>` with the actual NTP hostname configured on RTR-01 before publishing.
-
----
 
 ⬅️ [Back to Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
