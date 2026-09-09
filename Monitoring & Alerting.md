@@ -25,16 +25,17 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 
 ## 2. Monitoring Design 🗺️
 
-### 🛠️ Equipment & Platforms Used
+### 🛠️ Equipment Used
 
-| Equipment / Platform | Role |
-| --- | --- |
-| Cisco ISR 2911 Router — RTR-01 | Branch routing, NAT/PAT, NTP, SNMPv3, and syslog |
-| Cisco Catalyst 2960 Switch — SW-01 | Layer 2 switching, management, NTP, SNMPv3, and syslog |
-| VMware Workstation Pro | Hosts the monitoring server VM |
-| Ubuntu Server — NOC-SRV01 | Monitoring and centralized logging server |
-| LibreNMS | Network monitoring and alerting platform |
-| AT&T Gateway Router | Upstream connectivity between monitoring and branch networks |
+| Equipment | Model / Platform | Role |
+| --- | --- | --- |
+| Router | Cisco ISR 2911 | Routing, NAT/PAT, and branch connectivity |
+| Switch | Cisco Catalyst 2960X | VLANs, Layer 2 connectivity, and management |
+| Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
+| Virtualization | VMware Workstation Pro | Hosts NOC-SRV01 |
+| Workstation | Windows PC | VMware host and lab administration |
+| Upstream Gateway | AT&T Gateway | Upstream network and Internet connectivity |
+| Cabling | Cat5e/Cat6 | Physical network connectivity |
 
 ### 🔀 Logical Topology
 
