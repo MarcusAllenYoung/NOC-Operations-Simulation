@@ -25,17 +25,27 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 
 ## 2. Monitoring Design 🗺️
 
-### 🛠️ Equipment Used
+### 💻 Technologies Used
 
-| Equipment | Model / Platform | Role |
+| Technology | Purpose |
+| --- | --- |
+| VMware Workstation Pro | Hosts the NOC-SRV01 virtual machine |
+| Ubuntu Server | Operating system for NOC-SRV01 |
+| LibreNMS | Network monitoring, device discovery, polling, and alerting |
+| SNMPv3 | Authenticated and encrypted collection of network-device information |
+| Syslog / rsyslog | Centralized collection of Cisco device events |
+| NTP | Time synchronization for consistent event timestamps |
+| SSH | Remote administration of RTR-01 and SW-01 |
+
+### 🛠️ Devices Used
+
+| Device | Model / Platform | Role |
 | --- | --- | --- |
-| Router | Cisco ISR 2911 | Routing, NAT/PAT, and branch connectivity |
-| Switch | Cisco Catalyst 2960X | VLANs, Layer 2 connectivity, and management |
-| Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
-| Virtualization | VMware Workstation Pro | Hosts NOC-SRV01 |
-| Workstation | Windows PC | VMware host and lab administration |
-| Upstream Gateway | AT&T Gateway | Upstream network and Internet connectivity |
-| Cabling | Cat5e/Cat6 | Physical network connectivity |
+| Router | Cisco ISR 2911 | Routes management traffic between NOC-SRV01 and the branch network |
+| Switch | Cisco Catalyst 2960X | Provides the branch management interface and network interfaces monitored by LibreNMS |
+| NOC-SRV01 | Ubuntu Server VM | Remote monitoring and centralized logging server |
+| Host Workstation | Windows PC | Hosts NOC-SRV01 through VMware Workstation Pro |
+| Upstream Gateway | AT&T Gateway | Provides the upstream network and Internet connectivity |
 
 ### 🔀 Logical Topology
 
