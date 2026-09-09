@@ -41,8 +41,8 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 
 | Equipment | Model / Platform | Role |
 | --- | --- | --- |
-| Router-RTR-01 | Cisco ISR 2911 | ROAS, DHCP, NAT/PAT, SNMPV3, and syslog |
-| Switch-SW-01 | Cisco Catalyst 2960X | VLANs, trunking, SNMPv3, and syslog |
+| Router (RTR-01) | Cisco ISR 2911 | ROAS, DHCP, NAT/PAT, SNMPV3, and syslog |
+| Switch (SW-01) | Cisco Catalyst 2960X | VLANs, trunking, SNMPv3, and syslog |
 | Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
 | Workstation | Windows PC | VMware host and server administration |
 | Home Router | AT&T Gateway | Upstream network and Internet access |
