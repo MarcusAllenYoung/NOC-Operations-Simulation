@@ -42,7 +42,7 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 
 NOC-SRV01 operates from the upstream 192.168.1.0/24 network to simulate an external monitoring location. This represents a NOC monitoring a remote branch over an upstream network rather than operating inside the branch LAN.
 
-### 🌐 Monitoring Addressing
+### 🌐 Ip Addressing
 
 | Device | Address | Purpose |
 | --- | --- | --- |
