@@ -38,9 +38,7 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 
 ### 🔀 Logical Monitoring Topology
 
-```text
-<img width="953" height="364" alt="Image" src="https://github.com/user-attachments/assets/59c514d3-b7af-4ab3-a5ea-25a3267bd200" />
-```
+<img width="953" height="364" alt="Image" src="https://github.com/user-attachments/assets/559751df-abcd-47f2-bb8b-7a71da5dafad" />
 
 Unlike the endpoint network used during Phase 1, NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate an external monitoring location.
 
