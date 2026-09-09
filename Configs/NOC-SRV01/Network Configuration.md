@@ -6,7 +6,7 @@ NOC-SRV01 was deployed as an Ubuntu Server virtual machine in VMware Workstation
 
 | Setting | Value |
 | --- | --- |
-| Hostname | `noc-svr01` |
+| Hostname | noc-svr01 |
 | Platform | Ubuntu Server |
 | Virtualization | VMware Workstation Pro |
 | Network Mode | Bridged |
@@ -14,7 +14,7 @@ NOC-SRV01 was deployed as an Ubuntu Server virtual machine in VMware Workstation
 | Default Gateway | `192.168.1.254` |
 | Primary DNS | `192.168.1.254` |
 | Secondary DNS | `8.8.8.8` |
-| Interface | `ens33` |
+| Interface | ens33 |
 
 VMware bridged networking allows NOC-SRV01 to operate directly on the upstream `192.168.1.0/24` network while remaining logically separate from the simulated branch network.
 
