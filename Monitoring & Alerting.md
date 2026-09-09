@@ -85,7 +85,7 @@ The server provides:
 - Management reachability to the branch network
 
 📄 View NOC-SRV01 Phase 3 configurations below:
-- Network Configuration
+- [Network Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Network%20Configuration.md)
 - Static Management Route
 - Syslog Receiver Configuration
 
