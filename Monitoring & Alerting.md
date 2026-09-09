@@ -96,10 +96,10 @@ The existing Phase 2 NAT policy was modified to support the remote monitoring pa
 The Phase 2 NAT configuration was updated to allow direct communication between the VLAN 20 management network and NOC-SRV01 while preserving PAT for normal Internet-bound traffic. This maintains the original management addresses between NOC-SRV01 and VLAN 20 for direct monitoring and administration.
 
 📄 View RTR-01 Phase 3 configurations below:
-- Management NAT Exemption
-- NTP Configuration
-- SNMPv3 Configuration
-- Syslog Configuration
+- [Management NAT Exemption](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Phase%203%20Configuration.md)
+- [NTP Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NTP%20Configuration.md)
+- [SNMPv3 Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/SNMPv3%20Configuration.md)
+- [Syslog Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/SNMPv3%20Configuration.md)
 
 ### 🔀 SW-01 — Monitoring Services
 
