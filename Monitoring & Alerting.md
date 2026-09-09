@@ -134,7 +134,6 @@ LibreNMS uses SNMPv3 to collect operational information including:
 - VLAN information
 - Device hardware and IOS information
 
-SNMP credentials are intentionally excluded from this repository.
 
 ### 📊 LibreNMS
 
