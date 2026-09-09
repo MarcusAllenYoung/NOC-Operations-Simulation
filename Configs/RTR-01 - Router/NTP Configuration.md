@@ -7,7 +7,7 @@ NTP was configured on RTR-01 during Phase 3 to provide synchronized time for net
 | Setting | Value |
 | --- | --- |
 | NTP Role | Client / Internal Time Source |
-| External Source | External NTP server |
+| External Source | time.google.com |
 | Internal Client | SW-01 |
 | Purpose | Consistent event timestamps |
 
