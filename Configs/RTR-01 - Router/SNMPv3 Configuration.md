@@ -32,7 +32,7 @@ snmp-server group NOC-MONITOR v3 priv
 snmp-server user NOC-LIBRENMS NOC-MONITOR v3 auth sha <AUTH-PASSWORD> priv aes 128 <PRIVACY-PASSWORD>
 ```
 
-`<AUTH-PASSWORD>` and `<PRIVACY-PASSWORD>` are placeholders. Actual credentials are not stored in the repository.
+<AUTH-PASSWORD>` and `<PRIVACY-PASSWORD>` are placeholders
 
 ---
 
