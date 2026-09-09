@@ -39,28 +39,7 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 ### 🔀 Logical Monitoring Topology
 
 ```text
-                     NOC / Monitoring Network
-
-                  NOC-SRV01
-                Ubuntu Server VM
-                 192.168.1.50
-                       |
-                 VMware Bridged
-                       |
-                AT&T LAN / Wi-Fi
-                 192.168.1.0/24
-                       |
-          +------------+-------------+
-          |                          |
-   AT&T Gateway                  RTR-01 Gi0/0
-   192.168.1.254                 192.168.1.86
-                                     |
-                                Branch Network
-                                     |
-                              Gi0/1 802.1Q Trunk
-                                     |
-                                   SW-01
-                              Mgmt: 10.10.20.2
+<img width="953" height="364" alt="Image" src="https://github.com/user-attachments/assets/59c514d3-b7af-4ab3-a5ea-25a3267bd200" />
 ```
 
 Unlike the endpoint network used during Phase 1, NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate an external monitoring location.
