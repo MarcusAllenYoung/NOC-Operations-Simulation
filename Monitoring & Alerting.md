@@ -83,7 +83,7 @@ The server provides:
 📄 View NOC-SRV01 Phase 3 configurations below:
 
 - [Network Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Network%20Configuration.md)
-- [Static Management Route](...)
+- [Static Management Route](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Static%20Management%20Route.md)
 - [Syslog Receiver Configuration](...)
 
 ### 🔄 RTR-01 — Management Routing & NAT Policy
