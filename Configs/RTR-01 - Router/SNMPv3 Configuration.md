@@ -15,7 +15,6 @@ SNMPv3 was configured on RTR-01 during Phase 3 to allow LibreNMS to securely col
 
 SNMPv3 provides authenticated and encrypted monitoring communication between LibreNMS and RTR-01.
 
-Authentication and privacy credentials are intentionally excluded from this repository.
 
 ---
 
