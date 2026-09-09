@@ -40,7 +40,7 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 
 <img width="944" height="362" alt="Image" src="https://github.com/user-attachments/assets/9a447537-0233-4b77-bb2f-890f6446b7cb" />
 
-NOC-SRV01 operates from the upstream 192.168.1.0/24 network to simulate an external monitoring location. This models a NOC monitoring a remote branch over an upstream network rather than placing the monitoring server directly inside the branch VLANs.
+NOC-SRV01 operates from the upstream 192.168.1.0/24 network to simulate an external monitoring location. This represents a NOC monitoring a remote branch over an upstream network rather than operating inside the branch LAN.
 
 ### 🌐 Monitoring Addressing
 
@@ -90,7 +90,7 @@ The server provides:
 
 The existing Phase 2 NAT policy was modified to support the remote monitoring path.
 
-The Phase 2 NAT configuration was updated to allow direct communication between the VLAN 20 management network and NOC-SRV01 while preserving PAT for normal Internet-bound traffic.
+The Phase 2 NAT configuration was updated to allow direct communication between the VLAN 20 management network and NOC-SRV01 while preserving PAT for normal Internet-bound traffic. This maintains the original management addresses between NOC-SRV01 and VLAN 20 for direct monitoring and administration.
 
 📄 View RTR-01 Phase 3 configurations below:
 
