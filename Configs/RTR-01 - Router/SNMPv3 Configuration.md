@@ -8,7 +8,7 @@ SNMPv3 was configured on RTR-01 during Phase 3 to allow LibreNMS to securely col
 | --- | --- |
 | Monitoring Server | NOC-SRV01 |
 | Monitoring Platform | LibreNMS |
-| Security Level | `authPriv` |
+| Security Level | authPriv |
 | Authentication | SHA |
 | Privacy | AES 128 |
 | SNMP Version | SNMPv3 |
