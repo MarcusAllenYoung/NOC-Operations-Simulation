@@ -37,15 +37,16 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as `NOC-SRV01` to
 | NTP | Time synchronization for consistent event timestamps |
 | SSH | Remote administration of RTR-01 and SW-01 |
 
-### 🛠️ Devices Used
+### 🛠️ Equipment Used
 
-| Device | Model / Platform | Role |
+| Equipment | Model / Platform | Role |
 | --- | --- | --- |
-| Router | Cisco ISR 2911 | Routes management traffic between NOC-SRV01 and the branch network |
-| Switch | Cisco Catalyst 2960X | Provides the branch management interface and network interfaces monitored by LibreNMS |
-| NOC-SRV01 | Ubuntu Server VM | Remote monitoring and centralized logging server |
-| Host Workstation | Windows PC | Hosts NOC-SRV01 through VMware Workstation Pro |
-| Upstream Gateway | AT&T Gateway | Provides the upstream network and Internet connectivity |
+| Router | Cisco ISR 2911 | ROAS, DHCP, NAT/PAT, and SNMPv3 monitoring |
+| Switch | Cisco Catalyst 2960X | VLANs, trunking, SNMPv3 monitoring, and syslog |
+| Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
+| Workstation | Windows PC | VMware host and server administration |
+| Home Router | AT&T Gateway | Upstream network and Internet access |
+| Cabling | Cat5e/Cat6 | Physical network connectivity |
 
 ### 🔀 Logical Topology
 
