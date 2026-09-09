@@ -28,7 +28,7 @@ The purpose of this phase is to establish upstream WAN and Internet connectivity
 | Router | Cisco ISR 2911 | Routing, DHCP, NAT/PAT, and WAN connectivity |
 | Switch | Cisco Catalyst 2960 | VLANs, trunking, and Layer 2 connectivity |
 | Workstation | Windows PC | User endpoint, testing, and verification |
-| Upstream Gateway | AT&T Gateway | Internet access |
+| Home Router | AT&T Gateway | Internet access |
 | Cabling | Cat5e/Cat6 | Physical network connectivity |
 
 ### ⛓️ Physical Topology
