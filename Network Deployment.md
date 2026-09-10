@@ -38,7 +38,7 @@ The internal network was designed with separate user and management networks, ce
 
 ### 🔀 Logical Topology
 
-<img width="1292" height="277" alt="Logical Network Topology" src="https://github.com/user-attachments/assets/707745e1-d562-45d1-a87e-ad772241c088" />
+<img width="947" height="379" alt="Image" src="https://github.com/user-attachments/assets/29f1b91b-7fea-4732-b9a9-d37508506e46" />
 
 WAN connectivity is excluded from this phase and will be introduced during Phase 2.
 
