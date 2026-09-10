@@ -49,7 +49,7 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as NOC-SRV01 to m
 
 ### 🔀 Logical Topology
 
-<img width="944" height="362" alt="Image" src="https://github.com/user-attachments/assets/9a447537-0233-4b77-bb2f-890f6446b7cb" />
+<img width="944" height="365" alt="Image" src="https://github.com/user-attachments/assets/66bc51de-ad38-41a6-add0-c04a27385c5f" />
 
 NOC-SRV01 operates from the upstream 192.168.1.0/24 network to simulate an external monitoring location. This represents a NOC monitoring a remote branch over an upstream network rather than operating inside the branch LAN.
 
