@@ -156,13 +156,13 @@ LibreNMS successfully discovered device information, interfaces, operating-syste
 
 For SW-01, LibreNMS also provides visibility into interfaces such as:
 
-- **Gi1/0/1 — trunk to RTR-01**
+- **Gi1/0/1 - trunk to RTR-01**
   <img width="946" height="431" alt="Screenshot 2026-09-10 194712" src="https://github.com/user-attachments/assets/3e2543c9-784a-4682-a85b-cc04e9d6317d" />
   
-- **Gi1/0/10 — STORE-PC1**
+- **Gi1/0/10 - STORE-PC1**
   <img width="941" height="146" alt="Screenshot 2026-09-10 194814" src="https://github.com/user-attachments/assets/59518cae-186a-4cb3-b8d1-3b9bc5da48c2" />
   
-- **VLAN interfaces**
+- **VLANs 10, 20, and 99**
   <img width="951" height="247" alt="Image" src="https://github.com/user-attachments/assets/de7bf170-447c-4c69-81af-9cfd2bf8f795" />
   
 
