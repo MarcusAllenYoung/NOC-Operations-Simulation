@@ -71,23 +71,25 @@ Build and validate the physical LAN before introducing outside connectivity.
 
 ### [02 | Upstream Connectivity & NAT 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md) Completed ✅
 
-Extend LBR-001 beyond the internal network and establish external connectivity.
+Connect the retail branch to the upstream network and provide Internet access.
 
-**Focus:** WAN integration, default routing, NAT/PAT, Internet connectivity, DNS testing, and WAN validation.
+**Focus:** WAN integration, NAT/PAT, Internet connectivity, DNS testing, and WAN validation.
 
 ---
 
 ### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md) Completed ✅
 
-Introduce centralized visibility into the health and performance of the network.
+Build the remote NOC environment and begin monitoring the retail branch.
 
-**Focus:** LibreNMS, SNMP, syslog, device availability, interface monitoring, performance baselines, and alerting.
+**Focus:** LibreNMS, Ubunta Linux Server, SNMP, syslog, NTP, device availability, interface monitoring, performance baselines, and alerting.
 
 ---
 
 ### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
 
-Use the completed environment to simulate network incidents and operational troubleshooting.
+Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the retail branch.
+
+Controlled failures are introduced into the network and handled as simulated incidents.
 
 **Focus:** Alert investigation, ticket creation, fault isolation, troubleshooting, ISP escalation, service restoration, and incident closure.
 
