@@ -185,7 +185,8 @@ Alert behavior was also tuned so unused or non-operational interfaces do not gen
 
 ### 🌐 NOC-SRV01 Network Verification
 
-NOC-SRV01 successfully established its upstream network configuration and management route.
+- NOC-SRV01 successfully established its upstream network configuration and management route.
+- NOC-SRV01 is configured with the static address 192.168.1.50/24 on interface ens33.
 
 **Verification Commands**
 ```
