@@ -150,9 +150,11 @@ The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility
 
 ## 5. Results & Handoff 🏁
 
-The Network Foundation phase established a working and documented internal network with VLAN segmentation, routing, DHCP, management access, SSH, and endpoint connectivity.
+The Network Deployment phase established a working retail store branch network with VLAN segmentation, inter-VLAN routing, DHCP, secure remote management, and endpoint connectivity.
 
-This known-good baseline will be used as a reference when monitoring and incident-response scenarios are introduced later in the project.
+RTR-01, SW-01, and STORE-PC1 were successfully configured and verified, establishing a known-good internal network for the branch.
+
+With the internal branch network operational, the next phase connects the retail store to the upstream network and provides Internet access using NAT/PAT.
 
 🌐 Next Phase: [Upstream Connectivity & NAT](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20&%20NAT.md)
 
