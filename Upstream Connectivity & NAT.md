@@ -36,8 +36,7 @@ The purpose of this phase is to establish upstream WAN and Internet connectivity
 Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 
 **RTR-01, SW-01, & AT&T Gateway**
-<img width="4280" height="3406" alt="Image" src="https://github.com/user-attachments/assets/d56cc878-b6e6-4a8e-9a93-3c87da51f04e" />
-
+<img width="4032" height="2744" alt="Image" src="https://github.com/user-attachments/assets/57754db1-ffe5-4331-87be-10cf94659a4f" />
 
 ### 🔀 Logical Topology
 <img width="926" height="377" alt="Image" src="https://github.com/user-attachments/assets/b4c60271-36e5-4914-bcc2-e1b0a28db1ce" />
