@@ -25,7 +25,7 @@ The lab represents a small retail store branch being supported remotely by an MS
 The branch contains the physical network being supported:
 
 - Cisco ISR 2911 router
-- Cisco Catalyst 2960X switch
+- Cisco Catalyst 2960 switch
 - Store workstation
 - User network
 - Management network
@@ -35,7 +35,6 @@ The branch contains the physical network being supported:
 
 The remote NOC monitors and supports the retail branch using:
 
-- NOC-SRV01 monitoring server
 - Ubuntu Server
 - LibreNMS
 - SNMPv3 monitoring
