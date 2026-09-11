@@ -45,19 +45,15 @@ The remote NOC monitors and supports the retail branch using:
 <table>
   <tr>
     <td><b>1 x Cisco ISR 2911 Router</td>
+    <td><b>VMware Workstation</td>
     <td><b>LibreNMS</td>
+    <td><b>PuTTY</td>
   </tr>
   <tr>
     <td><b>1 x Cisco Catalyst 2960X Switch</td>
-    <td><b>Spiceworks</td>
-  </tr>
-  <tr>
-    <td><b>VMware Workstation</td>
-    <td><b>Wireshark</td>
-  </tr>
-  <tr>
     <td><b>Ubuntu Linux</td>
-    <td><b>PuTTY</td>
+    <td><b>Spiceworks</td>
+    <td><b>Wireshark</td>
   </tr>
 </table>
 
