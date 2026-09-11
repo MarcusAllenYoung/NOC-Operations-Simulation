@@ -59,6 +59,31 @@ The remote NOC monitors and supports the retail branch using:
 
 ---
 
+# NOC Operations Simulation 🌐
+
+## 🔗 About the Project
+
+[Your About the Project text]
+
+---
+
+## 🖥️ Device Reference
+
+| **Device Name** | **Device** | **Location** |
+| :--- | :--- | :--- |
+| **RTR-01** | **Cisco ISR 2911 Router** | **Retail Store Branch** |
+| **SW-01** | **Cisco Catalyst 2960 Switch** | **Retail Store Branch** |
+| **STORE-PC1** | **Store Workstation** | **Retail Store Branch** |
+| **NOC-SRV01** | **Ubuntu / LibreNMS Monitoring Server** | **MSP / NOC** |
+
+---
+
+## 🗺️ Network Topology
+
+[Your topology]
+
+---
+
 ## 🗺️ Project Roadmap
 
 ### [01 | Network Deployment 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Deployment.md) Completed ✅
