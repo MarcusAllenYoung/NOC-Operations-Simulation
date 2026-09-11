@@ -77,7 +77,6 @@ Both devices received baseline hardening: hostname, local admin account, SSH v2 
 Layer 3 routing for the internal network.
 
 - 802.1Q subinterfaces for router-on-a-stick (VLANs 10, 20, native 99)
-- Inter-VLAN routing between USERS and MANAGEMENT
 - DHCP for VLAN 10, with infrastructure addresses excluded
 
 ##### View RTR-01 Phase 1 Configurations below:
