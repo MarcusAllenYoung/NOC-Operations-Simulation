@@ -305,4 +305,4 @@ The completed monitoring environment provides visibility into:
 
 A known-good monitoring baseline has now been established. This baseline will be used during Phase 4 to generate controlled network failures, detect them through monitoring, create simulated tickets, troubleshoot the underlying problem, validate recovery, and document ticket closure.
 
-**🎫 Next Phase: Incident Response & Ticketing**
+[Next Phase: Incident Response & Ticketing]
