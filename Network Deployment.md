@@ -88,9 +88,9 @@ Layer 3 routing for the internal network.
 Layer 2 segmentation and access.
 
 - VLANs 10 (USERS), 20 (MANAGEMENT), and 99 (native/parking)
-- `Gi1/0/1` trunk to RTR-01
-- `Gi1/0/10` access port for STORE-PC1
-- Management SVI `10.10.20.2/24`
+- Gi1/0/1 trunk to RTR-01
+- Gi1/0/10 access port for STORE-PC1 placed in Vlan 10
+- Vlan 20 Management SVI `10.10.20.2/24`
 - Unused ports assigned to VLAN 99 and administratively disabled
 
 ##### View SW-01 Phase 1 Configurations below:
