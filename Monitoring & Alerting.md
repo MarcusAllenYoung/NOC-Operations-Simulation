@@ -210,16 +210,12 @@ Connectivity was verified to:
 
 RTR-01 successfully synchronized with its external NTP source.
 
-**Verification Commands**
-
 **RTR-01 NTP Synchronization**
 <img width="946" height="278" alt="Image" src="https://github.com/user-attachments/assets/91da3768-e6b5-4b6d-8cb5-1b7a15829c91" />
 
 ### 🕒 SW-01 NTP Verification
 
 SW-01 successfully synchronized its clock using RTR-01 as its NTP source.
-
-**Verification Commands**
 
 **SW-01 NTP Synchronization**
 <img width="956" height="311" alt="Image" src="https://github.com/user-attachments/assets/85c3db9f-ca5e-4d7c-8f63-0027d57b266a" />
