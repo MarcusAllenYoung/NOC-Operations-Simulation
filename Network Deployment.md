@@ -25,7 +25,6 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 <img width="950" height="195" alt="Image" src="https://github.com/user-attachments/assets/c254fbe5-0729-476e-8bf6-85edca7d293d" />
 
-WAN connectivity is excluded from this phase and will be introduced during Phase 2.
 
 ### 🔗 Objective
 
