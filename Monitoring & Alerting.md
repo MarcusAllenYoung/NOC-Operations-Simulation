@@ -247,13 +247,17 @@ SNMPv3 polling was manually tested from NOC-SRV01 before relying on LibreNMS. Bo
 
 Sensitive authentication and privacy credentials have been removed from documentation and screenshots.
 
-**Cisco Verification Commands**
-```
-show snmp user
-show snmp group
-```
+**SW-01 SNMPv3 Query**
 
-*[ADD SANITIZED SNMPv3 VERIFICATION SCREENSHOT]*
+[SW-01 SCREENSHOT]
+
+NOC-SRV01 successfully queried SW-01 at `10.10.20.2` using SNMPv3 and returned the device system name `SW-01.noc.lab`.
+
+**RTR-01 SNMPv3 Query**
+
+[RTR-01 SCREENSHOT]
+
+NOC-SRV01 successfully queried RTR-01 at `192.168.1.86` using SNMPv3 and returned the device system name `RTR-01.noc.lab`.
 
 ### 📊 LibreNMS Device Verification
 
