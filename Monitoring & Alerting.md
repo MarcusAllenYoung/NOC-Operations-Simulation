@@ -248,14 +248,12 @@ SNMPv3 polling was manually tested from NOC-SRV01 before relying on LibreNMS. Bo
 Sensitive authentication and privacy credentials have been removed from documentation and screenshots.
 
 **SW-01 SNMPv3 Query**
-
-[SW-01 SCREENSHOT]
+<img width="949" height="83" alt="Image" src="https://github.com/user-attachments/assets/51dda2df-e816-45f3-be74-a998daf5e628" />
 
 NOC-SRV01 successfully queried SW-01 at `10.10.20.2` using SNMPv3 and returned the device system name `SW-01.noc.lab`.
 
 **RTR-01 SNMPv3 Query**
-
-[RTR-01 SCREENSHOT]
+<img width="956" height="79" alt="Image" src="https://github.com/user-attachments/assets/c8cf22b4-7c6b-4b99-916a-485b2d165bb9" />
 
 NOC-SRV01 successfully queried RTR-01 at `192.168.1.86` using SNMPv3 and returned the device system name `RTR-01.noc.lab`.
 
