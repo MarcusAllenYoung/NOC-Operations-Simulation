@@ -26,20 +26,15 @@ The branch contains the physical network being supported:
 
 - Cisco ISR 2911 router
 - Cisco Catalyst 2960 switch
-- Store workstation
-- User network
-- Management network
+- End User Devices
 - Internet connectivity
 
 ### MSP / NOC
 
 The remote NOC monitors and supports the retail branch using:
 
-- Ubuntu Server
-- LibreNMS
-- SNMPv3 monitoring
-- Centralized syslog
-- Network alerting
+- Ubuntu Linux Server
+- LibreNMS (Monitoring Software)
 - Remote device administration
 - Incident and ticket management
 
