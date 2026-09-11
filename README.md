@@ -42,7 +42,6 @@ The remote NOC monitors and supports the retail branch using:
 
 ## 🔧 Lab Technologies
 
-| **Infrastructure & Virtualization** | **Monitoring & Operations** |
 | :--- | :--- |
 | Cisco ISR 2911 Router | LibreNMS |
 | Cisco Catalyst 2960 Switch | Spiceworks |
