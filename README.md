@@ -63,7 +63,7 @@ The remote NOC monitors and supports the retail branch using:
 
 ### [01 | Network Deployment 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Deployment.md) Completed ✅
 
-Build and validate the physical LAN before introducing outside connectivity.
+Build and configure the physical retail branch network.
 
 **Focus:** VLAN segmentation, 802.1Q trunking, inter-VLAN routing, management access, device hardening, endpoint connectivity, and establishing a known-good network baseline.
 
