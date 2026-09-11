@@ -49,12 +49,12 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 | Device | Interface | Role |
 | --- | --- | --- |
-| RTR-01 | Gi0/1 | Trunk port to SW-01 |
-| RTR-01 | Gi0/1.10 | VLAN 10 subinterface |
-| RTR-01 | Gi0/1.20 | VLAN 20 subinterface |
+| RTR-01 | Gi0/1 | Link to SW-01 |
+| RTR-01 | Gi0/1.10 | VLAN 10 gateway subinterface |
+| RTR-01 | Gi0/1.20 | VLAN 20 gateway subinterface |
 | RTR-01 | Gi0/1.99 | Native VLAN subinterface |
-| SW-01 | Gi1/0/1 | Trunk to RTR-01 |
-| SW-01 | Gi1/0/10 | Access port to STORE-PC1 |
+| SW-01 | Gi1/0/1 | Trunk link to RTR-01 |
+| SW-01 | Gi1/0/10 | Access link to STORE-PC1 |
 | SW-01 | Int Vlan 20 | SVI Interface |
 | SW-01 | Remaining ports | Unused / shutdown |
 
