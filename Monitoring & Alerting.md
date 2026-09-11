@@ -253,8 +253,7 @@ Sensitive authentication and privacy credentials have been removed from document
 
 **RTR-01 SNMPv3 Query**
 <img width="956" height="79" alt="Image" src="https://github.com/user-attachments/assets/c8cf22b4-7c6b-4b99-916a-485b2d165bb9" />
-
-NOC-SRV01 successfully queried RTR-01 at `192.168.1.86` using SNMPv3 and returned the device system name `RTR-01.noc.lab`.
+> NOC-SRV01 successfully queried RTR-01 at `192.168.1.86` using SNMPv3 and returned the device system name `RTR-01.noc.lab`.
 
 ### 📊 LibreNMS Device Verification
 
