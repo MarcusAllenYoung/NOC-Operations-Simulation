@@ -44,11 +44,11 @@ The remote NOC monitors and supports the retail branch using:
 
 <table>
   <tr>
-    <td>Cisco ISR 2911 Router</td>
+    <td>1 x Cisco ISR 2911 Router</td>
     <td>LibreNMS</td>
   </tr>
   <tr>
-    <td>Cisco Catalyst 2960X Switch</td>
+    <td>1 x Cisco Catalyst 2960X Switch</td>
     <td>Spiceworks</td>
   </tr>
   <tr>
