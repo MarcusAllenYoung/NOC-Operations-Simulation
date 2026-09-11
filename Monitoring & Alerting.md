@@ -226,7 +226,7 @@ show ntp associations
 show ntp status
 ```
 
-*[ADD RTR-01 NTP SCREENSHOT]*
+<img width="946" height="278" alt="Image" src="https://github.com/user-attachments/assets/91da3768-e6b5-4b6d-8cb5-1b7a15829c91" />
 
 ### 🕒 SW-01 NTP Verification
 
