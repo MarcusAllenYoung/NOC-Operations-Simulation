@@ -8,14 +8,16 @@ The purpose of this phase was to build and configure the basic network for the l
 
 A Cisco router and switch were connected and configured to create separate networks for users and network management. A Windows PC was connected as a test device to make sure the network was working correctly.
 
-This phase established:
+### 🔗 Objective
 
-- Separate networks for users and network management
-- Communication between the different networks
-- Automatic IP address assignment for connected devices
-- Remote access to the router and switch
-- Basic security for unused switch ports
-- A working network that could be expanded in later phases
+- Create separate VLANs for user and management traffic
+- Assign switch ports to the correct VLANs
+- Configure a trunk link between the switch and router
+- Configure Router-on-a-Stick for inter-VLAN routing
+- Configure DHCP to automatically provide network settings
+- Configure SSH for remote access to the router and switch
+- Secure unused switch ports by placing them in a parking VLAN and shutting them down
+- Verify connectivity between the PC, router, and switch
 
 ## 2. Network Design 🗺️
 
