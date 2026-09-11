@@ -47,6 +47,12 @@ An Ubuntu Server virtual machine running LibreNMS was deployed as NOC-SRV01 to m
 
 ### ⛓️ Physical Topology
 
+**Branch Network**
+<img width="4032" height="2744" alt="Image" src="https://github.com/user-attachments/assets/57754db1-ffe5-4331-87be-10cf94659a4f" />
+
+**Remote NOC**
+
+
 ### 🔀 Logical Topology
 
 <img width="944" height="365" alt="Image" src="https://github.com/user-attachments/assets/66bc51de-ad38-41a6-add0-c04a27385c5f" />
