@@ -207,10 +207,12 @@ Expected management route: `10.10.20.0/24 via 192.168.1.86`
 NOC-SRV01 successfully reached the branch network through RTR-01.
 
 Connectivity was verified to:
-- RTR-01 — 192.168.1.86
-- SW-01 — 10.10.20.2
 
-*[ADD MANAGEMENT REACHABILITY SCREENSHOT]*
+**RTR-01 — 192.168.1.86**
+
+**Ping to SW-01 (10.10.20.2)**
+  <img width="953" height="189" alt="Image" src="https://github.com/user-attachments/assets/576b0dc0-fb2e-4d5c-8402-346e7d15e7b1" />
+
 
 ### 🕒 RTR-01 NTP Verification
 
