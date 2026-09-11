@@ -239,7 +239,7 @@ show ntp associations
 show ntp status
 ```
 
-*[ADD SW-01 NTP SCREENSHOT]*
+<img width="956" height="311" alt="Image" src="https://github.com/user-attachments/assets/85c3db9f-ca5e-4d7c-8f63-0027d57b266a" />
 
 ### 🔐 SNMPv3 Verification
 
