@@ -107,7 +107,7 @@ The Phase 2 NAT configuration was updated to allow direct communication between 
 - [Management NAT Exemption](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Phase%203%20Configuration.md)
 - [NTP Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NTP%20Configuration.md)
 - [SNMPv3 Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/SNMPv3%20Configuration.md)
-- [Syslog Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/SNMPv3%20Configuration.md)
+- [Syslog Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Syslog%20Configuration.md)
 
 ### 🔀 SW-01 — Monitoring Services
 
