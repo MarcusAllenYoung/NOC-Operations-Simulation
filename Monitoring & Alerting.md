@@ -249,7 +249,6 @@ Sensitive authentication and privacy credentials have been removed from document
 
 **SW-01 SNMPv3 Query**
 <img width="949" height="83" alt="Image" src="https://github.com/user-attachments/assets/51dda2df-e816-45f3-be74-a998daf5e628" />
-
 > NOC-SRV01 successfully queried SW-01 at `10.10.20.2` using SNMPv3 and returned the device system name `SW-01.noc.lab`.
 
 **RTR-01 SNMPv3 Query**
