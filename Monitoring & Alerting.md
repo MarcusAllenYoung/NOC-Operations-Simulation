@@ -185,12 +185,6 @@ Alert behavior was tuned so unused or non-operational interfaces do not generate
 - NOC-SRV01 successfully established its upstream network configuration and management route.
 - NOC-SRV01 is configured with the static address 192.168.1.50/24 on interface ens33.
 
-**Verification Commands**
-```
-ip addr
-ip route
-```
-
 Expected management route: `10.10.20.0/24 via 192.168.1.86`
 
 **NOC-SRV01 Interface Address**
@@ -217,11 +211,7 @@ Connectivity was verified to:
 RTR-01 successfully synchronized with its external NTP source.
 
 **Verification Commands**
-```
-show clock
-show ntp associations
-show ntp status
-```
+
 **RTR-01 NTP Synchronization**
 <img width="946" height="278" alt="Image" src="https://github.com/user-attachments/assets/91da3768-e6b5-4b6d-8cb5-1b7a15829c91" />
 
@@ -230,11 +220,7 @@ show ntp status
 SW-01 successfully synchronized its clock using RTR-01 as its NTP source.
 
 **Verification Commands**
-```
-show clock
-show ntp associations
-show ntp status
-```
+
 **SW-01 NTP Synchronization**
 <img width="956" height="311" alt="Image" src="https://github.com/user-attachments/assets/85c3db9f-ca5e-4d7c-8f63-0027d57b266a" />
 
