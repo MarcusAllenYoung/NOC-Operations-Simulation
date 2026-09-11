@@ -193,11 +193,11 @@ ip route
 
 Expected management route: `10.10.20.0/24 via 192.168.1.86`
 
-**NOC-SRV01 Management Route**
-<img width="950" height="129" alt="Image" src="https://github.com/user-attachments/assets/01136cc0-6e2f-4d5e-bbba-6a2f4189424e" />
-
 **NOC-SRV01 Interface Address**
 <img width="932" height="254" alt="Image" src="https://github.com/user-attachments/assets/f48e8c63-2aee-4688-a3fa-614ee00aa515" />
+
+**NOC-SRV01 Management Route**
+<img width="950" height="129" alt="Image" src="https://github.com/user-attachments/assets/01136cc0-6e2f-4d5e-bbba-6a2f4189424e" />
 
 ### 📡 Management Reachability Verification
 
