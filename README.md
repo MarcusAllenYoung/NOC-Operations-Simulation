@@ -45,7 +45,7 @@ Extend LBR-001 beyond the internal network and establish external connectivity.
 
 ---
 
-### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/Network%20Monitoring%20%26%20Observability%20Deployment)
+### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md) Completed ✅
 
 Introduce centralized visibility into the health and performance of the network.
 
@@ -53,7 +53,7 @@ Introduce centralized visibility into the health and performance of the network.
 
 ---
 
-### [04 | Incident Response 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
+### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
 
 Use the completed environment to simulate network incidents and operational troubleshooting.
 
