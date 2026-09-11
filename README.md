@@ -1,18 +1,48 @@
-# 🖥️ NOC Operations Simulation
+# NOC Operations Simulation 🌐
 
-> A physical NOC lab focused on network monitoring, incident response, troubleshooting, and ticket management.
+A physical networking project that simulates a fictional retail store branch network being remotely monitored and supported by a NOC technician at a Managed Service Provider (MSP).
 
-## About the Project
+## 🔗 About the Project
 
-This project documents the development of a physical network environment designed to simulate the operational responsibilities of an entry-level Network Operations Center (NOC) technician.
+This project simulates a fictional retail store branch network, built and operated the way a NOC technician at an MSP would support a real client site.
 
-The lab is built using physical Cisco routing and switching infrastructure and will expand to include WAN connectivity, centralized network monitoring, logging, and ticket management. While the project begins with deploying and validating the network, its primary focus is using that infrastructure to practice realistic NOC incident response.
+The branch runs on physical Cisco routing and switching equipment. It begins as a standalone network and expands in phases to include Internet connectivity, remote monitoring, centralized logging, alerting, and a full ticketing workflow.
 
-Once the environment is operational, controlled network failures will be introduced to generate realistic incidents. These incidents will be detected through monitoring alerts or simulated user reports and documented in Spiceworks as trouble tickets.
+The monitoring server is intentionally placed outside the branch network on the upstream network and uses LibreNMS to monitor the router and switch. This simulates how an MSP can remotely monitor a client's network without a technician physically on-site.
 
-Each incident will require investigation, fault isolation, troubleshooting, escalation when appropriate, service restoration, validation, and ticket closure.
+Once the network is fully built and monitored, controlled failures are introduced to generate realistic incidents. Each incident is detected through a monitoring alert or simulated user report, documented as a trouble ticket, and worked from start to finish: investigated, troubleshot, restored, verified, and closed.
 
-The goal is to practice supporting and troubleshooting an operational network, not simply building one.
+**The goal of this project is to practice the day-to-day work of an entry-level NOC technician at an MSP, not just build a network and consider it finished.**
+
+---
+
+## 🏪 Lab Environment
+
+The lab represents a small retail store branch being supported remotely by an MSP.
+
+### Retail Store Branch
+
+The branch contains the physical network being supported:
+
+- Cisco ISR 2911 router
+- Cisco Catalyst 2960X switch
+- Store workstation
+- User network
+- Management network
+- Internet connectivity
+
+### MSP / NOC
+
+The remote NOC monitors and supports the retail branch using:
+
+- NOC-SRV01 monitoring server
+- Ubuntu Server
+- LibreNMS
+- SNMPv3 monitoring
+- Centralized syslog
+- Network alerting
+- Remote device administration
+- Incident and ticket management
 
 ---
 
