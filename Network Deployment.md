@@ -1,25 +1,21 @@
 # 01 | Network Deployment 🏗️
 
-Establishing a known-good internal network to support future monitoring and incident-response operations.
-
----
+Building the physical network that will be used throughout the NOC Operations Simulation.
 
 ## 1. Purpose & Objectives 🎯
 
-The internal network was designed with separate user and management networks, centralized DHCP addressing, inter-VLAN routing, secure remote device administration, and basic switch-port hardening.
+The purpose of this phase was to build and configure the basic network for the lab.
 
-| Design Goal | Purpose |
-| --- | --- |
-| VLAN segmentation | Separate user and network-management traffic |
-| 802.1Q trunking | Carry multiple VLANs between SW-01 and RTR-01 |
-| Inter-VLAN routing | Provide Layer 3 connectivity between segmented networks |
-| DHCP | Automatically configure user endpoints |
-| Management network | Provide dedicated addressing for network-device management |
-| SSH | Provide secure remote administration |
-| Port hardening | Disable and isolate unused switch interfaces |
-| Known-good baseline | Establish normal network behavior before monitoring and incident simulation |
+A Cisco router and switch were connected and configured to create separate networks for users and network management. A Windows PC was connected as a test device to make sure the network was working correctly.
 
----
+This phase established:
+
+- Separate networks for users and network management
+- Communication between the different networks
+- Automatic IP address assignment for connected devices
+- Remote access to the router and switch
+- Basic security for unused switch ports
+- A working network that could be expanded in later phases
 
 ## 2. Network Design 🗺️
 
