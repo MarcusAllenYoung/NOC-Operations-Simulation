@@ -95,29 +95,10 @@ Controlled failures are introduced into the network and handled as simulated inc
 
 ---
 
-## 🔄 NOC Workflow
+## 🏁 Project Goal
 
-The completed environment will be used to practice a repeatable operational process:
+The completed environment represents a fictional retail store branch being remotely supported by an MSP NOC.
 
-**Monitor → Detect → Investigate → Ticket → Troubleshoot → Resolve/Escalate → Verify → Close**
+The project does not end when the network is successfully configured. The network becomes a working environment where failures can be introduced, detected through monitoring, investigated, resolved, and documented through a ticketing workflow.
 
-Each incident will document:
-
-- What was reported or detected
-- What services or devices were affected
-- Initial troubleshooting observations
-- Tests performed
-- Root cause
-- Corrective action
-- Verification of service restoration
-- Final ticket resolution
-
----
-
-## 🎯 Project Goal
-
-The purpose of this project is to bridge the gap between networking knowledge and actually operating a network.
-
-A working network is only the starting point. The completed lab will provide an environment where I can practice recognizing abnormal behavior, using monitoring data to investigate problems, troubleshooting across multiple layers of the network, communicating technical findings, and documenting incidents from detection through resolution.
-
-The project will continue to evolve as new monitoring capabilities, troubleshooting scenarios, and infrastructure are introduced.
+This allows the project to demonstrate both **building a network and supporting it after deployment.**
