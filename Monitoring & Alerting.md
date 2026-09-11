@@ -208,7 +208,7 @@ NOC-SRV01 successfully reached the branch network through RTR-01.
 
 Connectivity was verified to:
 
-**RTR-01 — 192.168.1.86**
+**Ping to RTR-01  (192.168.1.86)**
 <img width="953" height="168" alt="Image" src="https://github.com/user-attachments/assets/71b6eb1d-fcf6-4b85-96cd-9782f2f5d76d" />
 
 **Ping to SW-01 (10.10.20.2)**
