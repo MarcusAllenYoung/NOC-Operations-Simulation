@@ -116,7 +116,7 @@ SW-01 was configured to participate in centralized monitoring and logging.
 📄 View SW-01 Phase 3 configurations below:
 - [NTP Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/NTP%20Configuration.md)
 - [SNMPv3 Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/SNMPv3%20Configuration.md)
-- [Syslog Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Syslog%20Configuration.md)
+- [Syslog Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Syslog%20Configuration.md)
 
 ## 4. Monitoring Services 📡
 
