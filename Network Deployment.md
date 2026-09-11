@@ -37,6 +37,14 @@ A Cisco router and switch were connected and configured to create separate netwo
 - Secure unused switch ports by placing them in a parking VLAN and shutting them down
 - Verify connectivity between the PC, router, and switch
 
+### 🖥️ Device Reference
+
+| **Device Name** | **Device** | **Location** |
+| :--- | :--- | :--- |
+| **RTR-01** | Cisco ISR 2911 Router | Retail Store Branch |
+| **SW-01** | Cisco Catalyst 2960X Switch | Retail Store Branch |
+| **STORE-PC1** | Windows PC | Retail Store Branch |
+
 ### 🔌 Interface Mapping
 
 | Device | Interface | Role |
