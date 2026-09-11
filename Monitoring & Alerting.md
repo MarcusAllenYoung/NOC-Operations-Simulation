@@ -222,7 +222,7 @@ show clock
 show ntp associations
 show ntp status
 ```
-
+**RTR-01 NTP Synchronization**
 <img width="946" height="278" alt="Image" src="https://github.com/user-attachments/assets/91da3768-e6b5-4b6d-8cb5-1b7a15829c91" />
 
 ### 🕒 SW-01 NTP Verification
@@ -235,7 +235,7 @@ show clock
 show ntp associations
 show ntp status
 ```
-
+**SW-01 NTP Synchronization**
 <img width="956" height="311" alt="Image" src="https://github.com/user-attachments/assets/85c3db9f-ca5e-4d7c-8f63-0027d57b266a" />
 
 ### 🔐 SNMPv3 Verification
