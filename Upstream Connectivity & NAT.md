@@ -61,13 +61,13 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 
 ### 🌐 WAN & IP Addressing
 
-| Host / Interface | Address | Purpose |
+| Network / End-point | Address | Purpose |
 | --- | --- | --- |
 | VLAN 10 | 10.10.10.0/24 | USERS network |
 | VLAN 20 | 10.10.20.0/24 | MANAGEMENT network |
-| Vlan 20 SVI | 10.10.20.1 | SVI Interface |
-| STORE-PC1 | 10.10.10.21/24 | End User |
-| RTR-01 Gi0/0 | 192.168.1.86/24 | WAN interface |
+| SW-01 (Vlan 20 SVI) | 10.10.20.1 | Switch management |
+| STORE-PC1 | 10.10.10.21/24 | End-user Workstation |
+| RTR-01 Gi0/0 | 192.168.1.86/24 | Upstream / WAN interface |
 | AT&T Gateway | 192.168.1.254 | Upstream gateway |
 
 RTR-01 receives its WAN address dynamically through DHCP from the AT&T gateway, so the WAN address may change.
