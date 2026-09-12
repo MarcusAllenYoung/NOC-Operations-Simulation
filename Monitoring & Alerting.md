@@ -121,9 +121,9 @@ NTP was configured to synchronize the switch clock with RTR-01, SNMPv3 was confi
 
 ### 🕒 NTP Synchronization
 
-Accurate time was configured before monitoring and logging so events from multiple systems could be correlated using consistent timestamps.
+NTP was configured to keep consistent timestamps across the network for monitoring, logging, and troubleshooting.
 
-RTR-01 synchronizes with an external NTP source. SW-01 uses RTR-01 as its NTP source.
+RTR-01 synchronizes with an external NTP source, while SW-01 uses RTR-01 as its NTP source.
 
 During implementation, RTR-01 initially could not resolve the hostname of the configured NTP server because DNS lookup had previously been disabled. DNS lookup was enabled on RTR-01, allowing hostname-based NTP synchronization to succeed.
 
@@ -151,7 +151,7 @@ LibreNMS was deployed on NOC-SRV01 and configured to monitor both Cisco devices.
 | RTR-01 | 192.168.1.86 |
 | SW-01 | 10.10.20.2 |
 
-LibreNMS successfully discovered device information, interfaces, operating-system information, and health metrics.
+LibreNMS successfully discovered device information, interfaces, IOS information, and health metrics.
 
 For SW-01, LibreNMS also provides visibility into interfaces such as:
 
@@ -169,7 +169,7 @@ For SW-01, LibreNMS also provides visibility into interfaces such as:
 
 RTR-01 and SW-01 forward informational syslog messages to NOC-SRV01.
 
-NOC-SRV01 receives Cisco events through rsyslog and stores them centrally for troubleshooting and incident correlation. This provides a second source of operational evidence in addition to LibreNMS monitoring.
+NOC-SRV01 receives Cisco events through rsyslog and stores them centrally. These logs provide additional information that can be used alongside LibreNMS when troubleshooting network problems.
 
 ### 🚨 Alerting
 
@@ -181,8 +181,7 @@ Alert behavior was tuned so unused or non-operational interfaces do not generate
 
 ### 🌐 NOC-SRV01 Network Verification
 
-- NOC-SRV01 successfully established its upstream network configuration and management route.
-- NOC-SRV01 is configured with the static address 192.168.1.50/24 on interface ens33.
+NOC-SRV01 was verified with the static address `192.168.1.50/24` on interface `ens33` and a route to the branch management network through RTR-01.
 
 Expected management route: `10.10.20.0/24 via 192.168.1.86`
 
@@ -271,19 +270,12 @@ LibreNMS detected the loss of SNMP polling and generated a critical alert. After
 
 ## 5. Results & Handoff 🏁
 
-The Monitoring & Alerting phase transformed the physical branch network into a centrally monitored environment.
+The Monitoring & Alerting phase established a remote MSP / NOC environment for monitoring and supporting the retail store branch.
 
-NOC-SRV01 now provides remote monitoring and centralized logging for RTR-01 and SW-01 using LibreNMS, SNMPv3, and syslog.
+NOC-SRV01 successfully provides centralized monitoring and logging for RTR-01 and SW-01 using LibreNMS, SNMPv3, and syslog. NTP provides consistent device timestamps, while LibreNMS provides visibility into device availability, interfaces, health, network traffic, and alert conditions.
 
-The completed monitoring environment provides visibility into:
-- Device availability
-- Interface state
-- Device health
-- Network traffic
-- Time synchronization
-- Centralized event logs
-- Monitoring failures and recoveries
+Monitoring and alerting were successfully verified, including a controlled SNMP failure on SW-01 that generated a critical alert and recovered after SNMP access was restored.
 
-A known-good monitoring baseline has now been established. This baseline will be used during Phase 4 to generate controlled network failures, detect them through monitoring, create simulated tickets, troubleshoot the underlying problem, validate recovery, and document ticket closure.
+With remote monitoring and alerting operational, the next phase introduces simulated network incidents, ticket creation, troubleshooting, resolution, validation, and ticket closure.
 
 🎫Next Phase: [Incident Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
