@@ -92,7 +92,7 @@ The server provides:
 - [Static Management Route](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Static%20Management%20Route.md)
 - [Syslog Receiver Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Syslog%20Receiver%20Configuration.md)
 
-### 🔄 RTR-01 — Monitoring Services
+### 🔄 RTR-01 Configurations
 
 RTR-01 was configured to support remote monitoring, logging, and management from the MSP / NOC environment.
 
@@ -106,7 +106,7 @@ RTR-01 was also configured with NTP for time synchronization, SNMPv3 for secure 
 - [SNMPv3 Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/SNMPv3%20Configuration.md)
 - [Syslog Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/Syslog%20Configuration.md)
 
-### 🔀 SW-01 — Monitoring Services
+### 🔀 SW-01 Configurations
 
 SW-01 was configured to support remote monitoring and centralized logging from the MSP / NOC environment.
 
@@ -117,7 +117,7 @@ NTP was configured to synchronize the switch clock with RTR-01, SNMPv3 was confi
 - [SNMPv3 Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/SNMPv3%20Configuration.md)
 - [Syslog Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Syslog%20Configuration.md)
 
-## 4. Monitoring Services 📡
+## 3. Monitoring Services 📡
 
 ### 🕒 NTP Synchronization
 
@@ -177,7 +177,7 @@ LibreNMS alerting was configured to detect meaningful network and monitoring fai
 
 Alert behavior was tuned so unused or non-operational interfaces do not generate unnecessary alerts. A controlled SNMP monitoring failure on SW-01 was later used to validate the alert and recovery lifecycle.
 
-## 5. Verification & Operational State 🔎
+## 4. Verification & Operational State 🔎
 
 ### 🌐 NOC-SRV01 Network Verification
 
@@ -269,7 +269,7 @@ LibreNMS detected the loss of SNMP polling and generated a critical alert. After
 <img width="934" height="230" alt="Image" src="https://github.com/user-attachments/assets/e5b67734-b304-4cd7-a6ba-494fc870d12c" />
 > The alert history shows the critical SNMP polling failure followed by recovery after SNMP access was restored.
 
-## 6. Results & Handoff 🏁
+## 5. Results & Handoff 🏁
 
 The Monitoring & Alerting phase transformed the physical branch network into a centrally monitored environment.
 
