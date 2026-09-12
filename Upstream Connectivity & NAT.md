@@ -47,16 +47,16 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 
 ### 🔌 Interface Mapping
 
-| Device | Interface | Role |
+| **Device** | **Interface** | **Role** |
 | --- | --- | --- |
-| RTR-01 | Gi0/0 | WAN connection to AT&T gateway |
-| RTR-01 | Gi0/1 | Trunk to SW-01 |
-| RTR-01 | Gi0/1.10 | VLAN 10 gateway / NAT inside |
-| RTR-01 | Gi0/1.20 | VLAN 20 gateway / NAT inside |
-| RTR-01 | Gi0/1.99 | Native VLAN |
-| SW-01 | Gi1/0/1 | Trunk to RTR-01 |
-| SW-01 | Gi1/0/10 | STORE-PC1 |
-| SW-01 | Vlan20 | Switch management |
+| RTR-01 | Gi0/0 | Upstream connection to AT&T gateway |
+| RTR-01 | Gi0/1 | Link to SW-01 |
+| RTR-01 | Gi0/1.10 | VLAN 10 gateway subinterface / NAT inside |
+| RTR-01 | Gi0/1.20 | VLAN 20 gateway subinterface / NAT inside |
+| RTR-01 | Gi0/1.99 | Native VLAN Subinterface |
+| SW-01 | Gi1/0/1 | Trunk link to RTR-01 |
+| SW-01 | Gi1/0/10 | Access link to STORE-PC1 |
+| SW-01 | Int Vlan 20 | SVI Interface |
 | SW-01 | Remaining ports | Unused / shutdown |
 
 ### 🌐 WAN & IP Addressing
