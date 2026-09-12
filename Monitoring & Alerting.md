@@ -1,12 +1,12 @@
 # 03 | Monitoring & Alerting 📊
 
-Extending the branch network with centralized monitoring, logging, time synchronization, and alerting to support NOC-style visibility and future incident-response workflows.
+Adding remote monitoring, centralized logging, and alerting to the retail store branch.
 
-## 1. Purpose & Objectives 🎯
+## 1. Purpose 🎯
 
-The purpose of this phase is to provide centralized visibility into the network created during Phases 1 and 2.
+The purpose of this phase was to establish a remote MSP / NOC environment for monitoring and supporting the retail store branch built during Phases 1 and 2.
 
-An Ubuntu Server virtual machine running LibreNMS was deployed as NOC-SRV01 to monitor RTR-01 and SW-01 from outside the branch network.
+NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outside the retail store branch to monitor RTR-01 and SW-01. SNMPv3, NTP, centralized syslog, and alerting were configured to provide visibility into the health and operational state of the branch network.
 
 | Design Goal | Purpose |
 |---|---|
