@@ -68,9 +68,11 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 ---
 
-## 3. Network Configurations ⚙️
+## 3. Configurations ⚙️
 
-Both devices received baseline hardening: hostname, local admin account, SSH v2 for remote management, VTY access, and interface descriptions.
+RTR-01 and SW-01 were configured to provide the core network services for the retail store branch. This included VLAN segmentation, trunking, Router-on-a-Stick, DHCP, switch management, and SSH remote access.
+
+The configurations below document how each device was set up during the Network Deployment phase.
 
 ### 🔀 RTR-01 — Router
 
