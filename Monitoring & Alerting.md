@@ -49,7 +49,7 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 | **Device Name** | **Device** | **Location** |
 | --- | --- | --- |
 | **RTR-01** | Cisco ISR 2911 Router | Retail Store Branch |
-| **SW-01** | Cisco Catalyst 2960X Switch | Retail Store Branch |
+| **SW-01** | Cisco Catalyst 2960 Switch | Retail Store Branch |
 | **STORE-PC1** | Windows PC | Retail Store Branch |
 | **AT&T Gateway** | Upstream Gateway | ISP / Upstream Network |
 | **NOC-SRV01** | Ubuntu / LibreNMS Monitoring Server | MSP / NOC |
