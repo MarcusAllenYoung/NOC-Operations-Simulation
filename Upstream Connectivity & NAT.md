@@ -74,7 +74,7 @@ RTR-01 Gi0/0 receives its WAN address dynamically through DHCP from the AT&T gat
 
 ---
 
-## 3. Network Configurations ⚙️
+## 2. Configurations ⚙️
 
 Phase 2 extended RTR-01 to the upstream network while preserving the internal VLAN, routing, DHCP, and management configuration established during Phase 1.
 
@@ -106,7 +106,7 @@ NAT/PAT was configured to provide Internet access to the private internal networ
 
 ---
 
-## 4. Validation & Troubleshooting 🔎
+## 3. Validation & Troubleshooting 🔎
 
 ### 🌐 WAN Interface Verification
 
@@ -168,7 +168,7 @@ The workstation successfully resolved `google.com` using the configured DNS serv
 
 ---
 
-## 5. Results & Handoff 🏁
+## 4. Results & Handoff 🏁
 
 The WAN & Internet Connectivity phase successfully extended the internal network from Phase 1 to the Internet while maintaining the existing VLAN segmentation and internal routing design.
 
