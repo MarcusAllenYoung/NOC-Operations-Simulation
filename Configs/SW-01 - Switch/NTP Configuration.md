@@ -25,4 +25,4 @@ ntp server 10.10.20.1
 
 ---
 
-⬅️ [Back to Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20&%20Alerting.md)
+⬅️ [Back to Monitoring & Alerting](../../Monitoring%20%26%20Alerting.md#-sw-01-configurations)
