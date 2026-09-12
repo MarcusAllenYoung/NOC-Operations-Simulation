@@ -33,6 +33,27 @@ NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outsi
 
 NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remote MSP / NOC monitoring the retail store branch from outside the branch network.
 
+### 🔗 Objective
+
+- Deploy NOC-SRV01 as the remote monitoring server
+- Establish management connectivity from NOC-SRV01 to the retail store branch
+- Configure NTP for consistent device timestamps
+- Configure SNMPv3 for secure device monitoring
+- Configure centralized syslog collection
+- Monitor RTR-01 and SW-01 using LibreNMS
+- Configure alerting for network and monitoring failures
+- Verify alert detection and recovery
+
+### 🖥️ Device Reference
+
+| **Device Name** | **Device** | **Location** |
+| --- | --- | --- |
+| **RTR-01** | Cisco ISR 2911 Router | Retail Store Branch |
+| **SW-01** | Cisco Catalyst 2960X Switch | Retail Store Branch |
+| **STORE-PC1** | Windows PC | Retail Store Branch |
+| **AT&T Gateway** | Upstream Gateway | ISP / Upstream Network |
+| **NOC-SRV01** | Ubuntu / LibreNMS Monitoring Server | MSP / NOC |
+
 ### 🌐 IP Addressing
 
 | Device | Address | Purpose |
