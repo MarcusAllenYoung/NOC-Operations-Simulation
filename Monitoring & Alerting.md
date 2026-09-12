@@ -92,11 +92,13 @@ The server provides:
 - [Static Management Route](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Static%20Management%20Route.md)
 - [Syslog Receiver Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/NOC-SRV01/Syslog%20Receiver%20Configuration.md)
 
-### 🔄 RTR-01 — Management Routing & NAT Policy
+### 🔄 RTR-01 — Monitoring Services
 
-The existing Phase 2 NAT policy was modified to support the remote monitoring path.
+RTR-01 was configured to support remote monitoring, logging, and management from the MSP / NOC environment.
 
-The Phase 2 NAT configuration was updated to allow direct communication between the VLAN 20 management network and NOC-SRV01 while preserving PAT for normal Internet-bound traffic. This maintains the original management addresses between NOC-SRV01 and VLAN 20 for direct monitoring and administration.
+The Phase 2 NAT policy was updated to allow direct communication between the VLAN 20 management network and NOC-SRV01 while preserving PAT for normal Internet-bound traffic.
+
+RTR-01 was also configured with NTP for time synchronization, SNMPv3 for secure monitoring, and syslog forwarding so network events could be collected centrally on NOC-SRV01.
 
 📄 View RTR-01 Phase 3 configurations below:
 - [Management NAT Exemption](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/NAT%20Phase%203%20Configuration.md)
