@@ -14,7 +14,7 @@ RTR-01 was connected to the AT&T gateway and configured to receive an upstream I
 | --- | --- | --- |
 | Router | Cisco ISR 2911 | Routing, NAT/PAT, and upstream connectivity |
 | Switch | Cisco Catalyst 2960X | VLANs, trunking, and Layer 2 connectivity |
-| Workstation | Windows PC | Store workstation and connectivity testing |
+| Workstation | Windows PC | User endpoint, SSH, Connectivity testing |
 | Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
 | Cabling | Cat5e/Cat6 | Physical network connectivity |
 
