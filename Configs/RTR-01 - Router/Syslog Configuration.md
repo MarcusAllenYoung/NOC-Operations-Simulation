@@ -38,4 +38,4 @@ logging trap informational
 
 ---
 
-⬅️ [Back to Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
+⬅️ [Back to Monitoring & Alerting](../../Monitoring%20%26%20Alerting.md#-rtr-01-configurations)
