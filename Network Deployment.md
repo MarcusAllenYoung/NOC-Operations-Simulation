@@ -68,7 +68,7 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 ---
 
-## 3. Configurations ⚙️
+## 2. Configurations ⚙️
 
 RTR-01 and SW-01 were configured to provide the core network services for the retail store branch. This included VLAN segmentation, trunking, Router-on-a-Stick, DHCP, switch management, and SSH remote access.
 
@@ -101,7 +101,7 @@ Layer 2 segmentation and access.
 - [Management SVI Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Management%20SVI%20Configuration.md)
 ---
 
-## 4. Validation & Troubleshooting 🔎
+## 3. Validation & Troubleshooting 🔎
 
 ### 🌐 DHCP & Endpoint Verification
 
@@ -150,7 +150,7 @@ The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility
 
 ---
 
-## 5. Results & Handoff 🏁
+## 4. Results & Handoff 🏁
 
 The Network Deployment phase established a working retail store branch network with VLAN segmentation, inter-VLAN routing, DHCP, secure remote management, and endpoint connectivity.
 
