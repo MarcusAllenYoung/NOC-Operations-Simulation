@@ -42,4 +42,4 @@ The resulting route on NOC-SRV01 is:
 ```text
 10.10.20.0/24 via 192.168.1.86 dev ens33
 ```
-⬅️[Back to Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
+⬅️[Back to Monitoring & Alerting](../../Monitoring%20%26%20Alerting.md#-noc-srv01--monitoring-server)
