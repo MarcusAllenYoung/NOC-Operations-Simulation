@@ -170,10 +170,10 @@ The workstation successfully resolved `google.com` using the configured DNS serv
 
 ## 4. Results & Handoff 🏁
 
-The WAN & Internet Connectivity phase successfully extended the internal network from Phase 1 to the Internet while maintaining the existing VLAN segmentation and internal routing design.
+The Upstream Connectivity & NAT phase successfully connected the retail store branch to the upstream network and provided Internet access through RTR-01.
 
-RTR-01 now provides upstream connectivity, default routing, and NAT/PAT services for the internal lab networks. STORE-PC1 successfully demonstrated end-to-end Internet connectivity and DNS resolution.
+RTR-01 successfully received an upstream IP address through DHCP and provided default routing and NAT/PAT for the internal branch networks. STORE-PC1 was used to verify Internet connectivity and DNS resolution.
 
-This known-good baseline will be used as a reference when network monitoring and centralized visibility are introduced during the next phase.
+With the retail store branch now connected to the Internet, the next phase introduces remote monitoring, centralized logging, and alerting from the MSP / NOC environment.
 
 📊 Next Phase: [Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
