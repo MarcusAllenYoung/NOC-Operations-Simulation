@@ -56,12 +56,12 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 
 ### 🌐 IP Addressing
 
-| Device | Address | Purpose |
-|---|---|---|
+| **Network / Endpoint** | **Address** | **Purpose** |
+| --- | --- | --- |
 | NOC-SRV01 | 192.168.1.50/24 | Monitoring and syslog server |
-| RTR-01 Gi0/0 | 192.168.1.86/24 | Branch WAN / monitoring path |
-| RTR-01 Gi0/1.20 | 10.10.20.1/24 | Management VLAN gateway |
-| SW-01 Vlan20 | 10.10.20.2/24 | Switch management |
+| RTR-01 Gi0/0 | 192.168.1.86/24 | Branch upstream / monitoring path |
+| RTR-01 Gi0/1.20 | 10.10.20.1/24 | Management Vlan 20 gateway |
+| SW-01 (Vlan 20 SVI) | 10.10.20.2/24 | Switch management |
 | AT&T Gateway | 192.168.1.254 | Upstream gateway |
 
 ### 🛣️ Management Route
