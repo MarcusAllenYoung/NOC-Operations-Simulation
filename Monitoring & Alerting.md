@@ -13,7 +13,7 @@ NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outsi
 | **Equipment** | **Model / Platform** | **Role** |
 | --- | --- | --- |
 | Router | Cisco ISR 2911 | Branch routing, NAT/PAT, SNMPv3, NTP, and syslog |
-| Switch | Cisco Catalyst 2960X | VLANs, SNMPv3, NTP, and syslog |
+| Switch | Cisco Catalyst 2960 | VLANs, SNMPv3, NTP, and syslog |
 | Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
 | Workstation | Windows PC | VMware host and server administration |
 | Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
