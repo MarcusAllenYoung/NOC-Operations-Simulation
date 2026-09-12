@@ -8,16 +8,15 @@ The purpose of this phase was to establish a remote MSP / NOC environment for mo
 
 NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outside the retail store branch to monitor RTR-01 and SW-01. SNMPv3, NTP, centralized syslog, and alerting were configured to provide visibility into the health and operational state of the branch network.
 
-| Design Goal | Purpose |
-|---|---|
-| Remote monitoring server | Separate the monitoring system from the simulated branch network |
-| Management reachability | Allow NOC-SRV01 to reach Cisco management addresses |
-| NTP synchronization | Maintain consistent timestamps across monitored devices |
-| SNMPv3 monitoring | Collect device and interface information securely |
-| Centralized syslog | Receive Cisco event messages on NOC-SRV01 |
-| LibreNMS monitoring | Provide centralized device, interface, and health visibility |
-| Alerting | Detect network and monitoring failures |
-| Known-good monitoring baseline | Reference point for Phase 4 incident-response simulations |
+### 🛠️ Equipment Used
+
+| **Equipment** | **Model / Platform** | **Role** |
+| --- | --- | --- |
+| Router | Cisco ISR 2911 | Branch routing, NAT/PAT, SNMPv3, NTP, and syslog |
+| Switch | Cisco Catalyst 2960X | VLANs, SNMPv3, NTP, and syslog |
+| Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
+| Workstation | Windows PC | VMware host and server administration |
+| Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
 
 ## 2. Monitoring Design 🗺️
 
