@@ -14,7 +14,7 @@ NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outsi
 | --- | --- | --- |
 | Router | Cisco ISR 2911 | Routing, NAT/PAT, SNMPv3, NTP, and syslog |
 | Switch | Cisco Catalyst 2960 | VLANS, SNMPv3, NTP, and syslog |
-| Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
+| Monitoring Server | Ubuntu Linux Server VM | LibreNMS monitoring and centralized syslog |
 | Workstation | Windows PC | VMware host and server administration |
 | Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
 
@@ -52,7 +52,7 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 | **SW-01** | Cisco Catalyst 2960 Switch | Retail Store Branch |
 | **STORE-PC1** | Windows PC | Retail Store Branch |
 | **AT&T Gateway** | Upstream Gateway | ISP / Upstream Network |
-| **NOC-SRV01** | Ubuntu / LibreNMS Monitoring Server | MSP / NOC |
+| **NOC-SRV01** | Ubuntu Linux / LibreNMS Monitoring Server | MSP / NOC |
 
 ### 🌐 IP Addressing
 
@@ -72,13 +72,13 @@ NOC-SRV01 requires a route to the retail store branch management network through
 
 This allows NOC-SRV01 to reach SW-01's management interface while remaining outside the retail store branch.
 
-## 3. Network Configurations ⚙️
+## 2. Configurations ⚙️
 
-Phase 3 introduced monitoring-specific configuration on RTR-01, SW-01, and NOC-SRV01.
+Phase 3 introduced monitoring-specific configurations on RTR-01, SW-01, and NOC-SRV01.
 
 ### 🌐 NOC-SRV01 — Monitoring Server
 
-NOC-SRV01 was deployed as an Ubuntu Server virtual machine in VMware Workstation Pro.
+NOC-SRV01 was deployed as an Ubuntu Linux Server virtual machine in VMware Workstation Pro.
 
 The server provides:
 - LibreNMS network monitoring
