@@ -4,7 +4,7 @@ Connecting the retail store branch to the upstream network and providing Interne
 
 ## 1. Purpose 🎯
 
-The purpose of this phase was to extend the retail store branch network established in Phase 1 by connecting RTR-01 to an upstream network (my home router) and providing Internet access.
+The purpose of this phase was to extend the retail store branch network established in Phase 1 by connecting RTR-01 to an upstream network and providing Internet access.
 
 RTR-01 was connected to the AT&T gateway and configured to receive an upstream IP address through DHCP. NAT/PAT was configured to allow devices using private IP addresses inside the branch to access the Internet.
 
