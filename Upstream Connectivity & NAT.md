@@ -1,34 +1,21 @@
 # 02 | Upstream Connectivity & NAT 🌐
 
-Extending the known-good internal network to the Internet while maintaining the segmentation established during Phase 1.
+Connecting the retail store branch to the upstream network and providing Internet access.
 
----
+## 1. Purpose 🎯
 
-## 1. Purpose & Objectives 🎯
+The purpose of this phase was to extend the retail store branch network established in Phase 1 by connecting RTR-01 to an upstream network and providing Internet access.
 
-The purpose of this phase is to establish upstream WAN and Internet connectivity for the NOC Operations Simulation. This connectivity extends the internal network from Phase 1 and provides the foundation required for external connectivity and future monitoring operations.
-
-| Design Goal | Purpose |
-| --- | --- |
-| WAN connectivity | Connect RTR-01 to the upstream AT&T gateway |
-| DHCP WAN addressing | Dynamically obtain an address for the WAN interface |
-| Default routing | Forward external traffic toward the upstream gateway |
-| NAT/PAT | Translate private internal addresses for Internet access |
-| Internet & DNS validation | Verify end-to-end external connectivity |
-| Known-good baseline | Reference point for future monitoring and incident-response work |
-
----
-
-## 2. Network Design 🗺️
+RTR-01 was connected to the AT&T gateway and configured to receive an upstream IP address through DHCP. NAT/PAT was configured to allow devices using private IP addresses inside the branch to access the Internet.
 
 ### 🛠️ Equipment Used
 
-| Equipment | Model / Platform | Role |
+| **Equipment** | **Model / Platform** | **Role** |
 | --- | --- | --- |
-| Router | Cisco ISR 2911 | Routing, DHCP, NAT/PAT, and WAN connectivity |
-| Switch | Cisco Catalyst 2960 | VLANs, trunking, and Layer 2 connectivity |
-| Workstation | Windows PC | User endpoint, testing, and verification |
-| Upstream Gateway | AT&T Gateway | Internet access |
+| Router | Cisco ISR 2911 | Routing, NAT/PAT, and upstream connectivity |
+| Switch | Cisco Catalyst 2960X | VLANs, trunking, and Layer 2 connectivity |
+| Workstation | Windows PC | Store workstation and connectivity testing |
+| Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
 | Cabling | Cat5e/Cat6 | Physical network connectivity |
 
 ### ⛓️ Physical Topology
