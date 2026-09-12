@@ -43,7 +43,7 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 | **RTR-01** | Cisco ISR 2911 Router | Retail Store Branch |
 | **SW-01** | Cisco Catalyst 2960X Switch | Retail Store Branch |
 | **STORE-PC1** | Windows PC | Retail Store Branch |
-| **AT&T Gateway** | Upstream Gateway | Upstream Network |
+| **AT&T Gateway** | Upstream Gateway | ISP / Upstream Network |
 
 ### 🔌 Interface Mapping
 
