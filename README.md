@@ -27,7 +27,14 @@ The branch contains the physical network being supported:
 - Cisco ISR 2911 router
 - Cisco Catalyst 2960 switch
 - End User Devices
-- Internet connectivity
+
+### ISP / Upstream Network
+
+The upstream network provides external connectivity for the retail branch:
+
+- AT&T gateway
+- Upstream network connectivity
+- Internet access
 
 ### MSP / NOC
 
