@@ -12,37 +12,12 @@ NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outsi
 
 | **Equipment** | **Model / Platform** | **Role** |
 | --- | --- | --- |
-| Router | Cisco ISR 2911 | Branch routing, NAT/PAT, SNMPv3, NTP, and syslog |
-| Switch | Cisco Catalyst 2960 | VLANs, SNMPv3, NTP, and syslog |
+| Router | Cisco ISR 2911 | Routing, NAT/PAT, SNMPv3, NTP, and syslog |
+| Switch | Cisco Catalyst 2960 | VLANS, SNMPv3, NTP, and syslog |
 | Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
 | Workstation | Windows PC | VMware host and server administration |
 | Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
 
-## 2. Monitoring Design 🗺️
-
-### 💻 Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| VMware Workstation Pro | Hosts the NOC-SRV01 virtual machine |
-| Ubuntu Server | Operating system for NOC-SRV01 |
-| LibreNMS | Network monitoring, device discovery, polling, and alerting |
-| SNMPv3 | Authenticated and encrypted collection of network-device information |
-| Syslog / rsyslog | Centralized collection of Cisco device events |
-| NTP | Time synchronization for consistent event timestamps |
-| DNS | Hostname resolution required for NTP server lookup |
-| SSH | Remote administration of RTR-01 and SW-01 |
-
-### 🛠️ Equipment Used
-
-| Equipment | Model / Platform | Role |
-|---|---|---|
-| Router (RTR-01) | Cisco ISR 2911 | ROAS, DHCP, NAT/PAT, SNMPv3, and syslog |
-| Switch (SW-01) | Cisco Catalyst 2960 | VLANs, trunking, SNMPv3, and syslog |
-| Monitoring Server | Ubuntu Server VM | LibreNMS monitoring and centralized syslog |
-| Workstation | Windows PC | VMware host and server administration |
-| Upstream Gateway | AT&T Gateway | Upstream network and Internet access |
-| Cabling | Cat5e/Cat6 | Physical network connectivity |
 
 ### ⛓️ Physical Topology
 
@@ -56,7 +31,7 @@ NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outsi
 
 <img width="944" height="365" alt="Image" src="https://github.com/user-attachments/assets/66bc51de-ad38-41a6-add0-c04a27385c5f" />
 
-NOC-SRV01 operates from the upstream 192.168.1.0/24 network to simulate an external monitoring location. This represents a NOC monitoring a remote branch over an upstream network rather than operating inside the branch LAN.
+NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remote MSP / NOC monitoring the retail store branch from outside the branch network.
 
 ### 🌐 IP Addressing
 
