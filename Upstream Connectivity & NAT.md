@@ -27,6 +27,15 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 ### 🔀 Logical Topology
 <img width="926" height="377" alt="Image" src="https://github.com/user-attachments/assets/b4c60271-36e5-4914-bcc2-e1b0a28db1ce" />
 
+### 🔗 Objective
+
+- Connect RTR-01 to the upstream AT&T gateway
+- Configure the upstream interface to receive an IP address through DHCP
+- Establish a default route toward the upstream gateway
+- Configure NAT/PAT for the internal branch networks
+- Provide Internet access to STORE-PC1
+- Verify external connectivity and DNS resolution
+
 ### 🔌 Interface Mapping
 
 | Device | Interface | Role |
