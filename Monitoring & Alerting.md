@@ -108,7 +108,9 @@ RTR-01 was also configured with NTP for time synchronization, SNMPv3 for secure 
 
 ### 🔀 SW-01 — Monitoring Services
 
-SW-01 was configured to participate in centralized monitoring and logging.
+SW-01 was configured to support remote monitoring and centralized logging from the MSP / NOC environment.
+
+NTP was configured to synchronize the switch clock with RTR-01, SNMPv3 was configured for secure monitoring through LibreNMS, and syslog forwarding was configured so switch events could be collected centrally on NOC-SRV01.
 
 📄 View SW-01 Phase 3 configurations below:
 - [NTP Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/NTP%20Configuration.md)
