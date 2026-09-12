@@ -24,7 +24,7 @@ interface GigabitEthernet1/0/1
  description TRUNK_TO_RTR-01
  switchport mode trunk
  switchport trunk native vlan 99
- switchport trunk allowed vlan 10,20,30,99
+ switchport trunk allowed vlan 10,20,99
 ```
 
 #### Gi1/0/10 - STORE-PC1
