@@ -66,11 +66,11 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 
 ### 🛣️ Management Route
 
-NOC-SRV01 requires a route to the branch management network through RTR-01.
+NOC-SRV01 requires a route to the retail store branch management network through RTR-01.
 
 `10.10.20.0/24 via 192.168.1.86`
 
-This allows the monitoring server to reach SW-01's management interface while remaining outside the branch VLANs.
+This allows NOC-SRV01 to reach SW-01's management interface while remaining outside the retail store branch.
 
 ## 3. Network Configurations ⚙️
 
