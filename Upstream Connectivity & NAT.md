@@ -4,7 +4,7 @@ Connecting Carolina Crest Bank to the upstream network and providing Internet ac
 
 ## 1. Purpose 🎯
 
-The purpose of this phase was to extend Carolina Crest Bank network established in Phase 1 by connecting RTR-01 to an upstream network and providing Internet access.
+The purpose of this phase was to extend the Carolina Crest Bank network established in Phase 1 by connecting RTR-01 to an upstream network and providing Internet access.
 
 RTR-01 was connected to the AT&T gateway and configured to receive an upstream IP address through DHCP. NAT/PAT was configured to allow devices using private IP addresses inside the branch to access the Internet.
 
@@ -170,7 +170,7 @@ The workstation successfully resolved `google.com` using the configured DNS serv
 
 ## 4. Results & Handoff 🏁
 
-The Upstream Connectivity & NAT phase successfully connected Carolina Crest Bank to the upstream network and provided Internet access through RTR-01.
+The Upstream Connectivity & NAT phase successfully connected the Carolina Crest Bank to the upstream network and provided Internet access through RTR-01.
 
 RTR-01 successfully received an upstream IP address through DHCP and provided default routing and NAT/PAT for the internal branch networks. BRANCH-PC1 was used to verify Internet connectivity and DNS resolution.
 
