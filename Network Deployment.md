@@ -4,7 +4,7 @@ Building the physical network that will be used throughout the NOC Operations Si
 
 ## 1. Purpose & Objectives 🎯
 
-The purpose of this phase was to build the physical network for Carolina Crest Bank and establish the basic network services needed for the site.
+The purpose of this phase was to build the physical network for the Carolina Crest Bank and establish the basic network services needed for the site.
 
 A Cisco router and switch were connected and configured to create separate networks for users and network management. A Windows PC was connected as a test device to make sure the network was working correctly.
 
@@ -70,7 +70,7 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 ## 2. Configurations ⚙️
 
-RTR-01 and SW-01 were configured to provide the core network services for Carolina Crest Bank. This included VLAN segmentation, trunking, Router-on-a-Stick, DHCP, switch management, and SSH remote access.
+RTR-01 and SW-01 were configured to provide the core network services for the Carolina Crest Bank. This included VLAN segmentation, trunking, Router-on-a-Stick, DHCP, switch management, and SSH remote access.
 
 The configurations below document how each device was set up during the Network Deployment phase.
 
