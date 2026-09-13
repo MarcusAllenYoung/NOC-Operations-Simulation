@@ -4,9 +4,9 @@ Adding remote monitoring, centralized logging, and alerting to Carolina Crest Ba
 
 ## 1. Purpose 🎯
 
-The purpose of this phase was to establish a remote MSP / NOC environment for monitoring and supporting the retail store branch built during Phases 1 and 2.
+The purpose of this phase was to establish a remote MSP / NOC environment for monitoring and supporting the Carolina Crest Bank branch built during Phases 1 and 2.
 
-NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outside Carolina Crest Bank network to monitor RTR-01 and SW-01. SNMPv3, NTP, centralized syslog, and alerting were configured to provide visibility into the health and operational state of the branch network.
+NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outside the Carolina Crest Bank network to monitor RTR-01 and SW-01. SNMPv3, NTP, centralized syslog, and alerting were configured to provide visibility into the health and operational state of the branch network.
 
 ### 🛠️ Equipment Used
 
@@ -36,7 +36,7 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 ### 🔗 Objective
 
 - Deploy NOC-SRV01 as the remote monitoring server
-- Establish management connectivity from NOC-SRV01 to Carolina Crest Bank network
+- Establish management connectivity from NOC-SRV01 to the Carolina Crest Bank network
 - Configure NTP for consistent device timestamps
 - Configure SNMPv3 for secure device monitoring
 - Configure centralized syslog collection
@@ -66,11 +66,11 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 
 ### 🛣️ Management Route
 
-NOC-SRV01 requires a route to Carolina Crest Bank management network through RTR-01.
+NOC-SRV01 requires a route to the Carolina Crest Bank management network through RTR-01.
 
 `10.10.20.0/24 via 192.168.1.86`
 
-This allows NOC-SRV01 to reach SW-01's management interface while remaining outside Carolina Crest Bank network.
+This allows NOC-SRV01 to reach SW-01's management interface while remaining outside the Carolina Crest Bank network.
 
 ## 2. Configurations ⚙️
 
@@ -270,7 +270,7 @@ LibreNMS detected the loss of SNMP polling and generated a critical alert. After
 
 ## 5. Results & Handoff 🏁
 
-The Monitoring & Alerting phase established a remote MSP / NOC environment for monitoring and supporting Carolina Crest Bank network.
+The Monitoring & Alerting phase established a remote MSP / NOC environment for monitoring and supporting the Carolina Crest Bank network.
 
 NOC-SRV01 successfully provides centralized monitoring and logging for RTR-01 and SW-01 using LibreNMS, SNMPv3, and syslog. NTP provides consistent device timestamps, while LibreNMS provides visibility into device availability, interfaces, health, network traffic, and alert conditions.
 
