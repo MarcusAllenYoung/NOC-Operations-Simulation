@@ -1,10 +1,10 @@
 # 02 | Upstream Connectivity & NAT 🌐
 
-Connecting the retail store branch to the upstream network and providing Internet access.
+Connecting Carolina Crest Bank to the upstream network and providing Internet access.
 
 ## 1. Purpose 🎯
 
-The purpose of this phase was to extend the retail store branch network established in Phase 1 by connecting RTR-01 to an upstream network and providing Internet access.
+The purpose of this phase was to extend Carolina Crest Bank network established in Phase 1 by connecting RTR-01 to an upstream network and providing Internet access.
 
 RTR-01 was connected to the AT&T gateway and configured to receive an upstream IP address through DHCP. NAT/PAT was configured to allow devices using private IP addresses inside the branch to access the Internet.
 
@@ -40,9 +40,9 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 
 | **Device Name** | **Device** | **Location** |
 | --- | --- | --- |
-| **RTR-01** | Cisco ISR 2911 Router | Retail Store Branch |
-| **SW-01** | Cisco Catalyst 2960X Switch | Retail Store Branch |
-| **STORE-PC1** | Windows PC | Retail Store Branch |
+| **RTR-01** | Cisco ISR 2911 Router | Carolina Crest Bank |
+| **SW-01** | Cisco Catalyst 2960X Switch | Carolina Crest Bank |
+| **BRANCH-PC1** | Windows PC | Carolina Crest Bank |
 | **AT&T Gateway** | Upstream Gateway | ISP / Upstream Network |
 
 ### 🔌 Interface Mapping
@@ -55,7 +55,7 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 | RTR-01 | Gi0/1.20 | VLAN 20 gateway subinterface / NAT inside |
 | RTR-01 | Gi0/1.99 | Native VLAN Subinterface |
 | SW-01 | Gi1/0/1 | Trunk link to RTR-01 |
-| SW-01 | Gi1/0/10 | Access link to STORE-PC1 |
+| SW-01 | Gi1/0/10 | Access link to BRANCH-PC1 |
 | SW-01 | Int Vlan 20 | SVI Interface |
 | SW-01 | Remaining ports | Unused / shutdown |
 
@@ -66,7 +66,7 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 | VLAN 10 | 10.10.10.0/24 | USERS network |
 | VLAN 20 | 10.10.20.0/24 | MANAGEMENT network |
 | SW-01 (Vlan 20 SVI) | 10.10.20.1 | Switch management |
-| STORE-PC1 | 10.10.10.21/24 | End-user Workstation |
+| BRANCH-PC1 | 10.10.10.21/24 | End-user Workstation |
 | RTR-01 Gi0/0 | 192.168.1.86/24 | Upstream / WAN interface |
 | AT&T Gateway | 192.168.1.254 | Upstream gateway |
 
@@ -134,11 +134,11 @@ This provides a path for traffic destined for networks outside of the internal l
 
 ### 🔄 NAT/PAT Verification
 
-NAT translations were verified while STORE-PC1 generated Internet traffic.
+NAT translations were verified while BRANCH-PC1 generated Internet traffic.
 
-The translation table confirmed that STORE-PC1's private address `10.10.10.21` was translated to RTR-01's inside global address `192.168.1.86`.
+The translation table confirmed that BRANCH-PC1's private address `10.10.10.21` was translated to RTR-01's inside global address `192.168.1.86`.
 
-**STORE-PC1 NAT Translation**
+**BRANCH-PC1 NAT Translation**
 
 `10.10.10.21 → 192.168.1.86`
 
@@ -148,21 +148,21 @@ The translation table confirmed that STORE-PC1's private address `10.10.10.21` w
 
 ### 📡 Internet Connectivity Verification
 
-End-to-end Internet connectivity was tested from STORE-PC1.
+End-to-end Internet connectivity was tested from BRANCH-PC1.
 
-STORE-PC1 successfully reached Google's public DNS server at `8.8.8.8`, confirming connectivity through SW-01, RTR-01, the AT&T gateway, and the Internet.
+BRANCH-PC1 successfully reached Google's public DNS server at `8.8.8.8`, confirming connectivity through SW-01, RTR-01, the AT&T gateway, and the Internet.
 
-**STORE-PC1 → Internet**
+**BRANCH-PC1 → Internet**
 
 <img width="959" height="182" alt="Image" src="https://github.com/user-attachments/assets/ee7040c3-277d-4de8-b0b1-ae3976cd9115" />
 
 ### 🔎 DNS Resolution Verification
 
-DNS resolution was tested from STORE-PC1 using `nslookup`.
+DNS resolution was tested from BRANCH-PC1 using `nslookup`.
 
 The workstation successfully resolved `google.com` using the configured DNS server `8.8.8.8`, confirming that both Internet connectivity and DNS resolution were operational.
 
-**STORE-PC1 DNS Verification**
+**BRANCH-PC1 DNS Verification**
 
 <img width="959" height="236" alt="Image" src="https://github.com/user-attachments/assets/6b3554bc-5ef0-49c9-9dba-f5b13335109b" />
 
@@ -170,10 +170,10 @@ The workstation successfully resolved `google.com` using the configured DNS serv
 
 ## 4. Results & Handoff 🏁
 
-The Upstream Connectivity & NAT phase successfully connected the retail store branch to the upstream network and provided Internet access through RTR-01.
+The Upstream Connectivity & NAT phase successfully connected Carolina Crest Bank to the upstream network and provided Internet access through RTR-01.
 
-RTR-01 successfully received an upstream IP address through DHCP and provided default routing and NAT/PAT for the internal branch networks. STORE-PC1 was used to verify Internet connectivity and DNS resolution.
+RTR-01 successfully received an upstream IP address through DHCP and provided default routing and NAT/PAT for the internal branch networks. BRANCH-PC1 was used to verify Internet connectivity and DNS resolution.
 
-With the retail store branch now connected to the Internet, the next phase introduces remote monitoring, centralized logging, and alerting from the MSP / NOC environment.
+With Carolina Crest Bank now connected to the Internet, the next phase introduces remote monitoring, centralized logging, and alerting from the MSP / NOC environment.
 
 📊 Next Phase: [Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
