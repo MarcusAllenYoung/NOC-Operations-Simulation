@@ -74,7 +74,7 @@ The remote NOC monitors and supports the branch network using:
 
 ### [01 | Network Deployment 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Deployment.md) Completed ✅
 
-Build and configure the physical bank branch network.
+Build and configure the physical network for the Carolina Crest Bank.
 
 **Focus:** VLAN segmentation, 802.1Q trunking, inter-VLAN routing, management access, device hardening, endpoint connectivity, and establishing a known-good network baseline.
 
@@ -82,7 +82,7 @@ Build and configure the physical bank branch network.
 
 ### [02 | Upstream Connectivity & NAT 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md) Completed ✅
 
-Connect the bank branch to the upstream network and provide Internet access.
+Connect the Carolina Crest Bank to the upstream network and provide Internet access.
 
 **Focus:** WAN integration, NAT/PAT, Internet connectivity, DNS testing, and WAN validation.
 
@@ -90,7 +90,7 @@ Connect the bank branch to the upstream network and provide Internet access.
 
 ### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md) Completed ✅
 
-Build the remote NOC environment and begin monitoring the bank branch.
+Build the remote NOC environment at Vertex Network Solutions, and begin monitoring the Carolina Crest Bank.
 
 **Focus:** LibreNMS, Ubunta Linux Server, SNMP, syslog, NTP, device availability, interface monitoring, performance baselines, and alerting.
 
@@ -98,7 +98,7 @@ Build the remote NOC environment and begin monitoring the bank branch.
 
 ### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
 
-Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the bank branch.
+Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the branch network.
 
 Controlled failures are introduced into the network and handled as simulated incidents.
 
@@ -107,8 +107,6 @@ Controlled failures are introduced into the network and handled as simulated inc
 ---
 
 ## 🏁 Project Goal
-
-The completed environment represents a fictional retail store branch being remotely supported by an MSP NOC.
 
 The project does not end when the network is successfully configured. The network becomes a working environment where failures can be introduced, detected through monitoring, investigated, resolved, and documented through a ticketing workflow.
 
