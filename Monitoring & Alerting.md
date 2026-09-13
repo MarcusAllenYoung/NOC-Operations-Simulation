@@ -4,7 +4,7 @@ Adding remote monitoring, centralized logging, and alerting to Carolina Crest Ba
 
 ## 1. Purpose 🎯
 
-The purpose of this phase was to establish a remote MSP / NOC environment for monitoring and supporting the Carolina Crest Bank branch built during Phases 1 and 2.
+The purpose of this phase was to establish a remote MSP / NOC environment at Vertex Network Solutions for monitoring and supporting the Carolina Crest Bank branch built during Phases 1 and 2.
 
 NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outside the Carolina Crest Bank network to monitor RTR-01 and SW-01. SNMPv3, NTP, centralized syslog, and alerting were configured to provide visibility into the health and operational state of the branch network.
 
