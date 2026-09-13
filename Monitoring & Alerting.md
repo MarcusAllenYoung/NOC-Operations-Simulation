@@ -1,12 +1,12 @@
 # 03 | Monitoring & Alerting 📊
 
-Adding remote monitoring, centralized logging, and alerting to the retail store branch.
+Adding remote monitoring, centralized logging, and alerting to Carolina Crest Bank.
 
 ## 1. Purpose 🎯
 
 The purpose of this phase was to establish a remote MSP / NOC environment for monitoring and supporting the retail store branch built during Phases 1 and 2.
 
-NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outside the retail store branch to monitor RTR-01 and SW-01. SNMPv3, NTP, centralized syslog, and alerting were configured to provide visibility into the health and operational state of the branch network.
+NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outside Carolina Crest Bank network to monitor RTR-01 and SW-01. SNMPv3, NTP, centralized syslog, and alerting were configured to provide visibility into the health and operational state of the branch network.
 
 ### 🛠️ Equipment Used
 
@@ -21,22 +21,22 @@ NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outsi
 
 ### ⛓️ Physical Topology
 
-**Retail Store Branch**
+**Carolina Crest Bank**
 <img width="4032" height="2744" alt="Image" src="https://github.com/user-attachments/assets/57754db1-ffe5-4331-87be-10cf94659a4f" />
 
-**MSP / NOC**
+**Vertex Network Solutions**
 <img width="4032" height="2268" alt="Image" src="https://github.com/user-attachments/assets/d4afa244-c197-405d-bf2c-3e398c733e9e" />
 
 ### 🔀 Logical Topology
 
 <img width="944" height="365" alt="Image" src="https://github.com/user-attachments/assets/66bc51de-ad38-41a6-add0-c04a27385c5f" />
 
-NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remote MSP / NOC monitoring the retail store branch from outside the branch network.
+NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remote MSP / NOC monitoring the Carolina Crest Bank from outside the branch network.
 
 ### 🔗 Objective
 
 - Deploy NOC-SRV01 as the remote monitoring server
-- Establish management connectivity from NOC-SRV01 to the retail store branch
+- Establish management connectivity from NOC-SRV01 to Carolina Crest Bank network
 - Configure NTP for consistent device timestamps
 - Configure SNMPv3 for secure device monitoring
 - Configure centralized syslog collection
@@ -48,11 +48,11 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 
 | **Device Name** | **Device** | **Location** |
 | --- | --- | --- |
-| **RTR-01** | Cisco ISR 2911 Router | Retail Store Branch |
-| **SW-01** | Cisco Catalyst 2960 Switch | Retail Store Branch |
-| **STORE-PC1** | Windows PC | Retail Store Branch |
+| **RTR-01** | Cisco ISR 2911 Router | Carolina Crest Bank |
+| **SW-01** | Cisco Catalyst 2960 Switch | Carolina Crest Bank |
+| **BRANCH-PC1** | Windows PC | Carolina Crest Bank |
 | **AT&T Gateway** | Upstream Gateway | ISP / Upstream Network |
-| **NOC-SRV01** | Ubuntu Linux / LibreNMS Monitoring Server | MSP / NOC |
+| **NOC-SRV01** | Ubuntu Linux / LibreNMS Monitoring Server | Vertex Network Solutions |
 
 ### 🌐 IP Addressing
 
@@ -66,11 +66,11 @@ NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remo
 
 ### 🛣️ Management Route
 
-NOC-SRV01 requires a route to the retail store branch management network through RTR-01.
+NOC-SRV01 requires a route to Carolina Crest Bank management network through RTR-01.
 
 `10.10.20.0/24 via 192.168.1.86`
 
-This allows NOC-SRV01 to reach SW-01's management interface while remaining outside the retail store branch.
+This allows NOC-SRV01 to reach SW-01's management interface while remaining outside Carolina Crest Bank network.
 
 ## 2. Configurations ⚙️
 
@@ -94,7 +94,7 @@ The server provides:
 
 ### 🔄 RTR-01 Configurations
 
-RTR-01 was configured to support remote monitoring, logging, and management from the MSP / NOC environment.
+RTR-01 was configured to support remote monitoring, logging, and management from Vertex Network Solutions.
 
 The Phase 2 NAT policy was updated to allow direct communication between the VLAN 20 management network and NOC-SRV01 while preserving PAT for normal Internet-bound traffic.
 
@@ -108,7 +108,7 @@ RTR-01 was also configured with NTP for time synchronization, SNMPv3 for secure 
 
 ### 🔀 SW-01 Configurations
 
-SW-01 was configured to support remote monitoring and centralized logging from the MSP / NOC environment.
+SW-01 was configured to support remote monitoring and centralized logging from Vertex Network Solutions.
 
 NTP was configured to synchronize the switch clock with RTR-01, SNMPv3 was configured for secure monitoring through LibreNMS, and syslog forwarding was configured so switch events could be collected centrally on NOC-SRV01.
 
@@ -158,7 +158,7 @@ For SW-01, LibreNMS also provides visibility into interfaces such as:
 - **Gi1/0/1 - trunk to RTR-01**
   <img width="946" height="431" alt="Screenshot 2026-09-10 194712" src="https://github.com/user-attachments/assets/3e2543c9-784a-4682-a85b-cc04e9d6317d" />
   
-- **Gi1/0/10 - STORE-PC1**
+- **Gi1/0/10 - BRANCH-PC1**
   <img width="941" height="146" alt="Screenshot 2026-09-10 194814" src="https://github.com/user-attachments/assets/59518cae-186a-4cb3-b8d1-3b9bc5da48c2" />
   
 - **VLANs 10, 20, and 99**
@@ -240,7 +240,7 @@ LibreNMS successfully monitors both network devices (RTR-01, SW-01). The dashboa
 
 ### 🔀 SW-01 Monitoring Verification
 
-LibreNMS successfully discovered SW-01 hardware, IOS information, VLANs, and physical interfaces. Operational interfaces including the router trunk and STORE-PC1 access port can be monitored from the NOC dashboard.
+LibreNMS successfully discovered SW-01 hardware, IOS information, VLANs, and physical interfaces. Operational interfaces including the router trunk and BRANCH-PC1 access port can be monitored from the NOC dashboard.
 
 <img width="947" height="433" alt="Image" src="https://github.com/user-attachments/assets/0650d399-a1c9-45a9-82e5-cd95ac312c76" />
 
@@ -270,7 +270,7 @@ LibreNMS detected the loss of SNMP polling and generated a critical alert. After
 
 ## 5. Results & Handoff 🏁
 
-The Monitoring & Alerting phase established a remote MSP / NOC environment for monitoring and supporting the retail store branch.
+The Monitoring & Alerting phase established a remote MSP / NOC environment for monitoring and supporting Carolina Crest Bank network.
 
 NOC-SRV01 successfully provides centralized monitoring and logging for RTR-01 and SW-01 using LibreNMS, SNMPv3, and syslog. NTP provides consistent device timestamps, while LibreNMS provides visibility into device availability, interfaces, health, network traffic, and alert conditions.
 
