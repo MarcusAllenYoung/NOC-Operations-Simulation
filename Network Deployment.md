@@ -4,7 +4,7 @@ Building the physical network that will be used throughout the NOC Operations Si
 
 ## 1. Purpose & Objectives 🎯
 
-The purpose of this phase was to build the physical network for the fictional retail store branch and establish the basic network services needed for the site.
+The purpose of this phase was to build the physical network for the fictional bank branch and establish the basic network services needed for the site.
 
 A Cisco router and switch were connected and configured to create separate networks for users and network management. A Windows PC was connected as a test device to make sure the network was working correctly.
 
@@ -41,9 +41,9 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 | **Device Name** | **Device** | **Location** |
 | :--- | :--- | :--- |
-| **RTR-01** | Cisco ISR 2911 Router | Retail Store Branch |
-| **SW-01** | Cisco Catalyst 2960X Switch | Retail Store Branch |
-| **STORE-PC1** | Windows PC | Retail Store Branch |
+| **RTR-01** | Cisco ISR 2911 Router | Carolina Crest bank |
+| **SW-01** | Cisco Catalyst 2960 Switch | Carolina Crest bank |
+| **BRANCH-PC1** | Windows PC | Carolina Crest bank |
 
 ### 🔌 Interface Mapping
 
@@ -54,7 +54,7 @@ A Cisco router and switch were connected and configured to create separate netwo
 | RTR-01 | Gi0/1.20 | VLAN 20 gateway subinterface |
 | RTR-01 | Gi0/1.99 | Native VLAN subinterface |
 | SW-01 | Gi1/0/1 | Trunk link to RTR-01 |
-| SW-01 | Gi1/0/10 | Access link to STORE-PC1 |
+| SW-01 | Gi1/0/10 | Access link to BRANCH-PC1 |
 | SW-01 | Int Vlan 20 | SVI Interface |
 | SW-01 | Remaining ports | Unused / shutdown |
 
@@ -70,7 +70,7 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 ## 2. Configurations ⚙️
 
-RTR-01 and SW-01 were configured to provide the core network services for the retail store branch. This included VLAN segmentation, trunking, Router-on-a-Stick, DHCP, switch management, and SSH remote access.
+RTR-01 and SW-01 were configured to provide the core network services for Carolina Crest Bank. This included VLAN segmentation, trunking, Router-on-a-Stick, DHCP, switch management, and SSH remote access.
 
 The configurations below document how each device was set up during the Network Deployment phase.
 
@@ -105,7 +105,7 @@ Layer 2 segmentation and access.
 
 ### 🌐 DHCP & Endpoint Verification
 
-STORE-PC1 successfully received its network configuration from RTR-01 through DHCP.
+BRANCH-PC1 successfully received its network configuration from RTR-01 through DHCP.
 
 The workstation received:
 
@@ -117,28 +117,28 @@ The workstation received:
 
 ---
 
-Wireshark captured the complete DHCP process used by STORE-PC1 to obtain its address: Discover, Offer, Request, and ACK.
+Wireshark captured the complete DHCP process used by BRANCH-PC1 to obtain its address: Discover, Offer, Request, and ACK.
 
 <img width="1918" height="1031" alt="Image" src="https://github.com/user-attachments/assets/bdcfbd58-fe82-497e-aaa6-b91d7b4ec3f7" />
 
 ### 📡 Connectivity Verification
 
-Connectivity was verified from STORE-PC1 to the VLAN 10 gateway `10.10.10.1` , and the SW-01 management interface `10.10.20.2`.
+Connectivity was verified from BRANCH-PC1 to the VLAN 10 gateway `10.10.10.1` , and the SW-01 management interface `10.10.20.2`.
 
-**STORE-PC1 ping to VLAN 10 Gateway**
+**BRANCH-PC1 ping to VLAN 10 Gateway**
 <img width="1915" height="399" alt="Image" src="https://github.com/user-attachments/assets/26d811b7-7e61-437a-9b3d-308381903bda" />
 
 
-**STORE-PC1 ping to SW-01 Management Interface**
+**BRANCH-PC1 ping to SW-01 Management Interface**
 <img width="1918" height="355" alt="Image" src="https://github.com/user-attachments/assets/11346c69-3f7a-499d-aa89-6d62855b6783" />
 
 ### 🔐 SSH Verification & Troubleshooting
 
-Remote management was tested from STORE-PC1 to both RTR-01 and SW-01.
+Remote management was tested from BRANCH-PC1 to both RTR-01 and SW-01.
 
 During initial testing, SSH connections failed because the older Cisco devices use legacy SSH algorithms that the newer Windows SSH client does not enable by default.
 
-The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility issue. SSH access to both devices was then successfully verified.
+The required SSH algorithm was enabled on BRANCH-PC1, resolving the compatibility issue. SSH access to both devices was then successfully verified.
 
 **RTR-01 SSH Verification**
 
@@ -154,7 +154,7 @@ The required SSH algorithm was enabled on STORE-PC1, resolving the compatibility
 
 The Network Deployment phase established a working retail store branch network with VLAN segmentation, inter-VLAN routing, DHCP, secure remote management, and endpoint connectivity.
 
-RTR-01, SW-01, and STORE-PC1 were successfully configured and verified, establishing a known-good internal network for the branch.
+RTR-01, SW-01, and BRANCH-PC1 were successfully configured and verified, establishing a known-good internal network for the branch.
 
 With the internal branch network operational, the next phase connects the retail store to the upstream network and provides Internet access using NAT/PAT.
 
