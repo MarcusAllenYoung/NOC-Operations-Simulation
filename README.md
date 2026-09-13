@@ -18,8 +18,6 @@ Once the network is operational and monitored, controlled failures are introduce
 
 The goal of this project is to practice the day-to-day work of an entry-level NOC technician supporting a remote client site, rather than simply configuring a network and considering it finished.
 
-**The goal of this project is to practice the day-to-day work of an entry-level NOC technician at an MSP, not just build a network and consider it finished.**
-
 ---
 
 ## 🏦 Lab Environment
@@ -108,6 +106,7 @@ Controlled failures are introduced into the network and handled as simulated inc
 
 ## 🏁 Project Goal
 
-The project does not end when the network is successfully configured. The network becomes a working environment where failures can be introduced, detected through monitoring, investigated, resolved, and documented through a ticketing workflow.
+Once the network is operational and monitored, controlled failures are introduced to simulate support incidents. These incidents are detected through monitoring alerts, documented in trouble tickets, investigated, troubleshot, resolved, verified, and closed.
 
-This allows the project to demonstrate both **building a network and supporting it after deployment.**
+**The goal of this project is to practice the day-to-day work of an entry-level NOC technician at an MSP, not just build a network and consider it finished.**
+
