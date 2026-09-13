@@ -53,3 +53,5 @@ PAT allows multiple internal devices to share the IPv4 address assigned to RTR-0
 ```text
 ip nat inside source list 1 interface GigabitEthernet0/0 overload
 ```
+
+⬅️ [Back to Upstream Connectivity & NAT](../../Upstream%20Connectivity%20%26%20NAT.md#-rtr-01-natpat)
