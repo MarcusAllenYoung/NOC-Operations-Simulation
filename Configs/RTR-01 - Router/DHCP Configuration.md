@@ -49,5 +49,6 @@ Assigned configuration:
 - DNS Suffix: `noc.lab`
 <img width="1906" height="227" alt="Image" src="https://github.com/user-attachments/assets/a7c243a1-8449-4377-89f0-4867aed5be59" />
 
+---
 
 [⬅️ Back to Network Deployment](../../Network%20Deployment.md#2-configurations-%EF%B8%8F)
