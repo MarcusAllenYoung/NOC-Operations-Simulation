@@ -174,6 +174,6 @@ The Upstream Connectivity & NAT phase successfully connected the Carolina Crest 
 
 RTR-01 successfully received an upstream IP address through DHCP and provided default routing and NAT/PAT for the internal branch networks. BRANCH-PC1 was used to verify Internet connectivity and DNS resolution.
 
-With Carolina Crest Bank now connected to the Internet, the next phase introduces remote monitoring, centralized logging, and alerting from the MSP / NOC environment.
+With Carolina Crest Bank now connected to the Internet, the next phase introduces remote monitoring, centralized logging, and alerting from the MSP / NOC environment at Vertex Network Solutions.
 
 📊 Next Phase: [Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
