@@ -29,7 +29,7 @@ NOC-SRV01, an Ubuntu Server virtual machine running LibreNMS, was deployed outsi
 
 ### 🔀 Logical Topology
 
-<img width="944" height="365" alt="Image" src="https://github.com/user-attachments/assets/66bc51de-ad38-41a6-add0-c04a27385c5f" />
+<img width="925" height="367" alt="Screenshot 2026-09-12 231634" src="https://github.com/user-attachments/assets/94a8369d-7817-41da-882f-1c0fbf29340b" />
 
 NOC-SRV01 operates from the upstream `192.168.1.0/24` network to simulate a remote MSP / NOC monitoring the Carolina Crest Bank from outside the branch network.
 
