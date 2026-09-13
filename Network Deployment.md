@@ -73,7 +73,7 @@ RTR-01 and SW-01 were configured to provide the core network services for the Ca
 
 The configurations below document how each device was set up during the Network Deployment phase.
 
-### 🔀 RTR-01 — Router
+### 🔀 RTR-01 - Router
 
 Layer 3 routing for the internal network.
 
@@ -84,7 +84,7 @@ Layer 3 routing for the internal network.
 - [ROAS Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/ROAS%20Configuration.md)
 - [DHCP Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/DHCP%20Configuration.md)
 
-### 🔌 SW-01 — Switch
+### 🔌 SW-01 - Switch
 
 Layer 2 segmentation and access.
 
