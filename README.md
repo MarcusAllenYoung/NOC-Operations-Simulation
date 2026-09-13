@@ -24,8 +24,6 @@ The goal of this project is to practice the day-to-day work of an entry-level NO
 
 ## 🏦 Lab Environment
 
-The lab represents a small fictional bank branch being supported remotely by a fictional MSP.
-
 ### Bank Branch (Carolina Crest Bank)
 
 The branch contains the physical network being supported:
