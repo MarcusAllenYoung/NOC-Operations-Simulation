@@ -38,7 +38,7 @@ ip dhcp pool VLAN10-USERS
 
 ### Client Assignment
 
-STORE-PC1 successfully received its network configuration from RTR-01 through DHCP.
+BRANCH-PC1 successfully received its network configuration from RTR-01 through DHCP.
 
 Assigned configuration:
 
