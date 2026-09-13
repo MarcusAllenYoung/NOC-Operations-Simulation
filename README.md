@@ -2,15 +2,21 @@
 
 A physical networking project that simulates a fictional Bank branch network being remotely monitored and supported by a NOC technician at a Managed Service Provider (MSP).
 
-## 🔗 About the Project
+## 📖 About the Project
 
-This project simulates a fictional retail store branch network, built and operated the way a NOC technician at an MSP would support a real client site.
+This project simulates a small bank branch operated by **Carolina Crest Bank** and remotely supported by **Vertex Network Solutions**, a managed service provider (MSP). Both organizations are fictional and were created for this lab simulation.
 
-The branch runs on physical Cisco routing and switching equipment. It begins as a standalone network and expands in phases to include Internet connectivity, remote monitoring, centralized logging, alerting, and a full ticketing workflow.
+**Carolina Crest Bank — Branch 01** represents the client site. The branch contains the physical Cisco router, switch, and end-user workstation that make up the network being supported.
 
-The monitoring server is intentionally placed outside the branch network on the upstream network and uses LibreNMS to monitor the router and switch. This simulates how an MSP can remotely monitor a client's network without a technician physically on-site.
+**Vertex Network Solutions** represents the MSP and Network Operations Center (NOC). From the NOC environment, the branch network is remotely monitored using LibreNMS, centralized syslog, and other management tools.
 
-Once the network is fully built and monitored, controlled failures are introduced to generate realistic incidents. Each incident is detected through a monitoring alert or simulated user report, documented as a trouble ticket, and worked from start to finish: investigated, troubleshot, restored, verified, and closed.
+The **ISP / Upstream Network** provides external connectivity between the branch network and the remote monitoring environment, as well as Internet access for the branch.
+
+The project is built in phases: first establishing the branch network, then adding upstream connectivity, remote monitoring and alerting, and finally incident response and ticketing.
+
+Once the network is operational and monitored, controlled failures are introduced to simulate support incidents. These incidents are detected through monitoring alerts, documented in trouble tickets, investigated, troubleshot, resolved, verified, and closed.
+
+The goal of this project is to practice the day-to-day work of an entry-level NOC technician supporting a remote client site, rather than simply configuring a network and considering it finished.
 
 **The goal of this project is to practice the day-to-day work of an entry-level NOC technician at an MSP, not just build a network and consider it finished.**
 
