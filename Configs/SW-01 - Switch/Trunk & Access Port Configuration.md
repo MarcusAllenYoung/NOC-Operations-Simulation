@@ -7,7 +7,7 @@ Trunk and access interfaces were configured on SW-01 during Phase 1 to connect t
 | Interface | Mode | VLAN / Role |
 | --- | --- | --- |
 | Gi1/0/1 | Trunk | Connection to RTR-01 |
-| Gi1/0/10 | Access | VLAN 10 - STORE-PC1 |
+| Gi1/0/10 | Access | VLAN 10 - BRANCH-PC1 |
 
 The trunk between SW-01 and RTR-01 carries the VLANs required for router-on-a-stick inter-VLAN routing.
 
@@ -17,7 +17,7 @@ STORE-PC1 connects to `Gi1/0/10` as an access device in the VLAN 10 USERS networ
 
 ### Configuration Commands
 
-#### Gi1/0/1 - Trunk to RTR-01
+#### Gi1/0/1 - Trunk link RTR-01
 
 ```text
 interface GigabitEthernet1/0/1
@@ -27,7 +27,7 @@ interface GigabitEthernet1/0/1
  switchport trunk allowed vlan 10,20,99
 ```
 
-#### Gi1/0/10 - STORE-PC1
+#### Gi1/0/10 - Access link BRANCH-PC1
 
 ```text
 interface GigabitEthernet1/0/10
