@@ -34,7 +34,7 @@ The branch contains the physical network being supported:
 
 ### ISP / Upstream Network
 
-The upstream network provides external connectivity for the bank branch:
+The upstream network provides external connectivity for the branch network:
 
 - AT&T gateway
 - Upstream network connectivity
@@ -42,7 +42,7 @@ The upstream network provides external connectivity for the bank branch:
 
 ### MSP / NOC (Vertex Network Solutions)
 
-The remote NOC monitors and supports the bank branch using:
+The remote NOC monitors and supports the branch network using:
 
 - Ubuntu Linux server
 - LibreNMS (monitoring software)
