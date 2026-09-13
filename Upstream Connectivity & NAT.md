@@ -33,7 +33,7 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 - Configure the upstream interface to receive an IP address through DHCP
 - Establish a default route toward the upstream gateway
 - Configure NAT/PAT for the internal branch networks
-- Provide Internet access to STORE-PC1
+- Provide Internet access to BRANCH-PC1
 - Verify external connectivity and DNS resolution
 
 ### 🖥️ Device Reference
