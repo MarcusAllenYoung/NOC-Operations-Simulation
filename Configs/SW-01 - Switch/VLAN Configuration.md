@@ -10,7 +10,7 @@ VLANs were configured on SW-01 during Phase 1 to separate user traffic, network-
 | 20 | MANAGEMENT | Network-device management |
 | 99 | PARKING-NATIVE | Native VLAN and unused switch ports |
 
-VLAN 10 provides connectivity for STORE-PC1, while VLAN 20 provides the dedicated management network for SW-01.
+VLAN 10 provides connectivity for BRANCH-PC1, while VLAN 20 provides the dedicated management network for SW-01.
 
 VLAN 99 is used as the native VLAN on the trunk and as the parking VLAN for unused switch interfaces.
 
