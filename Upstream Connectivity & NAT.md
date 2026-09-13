@@ -25,7 +25,7 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 <img width="4032" height="2744" alt="Image" src="https://github.com/user-attachments/assets/57754db1-ffe5-4331-87be-10cf94659a4f" />
 
 ### 🔀 Logical Topology
-<img width="926" height="377" alt="Image" src="https://github.com/user-attachments/assets/b4c60271-36e5-4914-bcc2-e1b0a28db1ce" />
+<img width="650" height="360" alt="Screenshot 2026-09-12 232106" src="https://github.com/user-attachments/assets/12a2a68a-1ab2-42a0-867e-88ddb7b487c4" />
 
 ### 🔗 Objective
 
