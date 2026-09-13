@@ -152,11 +152,11 @@ The required SSH algorithm was enabled on BRANCH-PC1, resolving the compatibilit
 
 ## 4. Results & Handoff 🏁
 
-The Network Deployment phase established a working retail store branch network with VLAN segmentation, inter-VLAN routing, DHCP, secure remote management, and endpoint connectivity.
+The Network Deployment phase established a working network with VLAN segmentation, inter-VLAN routing, DHCP, secure remote management, and endpoint connectivity.
 
 RTR-01, SW-01, and BRANCH-PC1 were successfully configured and verified, establishing a known-good internal network for the branch.
 
-With the internal branch network operational, the next phase connects the retail store to the upstream network and provides Internet access using NAT/PAT.
+With the internal network operational, the next phase connects Carolina Crest Bank to the upstream network and provides Internet access using NAT/PAT.
 
 🌐 Next Phase: [Upstream Connectivity & NAT](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20&%20NAT.md)
 
