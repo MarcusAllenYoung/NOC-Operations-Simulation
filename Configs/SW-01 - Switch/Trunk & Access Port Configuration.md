@@ -35,3 +35,5 @@ interface GigabitEthernet1/0/10
  switchport mode access
  switchport access vlan 10
 ```
+
+⬅️ [Back to Network Deployment](../../Network%20Deployment.md#-sw-01---switch)
