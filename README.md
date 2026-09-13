@@ -16,32 +16,32 @@ Once the network is fully built and monitored, controlled failures are introduce
 
 ---
 
-## 🏪 Lab Environment
+## 🏦 Lab Environment
 
-The lab represents a small retail store branch being supported remotely by an MSP.
+The lab represents a small fictional bank branch being supported remotely by a fictional MSP.
 
-### Retail Store Branch
+### Bank Branch (Carolina Crest Bank)
 
 The branch contains the physical network being supported:
 
 - Cisco ISR 2911 router
 - Cisco Catalyst 2960 switch
-- End User Devices
+- End-user devices
 
 ### ISP / Upstream Network
 
-The upstream network provides external connectivity for the retail branch:
+The upstream network provides external connectivity for the bank branch:
 
 - AT&T gateway
 - Upstream network connectivity
 - Internet access
 
-### MSP / NOC
+### MSP / NOC (Vertex Network Solutions)
 
-The remote NOC monitors and supports the retail branch using:
+The remote NOC monitors and supports the bank branch using:
 
-- Ubuntu Linux Server
-- LibreNMS (Monitoring Software)
+- Ubuntu Linux server
+- LibreNMS (monitoring software)
 - Remote device administration
 - Incident and ticket management
 
