@@ -1,6 +1,6 @@
 # NOC Operations Simulation 🌐
 
-A physical networking project that simulates a fictional retail store branch network being remotely monitored and supported by a NOC technician at a Managed Service Provider (MSP).
+A physical networking project that simulates a fictional Bank branch network being remotely monitored and supported by a NOC technician at a Managed Service Provider (MSP).
 
 ## 🔗 About the Project
 
@@ -70,7 +70,7 @@ The remote NOC monitors and supports the bank branch using:
 
 ### [01 | Network Deployment 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Deployment.md) Completed ✅
 
-Build and configure the physical retail branch network.
+Build and configure the physical bank branch network.
 
 **Focus:** VLAN segmentation, 802.1Q trunking, inter-VLAN routing, management access, device hardening, endpoint connectivity, and establishing a known-good network baseline.
 
@@ -78,7 +78,7 @@ Build and configure the physical retail branch network.
 
 ### [02 | Upstream Connectivity & NAT 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md) Completed ✅
 
-Connect the retail branch to the upstream network and provide Internet access.
+Connect the bank branch to the upstream network and provide Internet access.
 
 **Focus:** WAN integration, NAT/PAT, Internet connectivity, DNS testing, and WAN validation.
 
@@ -86,7 +86,7 @@ Connect the retail branch to the upstream network and provide Internet access.
 
 ### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md) Completed ✅
 
-Build the remote NOC environment and begin monitoring the retail branch.
+Build the remote NOC environment and begin monitoring the bank branch.
 
 **Focus:** LibreNMS, Ubunta Linux Server, SNMP, syslog, NTP, device availability, interface monitoring, performance baselines, and alerting.
 
@@ -94,7 +94,7 @@ Build the remote NOC environment and begin monitoring the retail branch.
 
 ### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
 
-Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the retail branch.
+Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the bank branch.
 
 Controlled failures are introduced into the network and handled as simulated incidents.
 
