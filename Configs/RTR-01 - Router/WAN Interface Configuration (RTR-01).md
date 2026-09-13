@@ -25,3 +25,5 @@ interface Gi0/0
  ip address dhcp
  no shutdown
 ```
+
+⬅️ [Back to Upstream Connectivity & NAT](../../Upstream%20Connectivity%20%26%20NAT.md#-rtr-01-natpat)
