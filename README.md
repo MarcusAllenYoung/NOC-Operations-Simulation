@@ -6,7 +6,7 @@ A physical networking project that simulates a fictional Bank branch network bei
 
 This project simulates a small bank branch operated by **Carolina Crest Bank** and remotely supported by **Vertex Network Solutions**, a managed service provider (MSP). Both organizations are fictional and were created for this lab simulation.
 
-**Carolina Crest Bank — Branch 01** represents the client site. The branch contains the physical Cisco router, switch, and end-user workstation that make up the network being supported.
+**Carolina Crest Bank - Branch 01** represents the client site. The branch contains the physical Cisco router, switch, and end-user workstation that make up the network being supported.
 
 **Vertex Network Solutions** represents the MSP and Network Operations Center (NOC). From the NOC environment, the branch network is remotely monitored using LibreNMS, centralized syslog, and other management tools.
 
