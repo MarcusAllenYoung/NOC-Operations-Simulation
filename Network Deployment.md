@@ -93,11 +93,13 @@ Layer 2 segmentation and access.
 - Gi1/0/1 trunk to RTR-01
 - Gi1/0/10 access port for STORE-PC1 placed in Vlan 10
 - Vlan 20 Management SVI `10.10.20.2/24`
+- SSH for secure remote access
 
 ##### View SW-01 Phase 1 Configurations below:
 - [VLAN Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/VLAN%20Configuration.md)
 - [Trunk & Access Port Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Trunk%20%26%20Access%20Port%20Configuration.md)
 - [Management SVI Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/Management%20SVI%20Configuration.md)
+- [SSH Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/SW-01%20-%20Switch/SSH%20Configuration.md)
 ---
 
 ## 3. Validation & Troubleshooting 🔎
