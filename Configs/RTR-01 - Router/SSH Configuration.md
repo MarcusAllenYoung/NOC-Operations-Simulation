@@ -37,7 +37,7 @@ ip ssh version 2
 #### VTY Remote Access
 
 ```text
-line vty 0 4
+line vty 0 15
  login local
  transport input ssh
  exec-timeout 15 0
