@@ -11,7 +11,7 @@ SSH was configured on RTR-01 during Phase 1 to provide secure remote command-lin
 | Domain Name | `noc.lab` |
 | SSH Version | SSHv2 |
 | Authentication | Local user database |
-| VTY Lines | 0–4 |
+| VTY Lines | 0–15 |
 | Allowed Remote Protocol | SSH |
 
 SSH was used instead of Telnet so remote management traffic is encrypted.
