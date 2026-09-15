@@ -67,7 +67,15 @@ The remote NOC monitors and supports the branch network using:
 </table>
 
 ---
-## 🔗 Network Topology
+## ⛓️ Network Topology
+
+**Physical Topology**
+<img width="4032" height="2744" alt="IMG_1050" src="https://github.com/user-attachments/assets/f1582be5-9560-4149-8f03-ba1b54a0fcd4" />
+
+**Logical Topology**
+<img width="866" height="357" alt="Screenshot 2026-09-12 231911" src="https://github.com/user-attachments/assets/d7f72b0f-4907-4247-9349-643bb8151c71" />
+
+---
 
 ## 🗺️ Project Roadmap
 
