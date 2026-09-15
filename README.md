@@ -75,7 +75,7 @@ The remote NOC monitors and supports the branch network using:
 **Vertex Network Solutions**
 <img width="4032" height="2268" alt="IMG_1060" src="https://github.com/user-attachments/assets/3abcad09-fe7f-4a15-9dc0-c177d60d2e1c" />
 
-## Logical Topology
+## 🔀 Logical Topology
 
 <img width="866" height="357" alt="Screenshot 2026-09-12 231911" src="https://github.com/user-attachments/assets/d7f72b0f-4907-4247-9349-643bb8151c71" />
 
