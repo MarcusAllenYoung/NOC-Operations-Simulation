@@ -79,10 +79,12 @@ Layer 3 routing for the internal network.
 
 - 802.1Q subinterfaces for router-on-a-stick (VLANs 10, 20, native 99)
 - DHCP for VLAN 10, with infrastructure addresses excluded
+- SSH for secure remote access
 
 ##### View RTR-01 Phase 1 Configurations below:
 - [ROAS Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/ROAS%20Configuration.md)
 - [DHCP Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/DHCP%20Configuration.md)
+- [SSH Configuration](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Configs/RTR-01%20-%20Router/SSH%20Configuration.md)
 
 ### 🔌 SW-01 - Switch
 
