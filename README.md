@@ -67,6 +67,7 @@ The remote NOC monitors and supports the branch network using:
 </table>
 
 ---
+## 🔗 Network Topology
 
 ## 🗺️ Project Roadmap
 
