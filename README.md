@@ -117,9 +117,3 @@ Controlled failures are introduced into the network and handled as simulated inc
 
 ---
 
-## 🏁 Project Goal
-
-Once the network is operational and monitored, controlled failures are introduced to simulate support incidents. These incidents are detected through monitoring alerts, documented in trouble tickets, investigated, troubleshot, resolved, verified, and closed.
-
-**The goal of this project is to practice the day-to-day work of an entry-level NOC technician at an MSP, not just build a network and consider it finished.**
-
