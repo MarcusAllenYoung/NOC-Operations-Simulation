@@ -107,7 +107,7 @@ Build the remote NOC environment at Vertex Network Solutions, and begin monitori
 
 ---
 
-### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations)
+### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Lab/blob/main/NOC%20Incident%20Response%20%26%20Troubleshooting%20Operations) Coming Soon ⌛
 
 Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the branch network.
 
