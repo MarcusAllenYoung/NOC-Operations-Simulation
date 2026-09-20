@@ -31,7 +31,7 @@ interface GigabitEthernet1/0/1
 
 ```text
 interface GigabitEthernet1/0/10
- description STORE_PC
+ description BRANCH_PC
  switchport mode access
  switchport access vlan 10
 ```
