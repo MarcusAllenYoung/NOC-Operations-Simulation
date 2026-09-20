@@ -147,7 +147,7 @@ The incident was therefore limited to a single branch endpoint and did not impac
 
 ## 5. Investigation & Diagnosis
 
-SW-01 was accessed remotely over SSH.
+SW-01 was accessed remotely to investigate the affected interface.
 
 Commands used:
 
@@ -157,19 +157,19 @@ show interfaces gi1/0/10
 show running-config interface gi1/0/10
 ```
 
-Findings:
+The investigation confirmed:
 
 - Gi1/0/1 remained connected
 - Gi1/0/10 was `down/down (notconnect)`
 - Gi1/0/10 was mapped to BRANCH_PC1
-- Gi1/0/10 remained correctly configured in VLAN 10
+- Gi1/0/10 remained configured as an access port in VLAN 10
 - No interface errors were observed
 
-![SW-01 Interface Troubleshooting](screenshots/INC-01/07-sw01-interface-troubleshooting.png)
+<img width="1344" height="421" alt="image" src="https://github.com/user-attachments/assets/8b3bde0c-81c4-4a35-9be8-783bda19a0f7" />
 
-The issue was narrowed to BRANCH-PC1 or its physical Ethernet connection.
+The failure was narrowed to the BRANCH-PC1 physical access connection.
 
-![Investigation Update](screenshots/INC-01/08-investigation-update.png)
+<img width="1504" height="367" alt="image" src="https://github.com/user-attachments/assets/8fd83fa1-ce91-45c2-a72b-93075c6b2635" />
 
 ---
 
