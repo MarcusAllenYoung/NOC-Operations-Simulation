@@ -10,4 +10,4 @@ The incident workflow used throughout this phase is:
 
 - [**Incident 02**](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2002.md) 🌐 A Sev 2 branch-wide WAN outage focused on validating local network infrastructure, coordinating with onsite personnel, performing WAN troubleshooting, simulating ISP escalation, monitoring service recovery, and documenting the incident through closure.
   
-
+[← Back to previous phase](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
