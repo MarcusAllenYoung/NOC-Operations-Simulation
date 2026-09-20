@@ -10,3 +10,10 @@ The incident workflow used throughout this phase is:
 
 - [**Incident 02**](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2002.md) 🌐 A Sev 2 branch-wide WAN outage focused on validating local network infrastructure, coordinating with onsite personnel, performing WAN troubleshooting, simulating ISP escalation, monitoring service recovery, and documenting the incident through closure.
   
+### Incident Response Methodology
+
+The incident workflow used in this phase was adapted from established network operations and incident-management practices documented by:
+
+- [Cisco — Network Management System: Best Practices](https://www.cisco.com/c/en/us/support/docs/availability/high-availability/15114-NMS-bestpractice.html)
+- [Microsoft Azure Well-Architected Framework — Incident Management](https://learn.microsoft.com/en-us/azure/well-architected/design-guides/incident-management)
+- [Google SRE — Incident Management Guide](https://sre.google/resources/practices-and-processes/incident-management-guide/)
