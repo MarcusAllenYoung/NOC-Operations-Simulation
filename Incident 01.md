@@ -134,9 +134,14 @@ Initial findings:
 
 ## 4. Impact Assessment
 
-The branch router, switch, and uplink remained operational.
+The available evidence showed:
 
-The available evidence showed that the incident was limited to the access connection serving **BRANCH-PC1**, rather than a complete branch outage.
+- RTR-01 remained reachable
+- SW-01 remained reachable
+- Gi1/0/1 trunk to RTR-01 remained operational
+- Only the BRANCH-PC1 access connection was affected
+
+The incident was therefore limited to a single branch endpoint and did not impact the entire Carolina Crest Bank site.
 
 ---
 
