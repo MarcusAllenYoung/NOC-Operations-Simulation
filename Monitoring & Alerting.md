@@ -252,7 +252,7 @@ LibreNMS successfully discovered SW-01 hardware, IOS information, VLANs, and phy
 
 LibreNMS successfully discovered RTR-01 hardware, IOS information, interfaces, uptime, and device health information.
 
-<img width="944" height="439" alt="Image" src="https://github.com/user-attachments/assets/58731b37-ab6f-446a-b785-432d32ec4a3e" />
+<img width="1896" height="909" alt="image" src="https://github.com/user-attachments/assets/982a889a-1232-473f-9200-8390ad6641a5" />
 
 ### 📝 Syslog Verification
 
