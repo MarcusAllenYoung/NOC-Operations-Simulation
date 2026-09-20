@@ -38,7 +38,7 @@ Network incidents are intentionally introduced at Carolina Crest Bank - Branch 0
 |---|---|
 | NOC / Service Provider | Vertex Network Solutions |
 | Client | Carolina Crest Bank |
-| Site | Carolina Crest Bank — Branch 01 |
+| Site | Carolina Crest Bank - Branch 01 |
 | NOC Technician | Marcus Young |
 | Onsite Contact | Alex Carter |
 
