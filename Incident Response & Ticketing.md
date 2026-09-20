@@ -8,5 +8,5 @@ The incident workflow used throughout this phase is:
 
 - [**Incident 01**](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2001.md) 🔌 A Sev 3 endpoint connectivity incident detected through LibreNMS and tracked in Spiceworks. Troubleshooting isolated the issue to the BRANCH-PC1 access connection, followed by onsite Tier 1 troubleshooting, physical connection restoration, connectivity validation, and ticket closure.
 
-- [**Incident 02**](Incident%2002%20-%20Branch%20WAN%20ISP%20Outage.md) 🌐 A Sev 2 branch-wide WAN outage focused on validating local network infrastructure, coordinating with onsite personnel, performing WAN troubleshooting, simulating ISP escalation, monitoring service recovery, and documenting the incident through closure.
+- [**Incident 02**](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2002.md) 🌐 A Sev 2 branch-wide WAN outage focused on validating local network infrastructure, coordinating with onsite personnel, performing WAN troubleshooting, simulating ISP escalation, monitoring service recovery, and documenting the incident through closure.
   
