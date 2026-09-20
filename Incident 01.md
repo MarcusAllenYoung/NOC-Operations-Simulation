@@ -126,8 +126,6 @@ Initial findings:
 - One active port-status alert
 - Gi1/0/10 down
 
-The incident remained **Sev 3 / Medium priority** because monitoring indicated a localized endpoint issue rather than a branch-wide outage.
-
 <img width="1504" height="244" alt="image" src="https://github.com/user-attachments/assets/5690ade9-e9d3-4665-8dd3-b2d181aedd6d" />
 
 ---
