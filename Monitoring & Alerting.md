@@ -240,7 +240,7 @@ Sensitive authentication and privacy credentials have been removed from document
 
 LibreNMS successfully monitors both network devices (RTR-01, SW-01). The dashboard provides centralized visibility into device availability and operational state.
 
-<img width="953" height="260" alt="Image" src="https://github.com/user-attachments/assets/d9a0124b-ddd1-4af4-b677-8f965309b733" />
+<img width="1410" height="412" alt="image" src="https://github.com/user-attachments/assets/1b87f087-dcd7-430a-ae7c-f6bb7ddf72f8" />
 
 ### 🔀 SW-01 Monitoring Verification
 
