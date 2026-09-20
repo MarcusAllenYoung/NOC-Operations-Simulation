@@ -113,6 +113,8 @@ The ticket documented:
 
 <img width="591" height="681" alt="image" src="https://github.com/user-attachments/assets/a5eb3831-1d96-4d69-a2f3-ec41f0e7f194" />
 
+<img width="1516" height="442" alt="image" src="https://github.com/user-attachments/assets/14ffb974-20a4-41fb-a4fa-c53495556685" />
+
 ---
 
 ## 3. Triage & Prioritization
