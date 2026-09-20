@@ -55,7 +55,8 @@ Troubleshooting isolated the issue to **Gi1/0/10**, the access port connected to
 
 ## Healthy Baseline
 
-Before introducing the controlled failure, the network was verified in its normal operational state.
+Before introducing the controlled failure, the network was verified in its normal operational state. 
+This baseline provides a known-good reference before the incident was introduced.
 
 LibreNMS confirmed:
 
@@ -73,9 +74,6 @@ LibreNMS confirmed:
 **Gi1-0-10 Online**
 
 <img width="1344" height="364" alt="image" src="https://github.com/user-attachments/assets/46552144-a334-453f-b548-b09bbb6de31d" />
-
-
-This baseline provides a known-good reference before the incident was introduced.
 
 ---
 
