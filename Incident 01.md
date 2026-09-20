@@ -69,7 +69,7 @@ After the BRANCH-PC1 connection was interrupted, LibreNMS generated a **Critical
 
 ---
 
-<img width="676" height="189" alt="Screenshot 2026-09-19 192155" src="https://github.com/user-attachments/assets/705f807e-d68e-4839-af37-5aa389119a7b" />
+<img width="1351" height="378" alt="image" src="https://github.com/user-attachments/assets/c310a868-bda9-4382-a1aa-094dddb5294b" />
 
 ---
 
