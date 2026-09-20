@@ -98,6 +98,8 @@ LibreNMS detected the interface state change and generated a **Critical Port Sta
 
 A network incident was created in Spiceworks and assigned to the NOC technician for investigation.
 
+The ticket documented:
+
 - Carolina Crest Bank
 - Site CCB-BR01
 - Severity 3
