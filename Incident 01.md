@@ -51,25 +51,42 @@ Troubleshooting isolated the issue to **Gi1/0/10**, the access port connected to
 
 ---
 
-## 1. Detection & Alerting
+## Healthy Baseline
 
-A healthy baseline was captured before the incident. RTR-01 and SW-01 were online, and Gi1/0/10 was operational.
+Before introducing the controlled failure, the network was verified in its normal operational state.
 
-**Healthy Devices**
+LibreNMS confirmed:
+
+- RTR-01 online
+- SW-01 online
+- No active alerts
+- Gi1/0/10 operational
+- BRANCH-PC1 access connection active
+
+**RTR-01 and SW-01 Online**
 
 <img width="1410" height="412" alt="image" src="https://github.com/user-attachments/assets/a39f4a65-e14f-43e4-ba12-f1231be47c0d" />
 
 ---
-**Gi1-0-10 Healthy**
+**Gi1-0-10 Online**
 
 <img width="1344" height="364" alt="image" src="https://github.com/user-attachments/assets/46552144-a334-453f-b548-b09bbb6de31d" />
 
 ---
-After the BRANCH-PC1 connection was interrupted, LibreNMS generated a **Critical Port Status** alert and Gi1/0/10 transitioned down.
+
+## 1. Detection & Alerting
+
+The BRANCH-PC1 Ethernet connection was intentionally interrupted to create the controlled incident.
+
+LibreNMS detected the interface state change and generated a **Critical Port Status** alert associated with SW-01
+
+### Alert Detection
 
 <img width="1891" height="253" alt="image" src="https://github.com/user-attachments/assets/857ad75e-14b5-4bd8-acdc-24e07da6ca68" />
 
 ---
+
+### Unhealthy Interface State
 
 <img width="1351" height="378" alt="image" src="https://github.com/user-attachments/assets/c310a868-bda9-4382-a1aa-094dddb5294b" />
 
