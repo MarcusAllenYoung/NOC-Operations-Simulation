@@ -24,7 +24,7 @@ The incident was detected through LibreNMS on NOC-SRV01, documented in Spicework
 ## Tools Used
 
 - **LibreNMS** - Monitoring and alerting
-- **Spiceworks** - Incident ticketing
+- **Spiceworks** - Ticketing Software
 - **SW-01** - Cisco Catalyst 2960
 - **BRANCH-PC1** - Windows endpoint
 
