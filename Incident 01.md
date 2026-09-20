@@ -268,3 +268,5 @@ The incident demonstrated that a critical monitoring alert does not automaticall
 - Confirm LibreNMS recovery in addition to user connectivity
 
 **Final Status:** Resolved — service restored, monitoring returned to normal, ticket closed, and Carolina Crest Bank - Branch 01 returned to proactive monitoring.
+
+Next: [INCIDENT 02](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2002.md)
