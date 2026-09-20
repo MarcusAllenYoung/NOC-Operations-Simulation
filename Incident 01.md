@@ -244,6 +244,8 @@ Validation confirmed:
 
 The recovery results were documented in Spiceworks and the ticket was changed from **Open → Closed**.
 
+**Ticket Documentation**
+
 <img width="1497" height="637" alt="image" src="https://github.com/user-attachments/assets/04d655cf-0a68-4ff3-9716-75d47ff9e196" />
 
 ---
