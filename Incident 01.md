@@ -14,7 +14,7 @@ The purpose of the scenario is to demonstrate how a junior NOC technician can us
 
 - Respond to a LibreNMS alert
 - Determine the scope of the incident
-- Perform remote switch troubleshooting
+- Perform remote troubleshooting
 - Coordinate onsite Tier 1 troubleshooting
 - Restore and validate service
 - Document and close the incident in Spiceworks
