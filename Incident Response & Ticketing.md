@@ -2,14 +2,7 @@
 
 ## Overview
 
-This phase demonstrates a realistic **NOC-style incident response and ticketing workflow** using:
-
-- **LibreNMS**
-- **Spiceworks Cloud Help Desk**
-- **Cisco IOS**
-- **Cisco 2911 Router**
-- **Cisco Catalyst 2960S Switch**
-- **Windows BRANCH-PC1**
+This phase demonstrates a realistic **NOC-style incident response and ticketing workflow** using the network setup in the previous phases.
 
 The goal of this phase is to demonstrate how monitoring alerts are reviewed, investigated, documented, and worked through to verified service recovery.
 
