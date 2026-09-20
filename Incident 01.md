@@ -59,7 +59,7 @@ A healthy baseline was captured before the incident. RTR-01 and SW-01 were onlin
 
 ---
 
-<img width="672" height="182" alt="Screenshot 2026-09-19 191525" src="https://github.com/user-attachments/assets/17ba4b83-869c-4026-94a2-4f4858f42eef" />
+<img width="1344" height="269" alt="image" src="https://github.com/user-attachments/assets/c3be5abc-9872-45a1-b6c6-8cf94287e4fe" />
 
 ---
 After the BRANCH-PC1 connection was interrupted, LibreNMS generated a **Critical Port Status** alert and Gi1/0/10 transitioned down.
