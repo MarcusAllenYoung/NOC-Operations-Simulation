@@ -74,6 +74,7 @@ LibreNMS confirmed:
 
 <img width="1344" height="364" alt="image" src="https://github.com/user-attachments/assets/46552144-a334-453f-b548-b09bbb6de31d" />
 
+
 This baseline provides a known-good reference before the incident was introduced.
 
 ---
@@ -93,8 +94,6 @@ LibreNMS detected the interface state change and generated a **Critical Port Sta
 ### Unhealthy Interface State
 
 <img width="1351" height="378" alt="image" src="https://github.com/user-attachments/assets/c310a868-bda9-4382-a1aa-094dddb5294b" />
-
-This baseline provides a known-good reference before the incident was introduced.
 
 ---
 
