@@ -11,7 +11,7 @@ Trunk and access interfaces were configured on SW-01 during Phase 1 to connect t
 
 The trunk between SW-01 and RTR-01 carries the VLANs required for router-on-a-stick inter-VLAN routing.
 
-STORE-PC1 connects to `Gi1/0/10` as an access device in the VLAN 10 USERS network.
+BRANCH-PC1 connects to `Gi1/0/10` as an access device in the VLAN 10 USERS network.
 
 ---
 
