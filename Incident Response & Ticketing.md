@@ -14,9 +14,9 @@ Network incidents are intentionally introduced at Carolina Crest Bank - Branch 0
 |---|---|
 | LibreNMS | Network monitoring, alert detection, and recovery validation |
 | Spiceworks Cloud Help Desk | Incident ticket creation, updates, and closure |
-| Cisco IOS | Remote network troubleshooting |
-| Cisco Catalyst 2960S | SW-01 access switch |
+| Cisco Catalyst 2960 | SW-01 access switch |
 | Cisco ISR 2911 | RTR-01 branch router |
+| Windows PC | NOCSVR-01 |
 | Windows PC | BRANCH-PC1 endpoint testing |
 
 ### 🔗 Objective
