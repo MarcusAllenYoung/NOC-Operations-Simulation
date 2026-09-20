@@ -74,6 +74,8 @@ LibreNMS confirmed:
 
 <img width="1344" height="364" alt="image" src="https://github.com/user-attachments/assets/46552144-a334-453f-b548-b09bbb6de31d" />
 
+This baseline provides a known-good reference before the incident was introduced.
+
 ---
 
 ## 1. Detection & Alerting
