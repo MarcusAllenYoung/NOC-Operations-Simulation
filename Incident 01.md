@@ -181,21 +181,32 @@ The failure was narrowed to the BRANCH-PC1 physical access connection.
 
 ## 6. Resolution & Recovery
 
-The onsite contact, **Alex Carter**, performed Tier 1 troubleshooting.
+The NOC contacted onsite representative **Alex Carter** for Tier 1 troubleshooting.
 
-The BRANCH-PC1 Ethernet connection was found disconnected / not fully seated and was reseated.
+The onsite check confirmed:
 
-![Onsite T1TS](screenshots/INC-01/09-onsite-t1ts.png)
+- BRANCH-PC1 was powered on
+- The Ethernet connection was checked
+- The Ethernet cable was disconnected / not fully seated
+- The cable was reseated
 
-After the corrective action, Gi1/0/10 returned to a connected state.
+**Ticket Documentation**
 
-![Interface Recovered](screenshots/INC-01/10-interface-recovered.png)
-
-LibreNMS also recorded the recovery and cleared the active alert.
-
-![LibreNMS Recovery](screenshots/INC-01/11-librenms-recovery.png)
+<img width="1504" height="265" alt="image" src="https://github.com/user-attachments/assets/299e2a80-bcd7-4e98-92f3-14e2b023c896" />
 
 ---
+
+**After the connection was restored, Gi1/0/10 returned to a connected state.**
+
+<img width="1509" height="393" alt="image" src="https://github.com/user-attachments/assets/ddd93f75-b47b-4902-bd14-951a29a4e38d" />
+
+---
+
+**LibreNMS recorded the recovery and cleared the active port-status alert. State Goes from Red to Green.**
+
+<img width="1879" height="301" alt="image" src="https://github.com/user-attachments/assets/5524c945-bd98-4fc3-8c81-879b125cc865" />
+
+--
 
 ## 7. Validation & Closure
 
