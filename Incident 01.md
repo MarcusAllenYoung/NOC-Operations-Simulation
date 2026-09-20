@@ -232,6 +232,7 @@ Validation confirmed:
 ---
 
 **ping 8.8.8.8**
+
 <img width="1918" height="370" alt="image" src="https://github.com/user-attachments/assets/26380ad3-461d-4c5d-a2d8-b695610c6978" />
 
 ---
