@@ -17,7 +17,7 @@ LibreNMS detected the issue, Spiceworks was used to document the incident, Cisco
 - Restore and validate service
 - Document and close the incident in Spiceworks
 
----
+## ---
 
 ## Tools Used
 
