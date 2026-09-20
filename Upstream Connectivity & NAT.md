@@ -177,3 +177,5 @@ RTR-01 successfully received an upstream IP address through DHCP and provided de
 With Carolina Crest Bank now connected to the Internet, the next phase introduces remote monitoring, centralized logging, and alerting from the MSP / NOC environment at Vertex Network Solutions.
 
 📊 Next Phase: [Monitoring & Alerting](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
+
+[← Back to previous phase](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Deployment.md)
