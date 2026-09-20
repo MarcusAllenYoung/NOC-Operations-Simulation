@@ -2,7 +2,7 @@
 
 ## Description
 
-This incident simulates a realistic Tier 1 NOC response to an endpoint connectivity failure at **Carolina Crest Bank — Branch 01**.
+This incident simulates a realistic Tier 1 NOC response to an endpoint connectivity failure at **Carolina Crest Bank - Branch 01**.
 
 The incident begins with a LibreNMS port-status alert associated with SW-01 and is worked through using a structured NOC troubleshooting process. Spiceworks is used to document the ticket lifecycle, Cisco IOS is used to investigate the affected switch interface, and an onsite contact is used when troubleshooting reaches the physical connection.
 
