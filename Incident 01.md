@@ -54,9 +54,9 @@ Troubleshooting isolated the issue to **Gi1/0/10**, the access port connected to
 A healthy baseline was captured before the incident. RTR-01 and SW-01 were online, and Gi1/0/10 was operational.
 
 <img width="705" height="206" alt="Screenshot 2026-09-19 190926" src="https://github.com/user-attachments/assets/16f8351a-4a8d-4372-80e0-fa482d2ea762" />
-
+---
 <img width="672" height="182" alt="Screenshot 2026-09-19 191525" src="https://github.com/user-attachments/assets/17ba4b83-869c-4026-94a2-4f4858f42eef" />
-
+---
 After the BRANCH-PC1 connection was interrupted, LibreNMS generated a **Critical Port Status** alert and Gi1/0/10 transitioned down.
 
 <img width="946" height="127" alt="Screenshot 2026-09-19 192118" src="https://github.com/user-attachments/assets/21a507cc-87f8-47cc-92f0-600ad14eaf3c" />
