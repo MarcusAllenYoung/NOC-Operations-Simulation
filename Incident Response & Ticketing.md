@@ -1,6 +1,6 @@
 # 04 | Incident Response & Ticketing 🎫
 
-This phase simulates a real-world **Tier 1 NOC incident response and ticketing environment** using the network built in the previous phases. It focuses on the full incident lifecycle from LibreNMS alert detection to Spiceworks ticket creation, initial triage, Cisco troubleshooting, onsite coordination, service restoration, recovery validation, and ticket closure. The goal is to demonstrate practical junior NOC responsibilities such as identifying incident scope, documenting troubleshooting actions, working with remote site contacts, validating service recovery, and maintaining a clear incident record from detection through resolution.
+This phase simulates a real-world **Tier 1 NOC incident response and ticketing environment** using the network built in the previous phases. It focuses on the full incident lifecycle from LibreNMS alert detection to Spiceworks ticket creation, initial triage, troubleshooting, onsite coordination, service restoration, recovery validation, and ticket closure. The goal is to demonstrate practical junior NOC responsibilities such as identifying incident scope, documenting troubleshooting actions, working with remote site contacts, validating service recovery, and maintaining a clear incident record from detection through resolution.
 
 The incident workflow used throughout this phase is:
 
