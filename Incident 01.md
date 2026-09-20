@@ -206,7 +206,7 @@ The onsite check confirmed:
 
 <img width="1879" height="301" alt="image" src="https://github.com/user-attachments/assets/5524c945-bd98-4fc3-8c81-879b125cc865" />
 
---
+---
 
 ## 7. Validation & Closure
 
