@@ -167,9 +167,13 @@ The investigation confirmed:
 - Gi1/0/10 remained configured as an access port in VLAN 10
 - No interface errors were observed
 
+**SW-01 CLI**
+
 <img width="1344" height="421" alt="image" src="https://github.com/user-attachments/assets/8b3bde0c-81c4-4a35-9be8-783bda19a0f7" />
 
 The failure was narrowed to the BRANCH-PC1 physical access connection.
+
+**Ticket Documentation**
 
 <img width="1504" height="367" alt="image" src="https://github.com/user-attachments/assets/8fd83fa1-ce91-45c2-a72b-93075c6b2635" />
 
