@@ -283,3 +283,5 @@ Monitoring and alerting were successfully verified, including a controlled SNMP 
 With remote monitoring and alerting operational, the next phase introduces simulated network incidents, ticket creation, troubleshooting, resolution, validation, and ticket closure.
 
 🎫Next Phase: [Incident Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
+
+[← Back to previous phase](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md)
