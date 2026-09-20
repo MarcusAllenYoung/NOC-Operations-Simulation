@@ -105,7 +105,7 @@ The incident was created in Spiceworks and assigned for investigation.
 - **Priority:** Medium
 - **Category:** Network
 
-![Spiceworks Ticket Created](screenshots/INC-01/05-spiceworks-ticket-created.png)
+<img width="591" height="681" alt="image" src="https://github.com/user-attachments/assets/a5eb3831-1d96-4d69-a2f3-ec41f0e7f194" />
 
 ---
 
