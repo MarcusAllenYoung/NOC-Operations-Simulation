@@ -4,18 +4,7 @@ This phase simulates a real-world **Tier 1 NOC incident response and ticketing e
 
 The incident workflow used throughout this phase is:
 
-**Monitoring → Alert Detection → Ticket Creation → Initial Triage → Troubleshooting → Service Restoration → Recovery Validation → Ticket Closure**
-
-### Incident Response Methodology
-
-The incident workflow used in this phase was adapted from established network operations and incident-management practices documented by:
-
-- [Cisco — Network Management System: Best Practices](https://www.cisco.com/c/en/us/support/docs/availability/high-availability/15114-NMS-bestpractice.html)
-- [Microsoft Azure Well-Architected Framework — Incident Management](https://learn.microsoft.com/en-us/azure/well-architected/design-guides/incident-management)
-- [Google SRE — Incident Management Guide](https://sre.google/resources/practices-and-processes/incident-management-guide/)
-
-These references were used to guide practices such as alert detection, triage, impact assessment, fault isolation, recovery validation, documentation, and post-incident review.
-
+ **Detection & Alerting → Logging & Ownership → Triage & Prioritization → Impact Assessment → Investigation & Diagnosis → Resolution & Recovery → Validation & Closure → Post-Incident Review**
 
 - [**Incident 01**](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2001.md) 🔌 A Sev 3 endpoint connectivity incident detected through LibreNMS and tracked in Spiceworks. Troubleshooting isolated the issue to the BRANCH-PC1 access connection, followed by onsite Tier 1 troubleshooting, physical connection restoration, connectivity validation, and ticket closure.
 
