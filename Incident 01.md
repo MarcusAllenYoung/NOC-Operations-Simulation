@@ -2,9 +2,11 @@
 
 ## Description
 
-This incident simulates a Tier 1 NOC response to a localized endpoint connectivity failure at **Carolina Crest Bank — Branch 01**.
+This incident simulates a realistic Tier 1 NOC response to an endpoint connectivity failure at **Carolina Crest Bank — Branch 01**.
 
-LibreNMS detected the issue, Spiceworks was used to document the incident, Cisco IOS was used for troubleshooting, and BRANCH-PC1 was used to validate service recovery.
+The incident begins with a LibreNMS port-status alert associated with SW-01 and is worked through using a structured NOC troubleshooting process. Spiceworks is used to document the ticket lifecycle, Cisco IOS is used to investigate the affected switch interface, and an onsite contact is used when troubleshooting reaches the physical connection.
+
+The purpose of the scenario is to demonstrate how a junior NOC technician can use monitoring data, device status, ticket documentation, remote troubleshooting, and endpoint validation to narrow the failure domain, restore service, and confirm recovery before closing the incident.
 
 ---
 
