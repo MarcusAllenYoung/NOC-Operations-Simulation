@@ -55,7 +55,7 @@ A healthy baseline was captured before the incident. RTR-01 and SW-01 were onlin
 
 **Healthy Devices**
 
-<img width="1410" height="148" alt="image" src="https://github.com/user-attachments/assets/fac09a13-52ce-4e03-baa5-3332e8ea7e95" />
+<img width="707" height="82" alt="Healthy Device 2" src="https://github.com/user-attachments/assets/305a9a49-1f7a-43b7-82db-bc744d3690b5" />
 
 ---
 **Gi1-0-10 Healthy**
