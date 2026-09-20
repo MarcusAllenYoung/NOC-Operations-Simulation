@@ -120,7 +120,7 @@ Initial dashboard review confirmed:
 
 The incident was classified as **Sev 3** because the failure appeared localized rather than site-wide.
 
-![Initial Triage](screenshots/INC-01/06-initial-triage.png)
+<img width="1504" height="244" alt="image" src="https://github.com/user-attachments/assets/5690ade9-e9d3-4665-8dd3-b2d181aedd6d" />
 
 ---
 
