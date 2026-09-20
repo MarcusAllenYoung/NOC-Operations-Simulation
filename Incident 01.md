@@ -6,7 +6,7 @@ This incident documents a **controlled Tier 1 NOC connectivity failure** within 
 
 **Vertex Network Solutions** acts as the remote NOC responsible for monitoring and supporting **Carolina Crest Bank**. A physical connectivity failure was intentionally introduced on the branch endpoint connection to generate a real LibreNMS alert and practice the complete incident lifecycle.
 
-The incident was detected through LibreNMS on NOC-SRV01, documented in Spiceworks, investigated remotely through 
+The incident was detected through LibreNMS on NOC-SRV01, documented in Spiceworks, investigated remotely through SW-01, and resolved through simulated onsite coordination with the branch contact.
 
 ---
 
