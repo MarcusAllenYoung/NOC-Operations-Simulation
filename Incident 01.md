@@ -210,10 +210,10 @@ The onsite check confirmed:
 
 ## 7. Validation & Closure
 
-Service was validated directly from BRANCH-PC1.
+Connectivity was validated directly from BRANCH-PC1.
 
 ```text
-ping 10.10.10.1
+ping 10.10.10.1 - Vlan 10 users default Gateway
 ping 8.8.8.8
 ping google.com
 ```
@@ -223,30 +223,45 @@ Validation confirmed:
 - Default gateway reachable
 - Internet connectivity restored
 - DNS resolution working
-- 0% packet loss during testing
+- 0% packet loss during validation
 
-![Gateway Validation](screenshots/INC-01/12-gateway-validation.png)
+**ping 10.10.10.1**
 
-![Internet Validation](screenshots/INC-01/13-internet-validation.png)
+<img width="1918" height="427" alt="image" src="https://github.com/user-attachments/assets/365a09be-69d5-45fc-a4ba-519d10191a1e" />
 
-![DNS Validation](screenshots/INC-01/14-dns-validation.png)
+---
 
-The final results were documented in Spiceworks and the ticket was closed.
+**ping 8.8.8.8**
+<img width="1918" height="370" alt="image" src="https://github.com/user-attachments/assets/26380ad3-461d-4c5d-a2d8-b695610c6978" />
 
-![Ticket Closed](screenshots/INC-01/15-ticket-closed.png)
+---
+
+**ping google.com**
+
+<img width="1903" height="364" alt="image" src="https://github.com/user-attachments/assets/4cef99bb-d06e-4e44-b615-c43818aadf9e" />
+
+---
+
+The recovery results were documented in Spiceworks and the ticket was changed from **Open → Closed**.
+
+<img width="1497" height="637" alt="image" src="https://github.com/user-attachments/assets/04d655cf-0a68-4ff3-9716-75d47ff9e196" />
 
 ---
 
 ## 8. Post-Incident Review
 
-**Root Cause:** Physical Ethernet connection issue affecting BRANCH-PC1 on SW-01 Gi1/0/10.
+**Root Cause:** Controlled physical Ethernet connectivity failure between BRANCH-PC1 and SW-01 Gi1/0/10.
+
+The incident demonstrated that a critical monitoring alert does not automatically mean a site-wide outage. Verifying the health of RTR-01, SW-01, and the trunk connection allowed the failure domain to be narrowed before corrective action was taken.
 
 ### Lessons Learned
 
-- Monitoring identifies the symptom, not always the root cause
-- Confirming what remains operational helps narrow the failure domain
-- `down/down (notconnect)` pointed troubleshooting toward Layer 1
-- Configuration should be verified before making changes
-- Endpoint and monitoring recovery should both be validated before closure
+- Establish what is still operational before troubleshooting deeper
+- Use monitoring alerts as symptoms rather than assumptions about root cause
+- `down/down (notconnect)` is strong evidence of a Layer 1 connectivity issue
+- Verify configuration before making changes
+- Use onsite personnel when remote troubleshooting reaches the physical layer
+- Validate from the affected endpoint before closing the ticket
+- Confirm LibreNMS recovery in addition to user connectivity
 
-**Final Status:** Resolved — ticket closed and site returned to proactive monitoring.
+**Final Status:** Resolved — service restored, monitoring returned to normal, ticket closed, and Carolina Crest Bank - Branch 01 returned to proactive monitoring.
