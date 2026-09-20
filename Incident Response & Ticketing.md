@@ -6,7 +6,7 @@ Operating the Carolina Crest Bank network as a monitored site and responding to 
 
 The purpose of this phase is to use the network and monitoring environment built in the previous phases to practice junior / Tier 1 NOC incident response.
 
-Network incidents are intentionally introduced at Carolina Crest Bank — Branch 01 and worked through from the Vertex Network Solutions NOC using LibreNMS, Cisco IOS, endpoint testing, and Spiceworks.
+Network incidents are intentionally introduced at Carolina Crest Bank - Branch 01 and worked through from the Vertex Network Solutions NOC using LibreNMS, Cisco IOS, endpoint testing, and Spiceworks.
 
 ### 🛠️ Tools Used
 
