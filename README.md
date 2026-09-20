@@ -83,15 +83,14 @@ The remote NOC monitors and supports the branch network using:
 
 ## 🗺️ Project Roadmap
 
-### [01 | Network Deployment 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Deployment.md) Completed ✅
-
+### [01 | Network Deployment 🏗️](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Network%20Deployment.md)
 Build and configure the physical network for the Carolina Crest Bank.
 
 **Focus:** VLAN segmentation, 802.1Q trunking, inter-VLAN routing, management access, device hardening, endpoint connectivity, and establishing a known-good network baseline.
 
 ---
 
-### [02 | Upstream Connectivity & NAT 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md) Completed ✅
+### [02 | Upstream Connectivity & NAT 🌐](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md)
 
 Connect the Carolina Crest Bank to the upstream network and provide Internet access.
 
@@ -99,7 +98,7 @@ Connect the Carolina Crest Bank to the upstream network and provide Internet acc
 
 ---
 
-### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md) Completed ✅
+### [03 | Monitoring & Alerting 📊](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Monitoring%20%26%20Alerting.md)
 
 Build the remote NOC environment at Vertex Network Solutions, and begin monitoring the Carolina Crest Bank.
 
@@ -107,7 +106,7 @@ Build the remote NOC environment at Vertex Network Solutions, and begin monitori
 
 ---
 
-### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20&%20Ticketing.md) Coming Soon ⌛
+### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20&%20Ticketing.md)
 
 Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the branch network.
 
