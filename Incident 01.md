@@ -23,11 +23,10 @@ The purpose of the scenario is to demonstrate how a junior NOC technician can us
 
 ## Tools Used
 
-- **LibreNMS** — Monitoring and alerting
-- **Spiceworks** — Incident ticketing
-- **Cisco IOS** — Remote troubleshooting
-- **SW-01** — Cisco Catalyst 2960S
-- **BRANCH-PC1** — Windows endpoint
+- **LibreNMS** - Monitoring and alerting
+- **Spiceworks** - Incident ticketing
+- **SW-01** - Cisco Catalyst 2960
+- **BRANCH-PC1** - Windows endpoint
 
 ---
 
