@@ -1,4 +1,4 @@
-# Incident 01 — BRANCH-PC1 Network Connectivity Incident
+# Incident 01
 
 ## Description
 
