@@ -128,6 +128,8 @@ Initial findings:
 - One active port-status alert
 - Gi1/0/10 down
 
+**Ticket Documentation**
+
 <img width="1504" height="244" alt="image" src="https://github.com/user-attachments/assets/5690ade9-e9d3-4665-8dd3-b2d181aedd6d" />
 
 ---
