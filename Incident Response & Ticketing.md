@@ -14,6 +14,6 @@ The incident workflow used throughout this phase is:
 
 The incident workflow used in this phase was adapted from established network operations and incident-management practices documented by:
 
-- [Cisco — Network Management System: Best Practices](https://www.cisco.com/c/en/us/support/docs/availability/high-availability/15114-NMS-bestpractice.html)
-- [Microsoft Azure Well-Architected Framework — Incident Management](https://learn.microsoft.com/en-us/azure/well-architected/design-guides/incident-management)
-- [Google SRE — Incident Management Guide](https://sre.google/resources/practices-and-processes/incident-management-guide/)
+- [Cisco - Network Management System: Best Practices](https://www.cisco.com/c/en/us/support/docs/availability/high-availability/15114-NMS-bestpractice.html)
+- [Microsoft Azure Well-Architected Framework - Incident Management](https://learn.microsoft.com/en-us/azure/well-architected/design-guides/incident-management)
+- [Google SRE - Incident Management Guide](https://sre.google/resources/practices-and-processes/incident-management-guide/)
