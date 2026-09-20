@@ -270,3 +270,5 @@ The incident demonstrated that a critical monitoring alert does not automaticall
 **Final Status:** Resolved — service restored, monitoring returned to normal, ticket closed, and Carolina Crest Bank - Branch 01 returned to proactive monitoring.
 
 Next: [INCIDENT 02](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2002.md)
+
+[← Back to Incdient Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
