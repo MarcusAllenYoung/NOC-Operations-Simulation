@@ -2,7 +2,7 @@
 
 ## Description
 
-This incident documents a **controlled Tier 1 NOC connectivity failure** within the LBR-001 NOC Operations Simulation.
+This incident documents a **controlled Tier 1 NOC connectivity failure** within the NOC Operations Simulation Lab.
 
 Vertex Network Solutions acts as the remote NOC responsible for monitoring and supporting **Carolina Crest Bank — Branch 01**. A physical connectivity failure was intentionally introduced on the branch endpoint connection to generate a real LibreNMS alert and practice the complete incident lifecycle.
 
