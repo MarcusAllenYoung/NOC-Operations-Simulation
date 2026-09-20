@@ -96,14 +96,17 @@ LibreNMS detected the interface state change and generated a **Critical Port Sta
 
 ## 2. Logging & Ownership
 
-The incident was created in Spiceworks and assigned for investigation.
+A network incident was created in Spiceworks and assigned to the NOC technician for investigation.
 
-- **Organization:** Carolina Crest Bank
-- **Site:** CCB-BR01
-- **Severity:** 3
-- **Equipment in Alarm:** SW-01
-- **Priority:** Medium
-- **Category:** Network
+- Carolina Crest Bank
+- Site CCB-BR01
+- Severity 3
+- SW-01 as equipment in alarm
+- Gi1/0/10 BRANCH_PC1 down
+- Medium priority
+- Network category
+
+**Spiceworks Ticket Created**
 
 <img width="591" height="681" alt="image" src="https://github.com/user-attachments/assets/a5eb3831-1d96-4d69-a2f3-ec41f0e7f194" />
 
