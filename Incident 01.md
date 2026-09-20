@@ -47,6 +47,7 @@ Troubleshooting isolated the issue to **Gi1/0/10**, the access port connected to
 - **Detection Method:** LibreNMS alert
 - **Affected Device:** SW-01
 - **Affected Services:** Network and Internet connectivity
+- **Environment:** Lab / simulated NOC workflow
 
 ---
 
