@@ -23,7 +23,7 @@ A Cisco router and switch were connected and configured to create separate netwo
 
 ### 🔀 Logical Topology
 
-  <img width="799" height="169" alt="Screenshot 2026-09-12 231127" src="https://github.com/user-attachments/assets/ef76810a-a38e-4cc2-85fa-68ef5ecd5aec" />
+<img width="1597" height="337" alt="image" src="https://github.com/user-attachments/assets/8b6b7b30-d52f-42e2-bcd2-624e9754e672" />
 
 ### 🔗 Objective
 
