@@ -99,6 +99,183 @@ Both monitored branch devices appeared unreachable from the Vertex Network Solut
 
 ---
 
+## 2. Logging & Ownership
+
+A network incident was created in Spiceworks and assigned to the NOC technician for investigation.
+
+The ticket documented:
+
+- Carolina Crest Bank
+- Site CCB-BR01
+- Severity 2
+- RTR-01 / SW-01 as equipment in alarm
+- Four critical LibreNMS alerts
+- High priority
+- Network category
+
+**Spiceworks Ticket Created**
+
+<img width="595" height="679" alt="image" src="https://github.com/user-attachments/assets/d7e46876-d165-4a1f-a9fd-f92deac5329d" />
+
+<img width="1510" height="437" alt="image" src="https://github.com/user-attachments/assets/80c23c9f-56d0-4666-b5c8-17771e5b7f43" />
+
+---
+
+## 3. Triage & Prioritization
+
+The first NOC action was to review the LibreNMS dashboard and determine whether the alerts represented a monitoring issue or a larger branch connectivity outage.
+
+Initial findings:
+
+- RTR-01 unreachable
+- SW-01 unreachable
+- Four active critical alerts
+- SNMP polling unavailable
+- ICMP reachability unavailable
+
+The incident was classified as **Sev 2 / High priority** due to the loss of remote connectivity to multiple devices at Carolina Crest Bank - Branch 01.
+
+**Ticket Documentation**
+
+<img width="1498" height="257" alt="image" src="https://github.com/user-attachments/assets/8a559552-18f0-4bbb-8c2b-0eda1e7f38d6" />
+
+---
+
+## 4. Impact Assessment
+
+NOC-SRV01 was used to determine whether the outage was affecting the Vertex Network Solutions environment or isolated to Carolina Crest Bank.
+
+Connectivity tests were performed from the NOC to both public Internet resources and the monitored branch devices.
+
+The results confirmed:
+
+- NOC-SRV01 retained Internet connectivity
+- 8.8.8.8 reachable from NOC-SRV01 with 0% packet loss
+- google.com reachable from NOC-SRV01 with 0% packet loss
+- RTR-01 unreachable from NOC-SRV01
+- SW-01 unreachable from NOC-SRV01
+
+This confirmed that Vertex Network Solutions remained operational while remote connectivity to Carolina Crest Bank was unavailable.
+
+The available evidence indicated that the outage was isolated to the branch and a site-level WAN issue was suspected.
+
+**Ticket Documentation**
+
+<img width="1490" height="359" alt="image" src="https://github.com/user-attachments/assets/a9c4e934-c65e-4fd0-bbdd-9c3758b9b6e8" />
+
+---
+
+## 5. Investigation & Diagnosis
+
+Because RTR-01 and SW-01 were unreachable from the NOC, the NOC contacted **Carolina Crest Bank** and continued troubleshooting with onsite representative **Alex Carter**.
+
+Alex was asked to perform connectivity tests from BRANCH-PC1 to determine whether the local LAN was still operational.
+
+The results confirmed:
+
+- Default gateway 10.10.10.1 reachable with 0% packet loss
+- 8.8.8.8 unreachable
+- google.com unable to resolve
+
+This showed that BRANCH-PC1 could still reach the local gateway while Internet and DNS connectivity were unavailable, narrowing the failure beyond the local LAN.
+
+#### BRANCH-PC1 Connectivity Tests
+
+**Default Gateway Reachable**
+
+<img width="1883" height="343" alt="image" src="https://github.com/user-attachments/assets/c799bb70-4e08-4aa9-b252-39fcbfdc3bba" />
+
+---
+
+**Internet / DNS Connectivity Unavailable**
+
+<img width="1826" height="284" alt="image" src="https://github.com/user-attachments/assets/7db19c1a-3405-444a-8b53-97195449772c" />
+
+---
+
+<img width="1186" height="113" alt="image" src="https://github.com/user-attachments/assets/8bf83694-9bb1-4a85-80f2-ac2317206e22" />
+
+---
+
+**Ticket Documentation**
+
+<img width="1490" height="449" alt="image" src="https://github.com/user-attachments/assets/329f2e2c-f84f-4eee-8cff-8cb92c60fd6b" />
+
+---
+
+## Investigation & Diagnosis Continued
+
+Troubleshooting continued during the call with Alex.
+
+The NOC asked Alex to inspect the branch WAN equipment.
+
+The onsite check confirmed:
+
+- RTR-01 powered on
+- SW-01 powered on
+- AT&T gateway powered on
+- WAN Ethernet connection checked
+- AT&T gateway service/status light **blinking red rapidly**
+
+According to the AT&T gateway status reference used in the lab, a rapidly blinking red light indicates a network service issue that may require AT&T intervention.
+
+The abnormal gateway status, combined with the loss of Internet and DNS connectivity, indicated a possible upstream provider issue and justified escalating the incident to the ISP.
+
+**Ticket Documentation**
+
+<img width="1487" height="400" alt="image" src="https://github.com/user-attachments/assets/5cce9041-b6dd-48eb-9204-4b39da57b7c3" />
+
+---
+
+## 6. Resolution & Recovery
+
+Based on the onsite findings, the incident was escalated to the ISP for service-status verification.
+
+The NOC provided AT&T with the troubleshooting results collected from both the NOC and the branch site, including:
+
+- Local branch LAN verified operational
+- RTR-01, SW-01, and AT&T gateway confirmed powered on
+- WAN Ethernet connection checked
+- AT&T gateway service/status light blinking red rapidly
+- Branch Internet and DNS connectivity unavailable
+
+The simulated ISP response reported:
+
+- Provider service outage
+- RFO: Upstream service interruption
+- ETR: 60 minutes
+
+The NOC then contacted **Alex Carter** and informed the site of the provider outage and estimated restoration time.
+
+**Ticket Documentation**
+
+<img width="1481" height="487" alt="image" src="https://github.com/user-attachments/assets/c5e9a9cb-0db1-428c-af8a-6ca9f1abb744" />
+
+---
+
+After the simulated provider recovery, remote connectivity to the branch was restored.
+
+LibreNMS recorded recovery events for both monitored devices:
+
+- RTR-01 returned online
+- SW-01 returned online
+- SNMP polling resumed
+- ICMP reachability returned
+- Active alerts cleared
+
+---
+
+**LibreNMS recorded the recovery and cleared the active alerts. State Goes from Red to Green.**
+
+<img width="1876" height="656" alt="image" src="https://github.com/user-attachments/assets/d1993b4d-a93a-4275-addd-a3228ffdfc3d" />
+
+---
+
+**RTR-01 and SW-01 returned Online**
+
+<img width="1415" height="409" alt="image" src="https://github.com/user-attachments/assets/134daa77-0e21-4ec5-9da3-9d7978bc688a" />
+
+
 [← Back to Incdient 01](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2001.md)
 
 [← Back to Incdient Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
