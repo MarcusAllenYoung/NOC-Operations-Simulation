@@ -210,7 +210,7 @@ The onsite check confirmed:
 
 ## 7. Validation & Closure
 
-Connectivity was validated directly from BRANCH-PC1.
+Connectivity was validated directly from BRANCH-PC1 via remote access.
 
 ```text
 ping 10.10.10.1 - Vlan 10 users default Gateway
