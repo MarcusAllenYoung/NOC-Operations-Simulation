@@ -31,7 +31,7 @@ The incident was detected through LibreNMS on NOC-SRV01, documented in Spicework
 
 ## Incident Summary
 
-LibreNMS generated four critical alerts after remote connectivity to **Carolina Crest Bank - Branch 01** was lost. RTR-01 and SW-01 became unreachable through both SNMP and ICMP.
+LibreNMS generated four critical alerts after remote connectivity to **Carolina Crest Bank** was lost. RTR-01 and SW-01 became unreachable through both SNMP and ICMP.
 
 Initial triage confirmed that **NOC-SRV01 remained online with Internet connectivity**, while RTR-01 and SW-01 were unreachable from the NOC. Onsite testing from BRANCH-PC1 confirmed that the local LAN and default gateway were still reachable, but Internet and DNS connectivity were unavailable.
 
@@ -132,7 +132,7 @@ Initial findings:
 - SNMP polling unavailable
 - ICMP reachability unavailable
 
-The incident was classified as **Sev 2 / High priority** due to the loss of remote connectivity to multiple devices at Carolina Crest Bank - Branch 01.
+The incident was classified as **Sev 2 / High priority** due to the loss of remote connectivity to multiple devices at Carolina Crest Bank.
 
 **Ticket Documentation**
 
