@@ -271,4 +271,4 @@ The incident demonstrated that a critical monitoring alert does not automaticall
 
 Next: [INCIDENT 02](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2002.md)
 
-[← Back to Incdient Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
+[← Back to Incident Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
