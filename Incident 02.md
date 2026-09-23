@@ -275,6 +275,58 @@ LibreNMS recorded recovery events for both monitored devices:
 
 <img width="1415" height="409" alt="image" src="https://github.com/user-attachments/assets/134daa77-0e21-4ec5-9da3-9d7978bc688a" />
 
+---
+
+## 7. Validation & Closure
+
+After LibreNMS showed the branch devices had recovered, the NOC validated that remote connectivity had returned.
+
+Validation confirmed:
+
+- RTR-01 reachable from the NOC
+- SW-01 reachable from the NOC
+- LibreNMS alarms cleared
+- Remote monitoring restored
+
+The NOC then contacted **Alex Carter** to confirm service from the branch.
+
+Alex confirmed:
+
+- BRANCH-PC1 Internet connectivity restored
+- No additional connectivity issues reported
+
+The final recovery results were documented in Spiceworks.
+
+<img width="1480" height="592" alt="image" src="https://github.com/user-attachments/assets/69041c71-3c90-4723-b864-0cb2c1f9adfc" />
+
+---
+
+## 8. Post-Incident Review
+
+**Lab Root Cause:** Controlled interruption of the WAN connection between RTR-01 and the upstream AT&T gateway.
+
+**Simulated Operational Cause:** Upstream ISP service interruption affecting Carolina Crest Bank - Branch 01.
+
+The incident demonstrated the importance of separating **local LAN health, NOC connectivity, and upstream WAN availability** when troubleshooting a site-level outage.
+
+NOC-SRV01 remained connected to the Internet throughout the incident while RTR-01 and SW-01 became unreachable from the NOC. Onsite testing confirmed that BRANCH-PC1 could still reach its local default gateway, while Internet and DNS connectivity were unavailable.
+
+The combination of a healthy local LAN, powered branch equipment, verified WAN cabling, and the abnormal AT&T gateway service/status indicator helped narrow the failure domain toward the upstream provider before escalation.
+
+### Lessons Learned
+
+- Verify the NOC environment before assuming the monitoring platform is the source of the outage
+- Determine the incident scope before beginning deeper troubleshooting
+- A reachable default gateway does not confirm Internet connectivity
+- Compare local LAN health against upstream WAN availability
+- Use onsite personnel when remote access to the affected site is unavailable
+- Check branch WAN equipment and provider gateway status before escalating
+- Document troubleshooting evidence before contacting the ISP
+- Record provider RFO and ETR information in the incident ticket
+- Confirm monitoring recovery, device reachability, and site connectivity before closing the ticket
+
+**Final Status:** Resolved — provider service restored, monitoring returned to normal, branch connectivity confirmed, ticket closed, and Carolina Crest Bank - Branch 01 returned to proactive monitoring.
+
 
 [← Back to Incdient 01](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2001.md)
 
