@@ -14,12 +14,12 @@ The incident was detected through LibreNMS on NOC-SRV01, documented in Spicework
 
 ## Objective
 
-- Respond to a LibreNMS alert
-- Determine the scope of the incident
-- Perform remote troubleshooting
+- Respond to and assess a monitoring alert
+- Determine incident scope and impact
+- Perform structured troubleshooting
 - Coordinate onsite Tier 1 troubleshooting
-- Restore and validate service
-- Document and close the incident in Spiceworks
+- Validate service recovery
+- Practice incident documentation and ticketing workflows in Spiceworks
 
 ---
 
