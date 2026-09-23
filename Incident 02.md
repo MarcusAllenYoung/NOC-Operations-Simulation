@@ -201,7 +201,7 @@ This showed that BRANCH-PC1 could still reach the local gateway while Internet a
 
 ---
 
-## Investigation & Diagnosis Continued
+### Onsite WAN Equipment Check
 
 Troubleshooting continued during the call with Alex.
 
@@ -263,7 +263,7 @@ LibreNMS recorded recovery events for both monitored devices:
 
 ---
 
-**LibreNMS recorded the recovery and cleared the active alerts. State Goes from Red to Green.**
+LibreNMS recorded the recovery and cleared the active alerts, with both devices returning from an alert state to a healthy state.
 
 <img width="1876" height="656" alt="image" src="https://github.com/user-attachments/assets/d1993b4d-a93a-4275-addd-a3228ffdfc3d" />
 
