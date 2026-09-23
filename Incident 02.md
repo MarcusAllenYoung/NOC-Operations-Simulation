@@ -327,6 +327,6 @@ The combination of a healthy local LAN, powered branch equipment, verified WAN c
 **Final Status:** Resolved — provider service restored, monitoring returned to normal, branch connectivity confirmed, ticket closed, and Carolina Crest Bank - Branch 01 returned to proactive monitoring.
 
 
-[← Back to Incdient 01](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2001.md)
+[← Back to Incident 01](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%2001.md)
 
-[← Back to Incdient Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
+[← Back to Incident Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
