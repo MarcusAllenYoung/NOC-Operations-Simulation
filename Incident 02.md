@@ -63,7 +63,6 @@ LibreNMS confirmed:
 - SW-01 online
 - No active alerts
 - Branch WAN connectivity operational
-- BRANCH-PC1 Internet connectivity operational
 
 **RTR-01 and SW-01 Online**
 
