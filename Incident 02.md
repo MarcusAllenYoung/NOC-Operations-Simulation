@@ -12,14 +12,14 @@ The incident was detected through LibreNMS on NOC-SRV01, documented in Spicework
 
 ## Objective
 
-- Respond to a LibreNMS site-level outage alert
-- Determine the scope of the incident
-- Verify whether the issue is isolated to the branch or affecting the NOC environment
-- Perform remote WAN troubleshooting
-- Coordinate onsite Tier 1 troubleshooting
-- Escalate to the ISP when local troubleshooting indicates an upstream issue
-- Validate service recovery
-- Document and close the incident in Spiceworks
+- Practice the Tier 1 NOC incident response lifecycle for a site-level WAN outage
+- Review and interpret multiple monitoring alerts
+- Determine incident scope and isolate the affected environment
+- Distinguish between local LAN, NOC, and upstream provider issues
+- Coordinate onsite troubleshooting and ISP escalation
+- Document troubleshooting, RFO, ETR, and recovery actions
+- Validate monitoring and service recovery before closure
+- Complete the incident lifecycle from detection through resolution
 
 ## Tools Used
 
