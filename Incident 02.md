@@ -303,11 +303,11 @@ The final recovery results were documented in Spiceworks.
 
 ## 8. Post-Incident Review
 
-**Lab Root Cause:** Controlled interruption of the WAN connection between RTR-01 and the upstream AT&T gateway.
+**Root Cause:** Controlled interruption of the WAN connection between RTR-01 and the upstream AT&T gateway.
 
-**Simulated Operational Cause:** Upstream ISP service interruption affecting Carolina Crest Bank - Branch 01.
+**Simulated Operational Cause:** Upstream ISP service interruption affecting Carolina Crest Bank.
 
-The incident demonstrated the importance of separating **local LAN health, NOC connectivity, and upstream WAN availability** when troubleshooting a site-level outage.
+The incident demonstrated the importance of separating local LAN health, NOC connectivity, and upstream WAN availability when troubleshooting a site-level outage.
 
 NOC-SRV01 remained connected to the Internet throughout the incident while RTR-01 and SW-01 became unreachable from the NOC. Onsite testing confirmed that BRANCH-PC1 could still reach its local default gateway, while Internet and DNS connectivity were unavailable.
 
