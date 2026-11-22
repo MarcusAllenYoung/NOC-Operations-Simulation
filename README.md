@@ -12,11 +12,9 @@ This project simulates a small bank branch operated by **Carolina Crest Bank** a
 
 The **ISP / Upstream Network** provides external connectivity between the branch network and the remote monitoring environment, as well as Internet access for the branch.
 
-The project is built in phases: first establishing the branch network, then adding upstream connectivity, remote monitoring and alerting, and finally incident response and ticketing.
+The project is built in phases: first establishing the branch network, then adding upstream connectivity, and finally remote monitoring and alerting.
 
-Once the network is operational and monitored, controlled failures are introduced to simulate support incidents. These incidents are detected through monitoring alerts, documented in trouble tickets, investigated, troubleshot, resolved, verified, and closed.
-
-The goal of this project is to practice the day-to-day work of an entry-level NOC technician supporting a remote client site, rather than simply configuring a network and considering it finished.
+The goal of this project is to build a small branch network and monitor it remotely the way an MSP / NOC would.
 
 ---
 
@@ -45,7 +43,6 @@ The remote NOC monitors and supports the branch network using:
 - Ubuntu Linux server
 - LibreNMS (monitoring software)
 - Remote device administration
-- Incident and ticket management
 
 ---
 
@@ -61,7 +58,6 @@ The remote NOC monitors and supports the branch network using:
   <tr>
     <td><b>1 x Cisco Catalyst 2960X Switch</td>
     <td><b>Ubuntu Linux</td>
-    <td><b>Spiceworks</td>
     <td><b>Wireshark</td>
   </tr>
 </table>
@@ -102,17 +98,6 @@ Connect the Carolina Crest Bank to the upstream network and provide Internet acc
 
 Build the remote NOC environment at Vertex Network Solutions, and begin monitoring the Carolina Crest Bank.
 
-**Focus:** LibreNMS, Ubunta Linux Server, SNMP, syslog, NTP, device availability, interface monitoring, performance baselines, and alerting.
+**Focus:** LibreNMS, Ubuntu Linux Server, SNMP, syslog, NTP, device availability, interface monitoring, performance baselines, and alerting.
 
 ---
-
-### [04 | Incident Response & Ticketing 🚨](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20&%20Ticketing.md)
-
-Use the completed network and monitoring environment to simulate the work of a NOC technician supporting the branch network.
-
-Controlled failures are introduced into the network and handled as simulated incidents.
-
-**Focus:** Alert investigation, ticket creation, fault isolation, troubleshooting, ISP escalation, service restoration, and incident closure.
-
----
-

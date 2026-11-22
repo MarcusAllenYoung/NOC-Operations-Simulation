@@ -280,8 +280,6 @@ NOC-SRV01 successfully provides centralized monitoring and logging for RTR-01 an
 
 Monitoring and alerting were successfully verified, including a controlled SNMP failure on SW-01 that generated a critical alert and recovered after SNMP access was restored.
 
-With remote monitoring and alerting operational, the next phase introduces simulated network incidents, ticket creation, troubleshooting, resolution, validation, and ticket closure.
-
-🎫Next Phase: [Incident Response & Ticketing](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Incident%20Response%20%26%20Ticketing.md)
-
 [← Back to previous phase](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/Upstream%20Connectivity%20%26%20NAT.md)
+
+[← Back to Main README](https://github.com/MarcusAllenYoung/NOC-Operations-Simulation/blob/main/README.md)
