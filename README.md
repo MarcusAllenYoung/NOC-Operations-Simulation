@@ -56,7 +56,7 @@ The remote NOC monitors and supports the branch network using:
     <td><b>PuTTY</td>
   </tr>
   <tr>
-    <td><b>1 x Cisco Catalyst 2960X Switch</td>
+    <td><b>1 x Cisco Catalyst 2960 Switch</td>
     <td><b>Ubuntu Linux</td>
     <td><b>Wireshark</td>
   </tr>

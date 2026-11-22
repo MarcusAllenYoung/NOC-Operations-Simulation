@@ -41,7 +41,7 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 | **Device Name** | **Device** | **Location** |
 | --- | --- | --- |
 | **RTR-01** | Cisco ISR 2911 Router | Carolina Crest Bank |
-| **SW-01** | Cisco Catalyst 2960X Switch | Carolina Crest Bank |
+| **SW-01** | Cisco Catalyst 2960 Switch | Carolina Crest Bank |
 | **BRANCH-PC1** | Windows PC | Carolina Crest Bank |
 | **AT&T Gateway** | Upstream Gateway | ISP / Upstream Network |
 
@@ -65,7 +65,7 @@ Phase 2 adds the WAN connection between RTR-01 and the AT&T gateway.
 | --- | --- | --- |
 | VLAN 10 | 10.10.10.0/24 | USERS network |
 | VLAN 20 | 10.10.20.0/24 | MANAGEMENT network |
-| SW-01 (Vlan 20 SVI) | 10.10.20.1 | Switch management |
+| SW-01 (Vlan 20 SVI) | 10.10.20.2 | Switch management |
 | BRANCH-PC1 | 10.10.10.21/24 | End-user Workstation |
 | RTR-01 Gi0/0 | 192.168.1.86/24 | Upstream / WAN interface |
 | AT&T Gateway | 192.168.1.254 | Upstream gateway |
